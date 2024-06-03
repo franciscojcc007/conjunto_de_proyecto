@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="esta app es para aquellos que quiere aprender la tabla de multiplicar">
+  <link rel="canonical" href="https://www.ejemlo.com/url-de-la-pagina-preferida" />
+  <title>A Prende Matematica</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="contenedor_cabesera">
+      <h1 class="titulo_principal">Tabla de multiplicar</h1>
+      <a class="btn_inicio" href="/index.html" role="button">Inicio</a>
+    </div>
+  </header>
+
+  <div class="contenedor">
+    <section>
+      <div class="contenedor_opciones">
+        <div class="contenedor_label_select">
+          <label class="lab" for="valor">Selecciona un número del 1 al 12:</label>
+          <select id="valor" class="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <div class="contenedor_btn_generar">
+          <button class="btn_generar" onclick="generarTabla()">Generar Tabla</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Número</th>
+            <th>Multiplicador</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody id="tablaResultado">
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
