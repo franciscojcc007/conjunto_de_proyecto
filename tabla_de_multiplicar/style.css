@@ -67,10 +67,8 @@ header::before {
      margin-top: 2rem;
      font-size: 4rem;
      text-transform: uppercase;
-     text-shadow:   -1px -1px 0 var(--text-border-color), 
-                    1px -1px 0 var(--text-border-color),
-                    -1px 1px 0 var(--text-border-color), 
-                    1px 1px 0 var(--text-border-color);
+     text-shadow:   -1px -1px 0 var(--text-border-color), 1px -1px 0 var(--text-border-color),
+                    -1px 1px 0 var(--text-border-color), 1px 1px 0 var(--text-border-color);
 } 
 .btn_inicio{
      background-color: var(--primary-color);
@@ -109,10 +107,8 @@ header::before {
      margin: 0 1rem;
      font-size: 2rem;
      color: var(--text-primary-color);
-     text-shadow:   -1px -1px 0 var(--text-border-color), 
-     1px -1px 0 var(--text-border-color),
-     -1px 1px 0 var(--text-border-color), 
-     1px 1px 0 var(--text-border-color);
+     text-shadow:   -1px -1px 0 var(--text-border-color), 1px -1px 0 var(--text-border-color),
+                    -1px 1px 0 var(--text-border-color), 1px 1px 0 var(--text-border-color);
 }
 .select{
      font-size: 2rem;
@@ -140,12 +136,9 @@ header::before {
      margin-top: 2rem;
      color: var(--text-secondary-color);
      font-size: 2rem;
-     text-shadow:   -1px -1px 0 var(--text-border-color), 
-     1px -1px 0 var(--text-border-color),
-     -1px 1px 0 var(--text-border-color), 
-     1px 1px 0 var(--text-border-color);
+     text-shadow:   -1px -1px 0 var(--text-border-color), 1px -1px 0 var(--text-border-color),
+                    -1px 1px 0 var(--text-border-color), 1px 1px 0 var(--text-border-color);
 }
 th{
      padding: 0 2rem 0.5rem 0;
-     
 }
