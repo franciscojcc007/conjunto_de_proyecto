@@ -72,14 +72,14 @@ header::before {
 } 
 .btn_inicio{
      background-color: var(--primary-color);
-     border-radius: 40px;
+     border-radius: 10px;
      color: var(--text-color-btn);
      border: none;
-     padding: 0.8rem 1.8rem;
+     padding: 0.8rem 1.5rem;
      font-size: 1.5rem;
      text-align: center;
      text-decoration: none;
-     height: 4rem;
+     height: 3.7rem;
      width: 10rem;
 }
 .btn_inicio:hover{
@@ -118,10 +118,10 @@ header::before {
 }
 .btn_generar{
      background-color: var(--secondary-color);
-     border-radius: 25px;
+     border-radius: 10px;
      color: var(--text-color-btn);
      border: none;
-     padding: 1rem 2rem;
+     padding: 0.8rem 1.8rem;
      font-size: 1.5rem; 
      height: 4rem;
      width: 15rem;
