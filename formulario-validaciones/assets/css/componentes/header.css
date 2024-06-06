@@ -10,7 +10,8 @@
 }
 
 .cabecalho__logo {
-  width: 3rem;
+  width: 4rem;
+  margin-top: 0.5rem;
 }
 
 .header__list-nav {
