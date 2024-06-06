@@ -42,11 +42,11 @@
 
 @media (min-width: 800px) {
   .registry-header__logo {
-    width: 5.75rem;
+    width: 10.75rem;
     margin-bottom: 1rem;
   }
 
   .registry-header__title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
