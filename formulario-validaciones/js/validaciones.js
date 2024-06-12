@@ -32,7 +32,7 @@ const mensajesDeError = {
   password: {
     valueMissing: "El campo contraseña no puede estar vacío",
     patternMismatch:
-      "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
+      "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y deve contener caracteres especiales.",
   },
   nacimiento: {
     valueMissing: "Este campo no puede estar vacío",
