@@ -35,18 +35,18 @@
       <h1 class="card__title">Registrar producto</h1>
       <form action="./registro_producto_concluido.html" class="flex flex--column">
         <div class="input-container">
-          <input name="name" id="name" class="input" type="text" placeholder="Nombre" />
-          <label class="input-label" for="name">Nombre</label>
+          <input name="name" id="name" class="input" type="text" placeholder="Nombre" required/>
+          <label class="input-label" for="name">Nombre:</label>
           <span class="input-message-error">Este campo no es valido</span>
         </div>
         <div class="input-container registry__price-container">
-          <input name="price" id="price" class="input" type="text" placeholder="Precio" />
-          <label class="input-label" for="price">Precio</label>
+          <input name="price" id="price" class="input" type="text" placeholder="Precio" pattern="^\d+(\.\d{1,2})?$" required  />
+          <label class="input-label" for="price">Precio:</label>
           <span class="input-message-error">Este campo no es valido</span>
         </div>
         <div class="input-container registry__description-container">
-          <input class="input" name="description" id="description" placeholder="Descripción" />
-          <label class="input-label" for="description">Descripción</label>
+          <input class="input" name="description" id="description" placeholder="Descripción" pattern="[\s\S]{10,150}" required />
+          <label class="input-label" for="description">Descripción:</label>
           <span class="input-message-error">Este campo no es valido</span>
         </div>
         <button class="button">Registrar producto</button>
@@ -57,3 +57,6 @@
 </body>
 
 </html>
+
+
+ 
