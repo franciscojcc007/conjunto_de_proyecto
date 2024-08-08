@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/************* uso de scroll ***********/
+.titulo-scroll{
+  font-size: 2rem;
+  margin: 5px 0 0 10px;
+  text-align: center;
+  color: rgb(3, 3, 80);
+}
+.scroll{
+  display: block;
+  border: 1px solid rgb(83, 46, 83);
+  width: auto;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 0 0 15px;
+  overflow-y: scroll;
+  background-color: rgba(0, 255, 255, 0.103);
+  scroll-behavior: smooth;
+}
+
+
