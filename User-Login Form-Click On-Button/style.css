@@ -28,17 +28,17 @@ body{
 
 .login-button-form .login-button{
     font-size: 24px;
-    padding: 14px 38px;
+    padding: 12px 40px;
     color: #666;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     outline: none;
 }
 
 .login-button-form .login-button:hover{
-    color: #ffffff;
-    background: #ff4367;
+    color: #fff;
+    background: #047001ea;
 }
 
 .login-form{
@@ -84,9 +84,14 @@ body{
     position: absolute;
     top: -20px;
     right: 10px;
-    font-size: 30px;
+    font-size: 50px;
     color: #ff4367;
     cursor: pointer;
+
+}
+.close:hover{
+    background-color: rgb(255, 255, 56);
+    color: rgb(112, 202, 10);
 }
 
 
@@ -124,7 +129,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     color: #fff;
-    background: #ff4367;
+    background: #49ff43;
 }
 
 .login-form .checkbox{
