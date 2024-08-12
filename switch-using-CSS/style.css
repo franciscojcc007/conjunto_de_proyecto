@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color-button-one: #ff8000;
+    --color-button-two: #0080ff;
+    --color-button-three: #ff0080;
+    --color-button-four: green;
+
+    
+}
 body{
     position: absolute;
     top: 40%;
@@ -14,9 +22,10 @@ body{
 
 h2{
     text-align: center;
-    color: #fff;
+    color: #9ef9fa;
     font-size: 50px;
-    text-shadow: 1px 3px #40ff00;
+    margin-bottom: 20px;
+
 }
 
 .switch2.check, .switch4.check{
@@ -66,35 +75,35 @@ h2{
 }
 
 input:checked + .slider.s1{
-    background: #ff8000;
+    background: var(--color-button-one);
 }
 
 input:focus + .slider.s1{
-    box-shadow: 0px 4px 12px #ff8000;
+    box-shadow: 0px 4px 12px var(--color-button-one);
 }
 
 input:checked + .slider.s2{
-    background: #0080ff;
+    background: var(--color-button-two);
 }
 
 input:focus + .slider.s2{
-    box-shadow: 0px 4px 12px #0080ff;
+    box-shadow: 0px 4px 12px var(--color-button-two);
 }
 
 input:checked + .slider.s3{
-    background: #ff0080;
+    background: var(--color-button-three);
 }
 
 input:focus + .slider.s3{
-    box-shadow: 0px 4px 12px #ff0080;
+    box-shadow: 0px 4px 12px var(--color-button-three);
 }
 
 input:checked + .slider.s4{
-    background: #40ff00;
+    background: var(--color-button-four);
 }
 
 input:focus + .slider.s4{
-    box-shadow: 0px 4px 12px #40ff00;
+    box-shadow: 0px 4px 12px var(--color-button-four);
 }
 
 input:checked + .slider::before{
