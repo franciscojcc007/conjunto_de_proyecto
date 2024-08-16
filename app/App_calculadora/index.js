@@ -13,7 +13,7 @@ function buttonClick(value){
      screen.innerText = buffer;
 }
 function handleSymbol(symbol){
- 
+
      switch(symbol){
           case 'AC':
                buffer = '0';
@@ -35,6 +35,8 @@ function handleSymbol(symbol){
                }else{
                     buffer = buffer.substring(0, buffer.length - 1);
                }
+          case '%':
+               buffer = (parseFloat(buffer) / 100).toString();
                break;
           case '+':
           case '−':
@@ -42,7 +44,10 @@ function handleSymbol(symbol){
           case '÷':
                handleMath(symbol);
                break;
-
+          case '.':
+               if(!buffer.includes('.')){
+                    buffer += '.';
+               }
      }
 }
 
@@ -59,8 +64,8 @@ function handleMath(symbol){
      }
      previosOperator = symbol;
      buffer = '0';
-
 }
+
 function flushOperation(intbuffer){
      if(previosOperator === '+'){
           runningTotal += intbuffer;
@@ -83,6 +88,5 @@ function init(){
      document. querySelector('.calc-buttons').addEventListener('click', function(event){
           buttonClick(event.target.innerText);
      })
-     
 }
 init();
