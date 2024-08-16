@@ -43,13 +43,16 @@ body {
      backdrop-filter: blur(4px);
      -webkit-backdrop-filter: blur(4px);
      /* background: rgba(255, 255, 255, 0.17); */
-     border: 1px solid rgba(255, 255, 255, 0.34);
+     /* border: 1px solid rgba(255, 255, 255, 0.34); */
      flex-basis: 400px;
      height: 540px;
      padding: 20px 35px;
 
-     
-     background: rgba(63, 63, 63, 0.483);
+     /* background: rgba(63, 63, 63, 0.483);
+     border: 20px double #000; */
+     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+     10px 10px 70px rgba(116, 115, 115, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+     inset 5px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .screen {
@@ -72,7 +75,6 @@ body {
      display: flex;
      justify-content: space-between;
      margin: 8px 0;
-
 }
 
 .calc-button {
@@ -87,6 +89,14 @@ body {
      font-family: inherit;
      font-size: 24px;
      height: 55px;
+     cursor: pointer;
+}
+button.calc-button.st{
+     background-color: #2ca8fb;
+}
+
+button.calc-button.dl{
+     background-color: #ff3333bc;
 }
 
 .calc-button:last-child {
@@ -114,6 +124,9 @@ body {
      background-color: inherit;
      font-size: 30px;
      color: #fff;
+     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
+     10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
+     inset 5px 5px 15px rgba(0, 0, 0, 0.083);
 }
 .calc-button:active{
      background-color: #ffef72;
@@ -122,6 +135,9 @@ body {
 .calc-button-doble:hover{
      background-color: inherit;
      color: #fff;
+     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
+     10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
+     inset 5px 5px 15px rgba(0, 0, 0, 0.083);
 }
 .calc-button-doble {
      backdrop-filter: blur(5.5px);
@@ -135,6 +151,7 @@ body {
      font-family: inherit;
      font-size: 24px;
      height: 55px;
+     cursor: pointer;
 }
 
 .calc-button-doble:active{
