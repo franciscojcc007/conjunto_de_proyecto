@@ -1,25 +1,25 @@
-//creamos un objeto con las llaves proporcionadas en el desafio
+//creamos un objeto con las llaves
 let llaves = {
     "e": "enter",
     "i": "imes",
-    "a": "ai",
+    "a": "ali",
     "o": "ober",
-    "u": "ufat" 
+    "u": "ufate" 
   };
   
-  //Creamos la funcion encriptar usando expresiones regulares con el modificador global
+  //Creamos la función encriptar usando expresiones regulares con el modificador global
   function encriptar(texto) {
     return texto.replace(/[aeiou]/g, function(match) {
       return llaves[match];
     });
   }
   
-  //Creamos la funcion para desencriptar
+  //Creamos la función para desencriptar
   function desencriptar(texto) {
-    return texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+    return texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ali/g, "a").replace(/ober/g, "o").replace(/ufate/g, "u");
   }
   
-  //Creamos otra funcion para contar cuantas palabras encripto
+  //Creamos otra función para contar cuantas palabras encripto
   function contarPalabras(texto) {
     let palabras = texto.trim().split(/\s+/);
     let palabrasConLetrasEnLlaves = 0;
@@ -35,7 +35,7 @@ let llaves = {
   
   let contadorPalabras = 0;; 
   
-  //Adicional crearemos otra funcion para validar que la palabra contenga una letra de la llave
+  //Adicional crearemos otra función para validar que la palabra contenga una letra de la llave
   function contieneLetraEnLlaves(palabra) {
     for (let letra in llaves) {
       if (palabra.includes(letra)) {
@@ -45,7 +45,7 @@ let llaves = {
     return false;
   }
   
-  //Creamos la funcion para encriptar y la asignamos al boton con onclick
+  //Creamos la función para encriptar y la asignamos al boton con onclick
   function procesar() {
     let entrada = document.getElementById("textoOriginal");
     let salida = document.getElementById("textoEncriptado");
@@ -58,12 +58,12 @@ let llaves = {
   
     let resultado = encriptar(texto);
     contadorPalabras += contarPalabras(texto);
-    document.getElementById("contadorPalabras").innerText = "Palabras Encritadas " + contadorPalabras;
+    document.getElementById("contadorPalabras").innerText = "Palabras Encriptadas " + contadorPalabras;
     salida.value = resultado;
     mostrarNotificacion("Texto encriptado correctamente");
   }
   
-  //Creamos la funcion para desencriptar y la asignamos al boton con onclick
+  //Creamos la función para desencriptar y la asignamos al boton con onclick
   function procesarDesencriptar() {
     let entrada = document.getElementById("textoOriginal");
     let salida = document.getElementById("textoEncriptado");
@@ -80,7 +80,7 @@ let llaves = {
   }
   
  // Creamos la función procesarBotonCopiar para el botón "copiar"
-function procesarBotonCopiar() {
+function btnCopiar() {
   let texto = document.getElementById("textoEncriptado").value.trim();
   if (!texto) {
     notificarNadaQueCopiar();
@@ -88,7 +88,14 @@ function procesarBotonCopiar() {
   }
   copiarAlPortapapeles(texto);
 }
-
+function btnLimpiar(){
+  let texto = document.getElementById("textoEncriptado").value.trim();
+  let texto2 = document.getElementById("textoOriginal").value.trim();
+  document.getElementById("textoEncriptado").value = "";
+  document.getElementById("textoOriginal").value = "";
+  document.getElementById("contadorPalabras").innerText = "Palabras Encriptadas";
+  contadorPalabras = 0;
+}
 // Creamos la función para copiar al portapapeles
 function copiarAlPortapapeles(texto) {
   if (texto.trim() === "") {
@@ -102,7 +109,7 @@ function copiarAlPortapapeles(texto) {
 
   // Seleccionamos el contenido del input temporal
   inputTemp.select();
-  inputTemp.setSelectionRange(0, 99999); // Para dispositivos móviles
+  inputTemp.setSelectionRange(0, 99999); 
 
   // Ejecutamos el comando de copiado
   document.execCommand("copy");
@@ -114,14 +121,16 @@ function copiarAlPortapapeles(texto) {
 }
 
 function notificarNadaQueCopiar() {
-  // Lógica para mostrar una notificación cuando no hay texto para copiar
+  mostrarNotificacion("No hay texto para copiar");
 }
 
 function mostrarNotificacion(mensaje) {
-  // Lógica para mostrar una notificación de éxito al copiar el texto
+  const notificacion = document.getElementById("notificacion");
+  notificacion.innerText = mensaje;
+
 }
   
-  //Creamos la funcion restablecer para limpiar nuestra area de trabajo con el Boton restablecer
+  //Creamos la función restablecer para limpiar nuestra area de trabajo con el Boton restablecer
   function borrarSegundoTextarea() {
     let salida = document.getElementById("textoEncriptado");
     let texto = salida.value.trim();
@@ -134,7 +143,7 @@ function mostrarNotificacion(mensaje) {
     salida.value = "";
     mostrarNotificacion("Limpieza realizada");
   } 
-  //Ocultar Divs dinamicamente si hay o no hay ningun texto en nuestra area de trabajo
+  //Ocultar Divs dinamicamente si hay o no hay ningún texto en nuestra area de trabajo
   function mostrarOcultarDivs() {
     setTimeout(() => {
       let texto = document.getElementById("textoOriginal").value;
@@ -154,41 +163,36 @@ function mostrarNotificacion(mensaje) {
       }
     }, 0); // El tiempo de espera es 0 milisegundos
   }
-  
-  //Creamos la variable global para almacenar el identificador del temporizador
+
   let timerId = null;
-  //Creamos la variable global para almacenar el identificador del intervalo
   let intervalId = null;
-  //Creamos la funcion notificacion y creamos la variable notificacion para asignarle una clase y trabajar en CSS
+
+  //Creamos la función notificacion y creamos la variable notificacion para asignarle una clase y trabajar en CSS
   function mostrarNotificacion(mensajeTexto) {
-    mensaje.innerText = mensajeTexto; //se cambia el texto del párrafo por el que se quiere mostrar
+    mensaje.innerText = mensajeTexto; 
     notificacion.classList.add("show");
-    //Cancelamos el temporizador anterior si existe
     clearTimeout(timerId);
-    //Cancelamos el intervalo anterior si existe
     clearInterval(intervalId);
-    //Creamos un nuevo temporizador y guardamos su identificador en la variable timerId
+
     timerId = setTimeout(function() {
       notificacion.classList.remove("show");
     }, 3000);
-    //Obtenemos el elemento progress dentro de la notificación
+    
     let progress = document.querySelector("#notificacion progress");
-    //Asignamos el valor máximo al elemento progress
+  
     progress.max = 3000;
-    //Asignamos el valor actual al elemento progress
     progress.value = 3000;
-    //Creamos un nuevo intervalo para actualizar el valor del elemento progress cada 10 milisegundos y guardamos su identificador en la variable intervalId
     intervalId = setInterval(function() {
-      //Reducimos el valor del elemento progress en 10 unidades
       progress.value -= 10;
-      //Si el valor del elemento progress llega a cero, detenemos el intervalo
+
       if (progress.value === 0) {
         clearInterval(intervalId);
       }
     }, 10);
+
   }
   
-  //Cerrar notificaciones usadas en las notificaciones anteriores
-  const notificacion = document.getElementById("notificacion");//usamos el ID del div de la notificacion
-  const mensaje = document.querySelector(".mensaje"); //usamos su clase
-  const cerrar = document.getElementById("cerrar");//usamos el ID del boton cerrar
+
+  const notificacion = document.getElementById("notificacion");
+  const mensaje = document.querySelector(".mensaje"); 
+  const cerrar = document.getElementById("cerrar");
