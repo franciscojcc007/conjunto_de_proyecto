@@ -192,8 +192,3 @@ function mostrarNotificacion(mensaje) {
   const notificacion = document.getElementById("notificacion");//usamos el ID del div de la notificacion
   const mensaje = document.querySelector(".mensaje"); //usamos su clase
   const cerrar = document.getElementById("cerrar");//usamos el ID del boton cerrar
-  
- 
-  
-  
-
