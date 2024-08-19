@@ -11,9 +11,7 @@ html{
   }
   
   *, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
   }
   canvas{
@@ -25,6 +23,7 @@ html{
     color: #0a3871;
     align-items: center;
     margin: 2% 0 2% 8%;
+    display: grid;
   }
   
   .alura{
@@ -38,16 +37,20 @@ html{
   h1 {
     display: block;
     white-space: nowrap;
-    width: 360px;
+    width: 80vw; /* Cambiado a una unidad relativa */
     animation: typing 0.8s steps(8), blink .5s infinite step-end alternate;
     overflow: hidden;
-    font-size: 25px;
+    font-size: 3vw; /* Cambiado a una unidad relativa */
+    left: 25%; /* Ajustado para que sea más flexible */
+    position: relative;
+    margin-bottom: 4vw; /* Ajustado a una unidad relativa */
   }
 
 .text2{
-    margin-left: 366px;
-    padding: 14px;
+    margin-left: 20%;
+    padding: 10px;
     position: left;
+    color: #fff;
 }
 .principal{
   display: inline-flex;
@@ -129,17 +132,17 @@ html{
     padding: 24px;
   }
   
-  .copiar {
+  /* .copiar {
     width: 80%;
     margin: 5px auto;
     display: block;
-  }
+  } */
   
-  .copiar:hover{
+  /* .copiar:hover{
     background-color: #2661a9;
     border: 2px solid #013d34;
     
-  }
+  } */
   
   .notificacion {
     width: 24%;
@@ -195,7 +198,6 @@ html{
   }
   
 
-
 /*codigo respocient*/
 
   .notificacion progress {
@@ -210,6 +212,12 @@ html{
   }
   
   @media (max-width: 950px) and (orientation: portrait){
+    h1{
+      font-size: 6vw;
+      left: 5%;
+      margin-bottom: 6vw;
+    }
+
     .principal{
       display: block;
       width: 100%;
@@ -266,6 +274,11 @@ html{
   }
   
   @media (max-width: 480px) and (orientation: portrait){
+    h1 {
+      font-size: 5vw;
+      left: 2%;
+      margin-bottom: 8vw;
+  }
     .encabezado-principal{
       margin: 14% 0 4% 10%;
     }
