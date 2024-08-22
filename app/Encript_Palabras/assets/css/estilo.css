@@ -5,7 +5,7 @@ html{
     background-size: 200%;
     transition: background-position 1s;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     background-color: #090909eb;
   }
@@ -20,39 +20,38 @@ html{
   :root{
     --primary-color: #ebebeb;
     --secondary-color: #0a3871;
+    --boton-color-hover:#134f98;
     --border:  #018673;
 
   }
   
   .header {
     color: var(--secondary-color);
-    align-items: center;
-    margin: 2% 0 2% 8%;
-    display: grid;
+    margin: 2% 0 2% 2%;
   }
   
   .alura{
-    vertical-align: middle;
-    max-width: 70px;
-    height: auto;
-    left: 30px;
-    top: 30px;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 35px;
   }
     
   h1 {
-    display: block;
-    white-space: nowrap;
-    width: 80vw; /* Cambiado a una unidad relativa */
     overflow: hidden;
-    font-size: 2vw; /* Cambiado a una unidad relativa */
+    font-size: 2vw; 
     text-align: center;
-    margin-bottom: 4vw; /* Ajustado a una unidad relativa */
+    margin-bottom: 3vw;
+    color: var(--primary-color);
+  }
+
+  .header_pr{
+    display: flex;
+    justify-content: center;
   }
 
 .text2{
     margin-left: 20%;
     padding: 10px;
-    position: left;
     color: var(--primary-color);
 }
 .principal{
@@ -61,10 +60,11 @@ html{
   width: 100%;
   height: 50vh;
   justify-content: center;
+  flex: 1;
 }
 
 .article-uno{
-  width: 50%;
+  width: 45%;
   text-align: center;
 }
 
@@ -86,11 +86,11 @@ html{
   }
   
   .label{
-    margin-left: 45px;
+    
     color: var(--primary-color);
     font-size: 14px;
     display: block;
-    padding: 2px;
+    padding: 12px 0;
   }
   
   .parrafo, .mensaje-info{
@@ -103,9 +103,8 @@ html{
     width: 80%;
     height: 350px;
     resize: none;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 12px;
-    border: 0;
     padding: 10px;
   }
   
@@ -119,115 +118,62 @@ html{
   }
   
   .textarea-modificada{
-    background-color: #14141465;
+    background-color: var(--primary-color);
   }
   
   .boton{
     text-align: center;
-    margin-bottom: 50px;
-    margin-left: 58px;
-    width: 250px;
-    height: 5vh;
+    width: 20%;
+    height: 4.5vh;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-size: 16px;
     border-radius: 24px;
-    padding: 24px;
+    padding: 5px;
+    margin: 0 10px;
   }
-  
-  /* .copiar {
-    width: 80%;
-    margin: 5px auto;
-    display: block;
-  } */
-  
-  /* .copiar:hover{
-    background-color: #2661a9;
-    border: 2px solid #013d34;
-    
-  } */
-  
-  .notificacion {
-    width: 24%;
-    height: 10%;
-    font-size: smaller;
-    text-align: center;
-    position: fixed;
-    top: 20px;
-    right: 4%;
-    background-color: #171e20;
-    color: var(--primary-color);
-    padding: 14px 10px 10px 10px;
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .notificacion.show {
-    opacity: 1;
-  }
-  
-  .notificacion .cerrar {
-    position: fixed;
-    top: 1.8rem;
-    right: 5%;
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: #1a1d1f;
-    color: var(--primary-color);
-    border: 2px solid var(--border);
-    border-radius: 25%;
-    font-size: .8rem;
-    font-weight: 600;
-    line-height: 1.3rem;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .notificacion .texto {
-    padding-right: 2rem;
-    margin-left: 2rem;
-  }
-  
-  .notificacion .cerrar:hover {
-    background-color: var(--primary-color);
-    color: #000000;
+  .boton:hover{
+    background-color: var(--boton-color-hover)
   }
   
   .close-button {
     z-index: 1;
   }
   
-
-  .notificacion progress {
-    width: 100%;
-    height: 10px;
-    border: none;
-    background-color: var(--primary-color);
+  footer{
+    background-color: var(--border);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
   }
-  
-  .notificacion progress::-webkit-progress-bar {
-    background-color: #1a2e35;
-  }
-  
 
 
   @media (max-width: 950px) and (orientation: portrait){
+
     h1{
-      font-size: 6vw;
-      left: 5%;
+      font-size: 4vw;
       margin-bottom: 6vw;
+      text-align: end;
+    }
+
+    .alura{
+      margin-bottom: 40px;
+      width: 40px;
+      height: 20px;
     }
 
     .principal{
       display: block;
       width: 100%;
     }
+    .text2{
+      text-align:center;
+      margin-left: 0;
+    }
   
     .header{
-      margin: 4% 0 4% 10%;
+      margin: 4% 0 4% 0;
     }
     
     .article-uno{
@@ -254,26 +200,14 @@ html{
       text-align: center;
       font-size: 1rem;
       width: 40%;
-      height: 6vh;
+      height: 5vh;
+      margin: 0 5px;
     }
   
     .imagen-b{
       width: 40%;
     }
-  
-    .contenedor-notificacion {
-      position: fixed;
-      top: 0rem;
-      right: 0rem;
-      text-align: center;
-      width: 40%;
-      height: 6%;
-      font-size: 0.8rem;
-    }
-  
-    .contenedor-notificacion .boton-cerrar-notificacion {
-      display: none;
-    }
+
   }
 
 
@@ -281,7 +215,6 @@ html{
   @media (max-width: 480px) and (orientation: portrait){
     h1 {
       font-size: 5vw;
-      left: 2%;
       margin-bottom: 8vw;
   }
     .encabezado-principal{
@@ -297,9 +230,6 @@ html{
       margin-bottom: 1rem;
     }
     
-    .contenedor-mensaje,.contenedor-resultado{
-      width: 100%;
-    }
   
     .textarea-original, .textarea-modificada{
       width: 80%;
@@ -330,23 +260,6 @@ html{
       width: 40%;
     }
   
-    .notificacion {
-      position: fixed;
-      top: 0rem;
-      right: 0rem;
-      text-align: center;
-      width: 40%;
-      height: 7%;
-      font-size: 0.6rem;
-    }
-  
-    .notificacion .cerrar {
-      display: none;
-    }
-  
-    .notificacion progress {
-      display: none;
-    }
   }
   
 
@@ -390,27 +303,9 @@ html{
   
     .boton{
       text-align: center;
-      font-size: 1rem;
+      font-size: .2rem;
       width: 40%;
       height: 8vh;
-    }
-  
-    .notificacion progress {
-      display: none;
-    }
-  
-    .notificacion {
-      position: fixed;
-      top: 0rem;
-      right: 0rem;
-      text-align: center;
-      width: 40%;
-      height: 10%;
-      font-size: 0.8rem;
-    }
-  
-    .notificacion .cerrar {
-      display: none;
     }
     
   }
