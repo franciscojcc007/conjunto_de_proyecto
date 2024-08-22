@@ -13,7 +13,10 @@
         <title>Encriptado</title>
     </head>
     <header class="header">
-        <h1><img src="./assets/img/Logo.png" class="alura">Encriptado de Palabras</h1>
+        <div class="header_pr">
+            <img src="./assets/img/Logo.png" class="alura">
+            <h1>Encriptado de Palabras</h1> 
+        </div>
         <article id="contadorPalabras" class="text2"> 
             <p>Cuantas palabras tienes</p>
         </article>
@@ -23,7 +26,7 @@
             <article class="article-uno">
                 <form onreset="mostrarOcultarDivs()">
                     <textarea class="textarea-original" placeholder="Ingrese el texto que deseas encriptar aquí" name="texto" minlength="1" autofocus  id="textoOriginal" oninput="mostrarOcultarDivs()"></textarea>
-                    <label class="label" for="encriptar"> ® Solo se puede encriptar letras minúsculas y sin acento</label>
+                    <label class="label" for="encriptar">Solo se puede encriptar letras minúsculas y sin acento 👌</label>
                     <input class="boton" type="button" value="Encriptar" id="encriptar" name="encriptar" onclick="procesar()">
                     <input class="boton" type="button" value="desencriptar" id="desencriptar" name="Desencriptar" onclick="procesarDesencriptar()">
                 </form>
@@ -36,13 +39,15 @@
             <article class="article-tres" id="activo">
                 <form>
                     <textarea class="textarea-modificada" disabled id="textoEncriptado"></textarea>
-                    <br>
                     <label class="label" for="copiar">puedes copiar el texto y limpiar lo realizado</label>
                     <input class="boton copiar" type="button" name="copiar" value="copiar" id="copiar" onclick="btnCopiar()">
                     <input class="boton limpiar" type="button" name="limpiar" value="limpiar" id="limpiar" onclick="btnLimpiar()">
                 </form>
             </article>
         </section>
+        <footer>
+            <p> ® Francisco Javier</p>
+        </footer>
         <script src="./assets/encriptador.js"></script>
     </body>
 </html>    
