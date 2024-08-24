@@ -12,7 +12,12 @@ html {
 }
 :root{
      --primary-color: #f5eba1;
-
+     --background-color: #f1f1f1;
+     --background-color-hover: #ffef72;
+     --background-color-button: #fafafac6;
+     --color-text-dark: #232323;
+     --color-text-light: #ffffff;
+     --box-shadow: rgba(35, 35, 35, 0.1);
 }
 
 body {
@@ -20,145 +25,146 @@ body {
      background: linear-gradient(320deg, #3b1464, #070795, #09634f);
      display: flex;
      font-family: 'Dosis', 'sans-serif';
-     font-display: swap;
      height: inherit;
      justify-content: center;
 }
+
+.wrapper {
+     backdrop-filter: blur(5.5px);
+     border-radius: 16px;
+     box-shadow: 0 4px 30px var(--box-shadow);
+     color: var(--color-text-dark);
+     flex-basis: 400px;
+     height: 540px;
+     padding: 20px 35px;
+     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+     10px 10px 70px rgba(116, 115, 115, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+     inset 5px 5px 15px rgba(0, 0, 0, 0.25);
+
+     .screen {
+          backdrop-filter: blur(5.5px);
+          background: var(--background-color);
+          border: 1px solid rgba(255, 255, 255, 0.01);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px var(--box-shadow);
+          color: var(--color-text-dark);
+          font-size: 35px;
+          overflow: auto;
+          padding: 20px;
+          text-align: right;
+          width: auto;
+     }
+}
+
 .title_pric{
      text-align: center;
 }
+
 .tit{
      font-size: 35px;
-     color: #f5eba1;
+     color: var(--primary-color);
      padding: 7px;
 }
+
 .tit span{
      color: var(--primary-color);
      font-family: "Bebas Neue", sans-serif;
      font-weight: 400;
      font-style: normal;
 }
-.wrapper {
-     backdrop-filter: blur(5.5px);
-     -webkit-backdrop-filter: blur(5.5px);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-     color: #232323;
-     backdrop-filter: blur(4px);
-     -webkit-backdrop-filter: blur(4px);
-     /* background: rgba(255, 255, 255, 0.17); */
-     /* border: 1px solid rgba(255, 255, 255, 0.34); */
-     flex-basis: 400px;
-     height: 540px;
-     padding: 20px 35px;
-
-     /* background: rgba(63, 63, 63, 0.483);
-     border: 20px double #000; */
-     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
-     10px 10px 70px rgba(116, 115, 115, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
-     inset 5px 5px 15px rgba(0, 0, 0, 0.25);
-}
-
-.screen {
-     backdrop-filter: blur(5.5px);
-     -webkit-backdrop-filter: blur(5.5px);
-     background: rgba(255, 255, 255, 0.75);
-     border: 1px solid rgba(255, 255, 255, 0.01);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-     color: #232323;
-     font-size: 35px;
-     overflow: auto;
-     padding: 20px;
-     text-align: right;
-     width: auto;
-
-}
 
 .calc-button-row {
      display: flex;
      justify-content: space-between;
      margin: 8px 0;
+
+     .calc-button {
+          backdrop-filter: blur(5.5px);
+          background: var(--background-color-button);
+          border: 1px solid rgba(255, 255, 255, 0.01);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px var(--box-shadow);
+          color: var(--color-text-dark);
+          flex-basis: 20%;
+          font-family: inherit;
+          font-size: 24px;
+          height: 55px;
+          cursor: pointer;
+     
+          &:hover{
+               background-color: inherit;
+               font-size: 30px;
+               color: var(--color-text-light);
+               box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
+               10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
+               inset 5px 5px 15px rgba(0, 0, 0, 0.083);
+          }
+     
+          &:active{
+               background-color: var(--background-color-hover);
+               color: var(--color-text-dark);
+          }
+     }
+
+     button.calc-button.st{
+          background-color: #2ca8fb;
+     }
+     
+     button.calc-button.dl{
+          background-color: #ff3333bc;
+     }
+     
+     .calc-button:last-child {
+          backdrop-filter: blur(5.5px);
+          background: var(--background-color-button);
+          border: 1px solid rgba(255, 255, 255, 0.01);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+          color: var(--color-text-dark);
+          background: #d72;
+     }
+     
+     .calc-button:last-child:hover {
+          background-color: inherit;
+          color: var(--background-color-hover);
+          font-size: 35px;
+     }
+     
+     .calc-button:last-child:active{
+          background-color: var(--background-color-hover);
+          color: var(--color-text-dark);
+     }
+     
+     .calc-button-doble {
+          backdrop-filter: blur(5.5px);
+          background: var(--background-color-button);
+          border: 1px solid rgba(255, 255, 255, 0.01);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px var(--box-shadow);
+          color: var(--color-text-dark);
+          flex-basis: 47%;
+          font-family: inherit;
+          font-size: 24px;
+          height: 55px;
+          cursor: pointer;
+     
+          &:hover{
+               background-color: inherit;
+               color: var(--color-text-light);
+               box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
+               10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
+               inset 5px 5px 15px rgba(0, 0, 0, 0.083);
+          }
+     
+          &:active{
+               background-color: var(--background-color-hover);
+               color: var(--color-text-dark);
+          }
+          
+     }
 }
 
-.calc-button {
-     backdrop-filter: blur(5.5px);
-     -webkit-backdrop-filter: blur(5.5px);
-     background: rgba(255, 255, 255, 0.75);
-     border: 1px solid rgba(255, 255, 255, 0.01);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-     color: #232323;
-     flex-basis: 20%;
-     font-family: inherit;
-     font-size: 24px;
-     height: 55px;
-     cursor: pointer;
-}
-button.calc-button.st{
-     background-color: #2ca8fb;
-}
 
-button.calc-button.dl{
-     background-color: #ff3333bc;
-}
 
-.calc-button:last-child {
-     backdrop-filter: blur(5.5px);
-     -webkit-backdrop-filter: blur(5.5px);
-     background: rgba(255, 255, 255, 0.75);
-     border: 1px solid rgba(255, 255, 255, 0.01);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-     color: #232323;
-     background: #d72;
-}
 
-.calc-button:last-child:hover {
-     background-color: inherit;
-     color: #ffef72;
-     font-size: 35px;
-}
-.calc-button:last-child:active{
-     background-color:#ffef72 ;
-     color: #232323;
-}
 
-.calc-button:hover {
-     background-color: inherit;
-     font-size: 30px;
-     color: #fff;
-     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
-     10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
-     inset 5px 5px 15px rgba(0, 0, 0, 0.083);
-}
-.calc-button:active{
-     background-color: #ffef72;
-     color: #232323;
-}
-.calc-button-doble:hover{
-     background-color: inherit;
-     color: #fff;
-     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
-     10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
-     inset 5px 5px 15px rgba(0, 0, 0, 0.083);
-}
-.calc-button-doble {
-     backdrop-filter: blur(5.5px);
-     -webkit-backdrop-filter: blur(5.5px);
-     background: rgba(255, 255, 255, 0.75);
-     border: 1px solid rgba(255, 255, 255, 0.01);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-     color: #232323;
-     flex-basis: 47%;
-     font-family: inherit;
-     font-size: 24px;
-     height: 55px;
-     cursor: pointer;
-}
-
-.calc-button-doble:active{
-     background-color: #ffef72;
-     color: #232323;
-}
