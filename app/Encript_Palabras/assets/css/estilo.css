@@ -7,7 +7,7 @@ html{
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #090909eb;
+    background-color: var(--color-dark);
   }
   
   *, *:before, *:after {
@@ -21,7 +21,8 @@ html{
     --primary-color: #ebebeb;
     --secondary-color: #0a3871;
     --boton-color-hover:#134f98;
-    --border:  #018673;
+    --border:  #fffefef2;
+    --color-dark: #090909eb
   }
   .conteiner{
     display: grid;
@@ -73,7 +74,7 @@ html{
 }
 
 .imagen-b {
-  filter: blur(1px) brightness(95%);
+  filter: blur(0) brightness(75%);
   object-fit: contain;
   width: 100%;
   height: 50%;
@@ -84,7 +85,7 @@ html{
     width: 40%;
     text-align: center;
   }
-  
+
   .article-tres{
     display: none;
   }
@@ -133,7 +134,7 @@ html{
     font-size: 16px;
     border-radius: 24px;
     padding: 5px;
-    margin: 0 10px;
+    margin: 5px 10px;
   }
   .boton:hover{
     background-color: var(--boton-color-hover)
@@ -144,15 +145,18 @@ html{
   }
   
   footer{
-    background-color: var(--border);
+    /* background-color: var(--border); */
     color: var(--primary-color);
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0 ;
     margin-top: 20px;
+    font-size: 1rem;
+    border-top: 2px solid var(--secondary-color);
+    box-shadow: 0px 1px 20px var(--boton-color-hover);
   }
 
 
-  @media (max-width: 950px) and (orientation: portrait){
+  @media (max-width: 665px) and (orientation: portrait){
 
     h1{
       font-size: 4vw;
@@ -203,7 +207,7 @@ html{
     .boton{
       text-align: center;
       font-size: .8rem;
-      width: 115px;
+      width: 150px;
       height: 5vh;
       margin: 0 5px;
     }
@@ -213,8 +217,6 @@ html{
     }
 
   }
-
-
 
   @media (max-width: 480px) and (orientation: portrait){
     h1 {
@@ -312,43 +314,4 @@ html{
       height: 8vh;
     }
     
-  }
-  
-  .bg {
-    z-index: 3;
-    position: inherit;
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation .2s infinite;
-    opacity: .9;
-    visibility: visible;
-  }
-  
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
-
-  @keyframes typing{
-    from { width: 0 }
-  }
-
-  @keyframes blink {
-    50% { border-color: transparent }
   }
