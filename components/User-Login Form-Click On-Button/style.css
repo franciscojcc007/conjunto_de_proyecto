@@ -15,7 +15,8 @@ body{
     --secondary-color:#666666;
     --third-color: #555555;
     --background-color: #333333;
-
+    --btn-color-hover: #047001ea;
+    --btn-color-active: #18b713;
 }
 
 .header{
@@ -34,7 +35,7 @@ body{
 }
 
 .login-button-form .login-button{
-    font-size: 24px;
+    font-size: 1.3rem;
     padding: 12px 40px;
     color: var(--secondary-color);
     font-weight: 600;
@@ -45,7 +46,11 @@ body{
 
 .login-button-form .login-button:hover{
     color: var(--primary-color);
-    background: #047001ea;
+    background: var(--btn-color-hover);
+}
+
+.login-button-form .login-button:active{
+    background: var(--btn-color-active);
 }
 
 .login-form{
@@ -97,8 +102,7 @@ body{
 
 }
 .close:hover{
-    background-color: rgb(255, 255, 56);
-    color: rgb(112, 202, 10);
+    color: var(--btn-color-hover);
 }
 
 
@@ -123,7 +127,7 @@ input[type="password"]{
 }
 
 input[type="submit"]{
-    font-size: 24px;
+    font-size: 1.3rem;
     width: 100%;
     color: var(--third-color);
     font-weight: 600;
@@ -136,7 +140,11 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     color: var(--primary-color);
-    background: #49ff43;
+    background: var(--btn-color-hover);
+}
+
+input[type="submit"]:active{
+    background: var(--btn-color-active);
 }
 
 .login-form .checkbox{
@@ -164,4 +172,16 @@ input[type="submit"]:hover{
 .login-form  .password a{
     color: #ff4367;
     cursor: pointer;
+}
+@media (max-width: 360px) and (orientation: portrait){
+    .header{
+        font-size: 1.2rem;
+    }
+    .login-form{
+        width: 320px;
+    }
+    input.btn{
+        font-size: 1rem;
+    }
+
 }
