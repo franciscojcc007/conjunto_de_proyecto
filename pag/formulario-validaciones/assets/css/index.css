@@ -1,0 +1,10 @@
+#container{
+    background-image: url("../img/potada_primc.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60rem;
+    width: 100%;
+    position: relative;
+    padding: 5rem 0;
+}
