@@ -164,7 +164,7 @@ html{
   }
 
 
-  @media (max-width: 665px) and (orientation: portrait){
+  @media (max-width: 665px){
 
     h1{
       font-size: 4vw;
@@ -226,7 +226,7 @@ html{
 
   }
 
-  @media (max-width: 480px) and (orientation: portrait){
+  @media (max-width: 480px){
     h1 {
       font-size: 5vw;
       margin-bottom: 8vw;
@@ -254,12 +254,15 @@ html{
     .textarea-entrada, .textarea-salida::placeholder{
       font-size: small;
     }
-  
+  .boton{
+    margin-top: 8px;
+  }
     .boton-accion{
       text-align: center;
       font-size: 0.8rem;
       width: 100px;
       height: 6vh;
+    
     }
   
     .titulo-mensaje{
@@ -277,49 +280,3 @@ html{
   }
   
 
-
-  @media (max-height: 480px) and (orientation: landscape){
-  
-    .formulario-encriptacion{
-      width: 50%;
-      text-align: center;
-    }
-    
-    .article-dos,.article-tres{
-      width: 50%;
-      text-align: center;
-    }
-  
-    .textarea-original, .textarea-modificada{
-      height: 80px;
-      font-size: 0.8rem;
-    }
-  
-    .textarea-original, .textarea-modificada::placeholder{
-      font-size: 0.8rem;
-    }
-  
-    .mensaje-info{
-      font-size: 0.8rem;
-    }
-  
-    .parrafo{
-      font-size: 0.7rem;
-    }
-  
-    .label{
-      font-size: 0.8rem;
-    }
-  
-    .imagen-b{
-      width: 50%;
-    }
-  
-    .boton{
-      text-align: center;
-      font-size: .2rem;
-      width: 100px;
-      height: 8vh;
-    }
-    
-  }
