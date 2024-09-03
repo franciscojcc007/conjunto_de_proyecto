@@ -12,12 +12,24 @@
     <link rel="stylesheet" href="./assets/css/componentes/card.css">
     <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
     <link rel="stylesheet" href="./assets/css/componentes/button.css">
+    <link rel="stylesheet" href="./assets/css/componentes/header.css">
 </head>
 
 <body>
+    <header class="cabecalho container">
+        <a href="./index.html"></href><img src="./assets/img/logo gym.svg" alt="Logotipo gym admin" class="cabecalho__logo" /></a>
+        <nav>
+            <ul class="header__list-nav">
+                <li class="header__link"><a href="./index.html">Inicio</a></li>
+                <li class="header__link"><a href="#">Productos</a></li>
+                <!-- <li class="header__link"><a href="./registro.html">Registrarse</a></li> -->
+                <li class="header__link"><a href="#">Sobre el Gym</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="container flex flex--column flex--center">
         <div class="cadastro-cabecalho">
-            <img src="./assets/img/logo gym.svg" alt="Logo Gym" class="registry-header__logo">
+            <!-- <a href="./index.html"><img src="./assets/img/logo gym.svg" alt="Logo Gym" class="registry-header__logo"></a> -->
             <h1 class="registry-header__title">Aficionado del GYM</h1>
         </div>
         <section class="cartao">
@@ -49,14 +61,14 @@
                 <fieldset>
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
-                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento"
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimiento"
                             required data-tipo="nacimiento">
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
                         <input name="phoneNumber" id="phoneNumber" class="input" type="text"
-                            placeholder="Número telefónico" pattern="\d{10}" required minlegth="10" maxlength="10"
+                            placeholder="Número telefónico" pattern="\d{10}" required minlegth="10" maxlength="15"
                             data-tipo="numero">
                         <label class="input-label" for="phoneNumber">Número telefónico</label>
                         <span class="input-message-error">Este campo no es valido</span>
