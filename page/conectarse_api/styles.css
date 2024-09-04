@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-:root{
+:root {
 	--primary-color: #93f718;
 	--secondary-color: #54c80c;
 	--background-color-primary: #ffffff;
@@ -39,7 +39,7 @@ body {
 
 .contenedor .pelicula .poster {
 	width: 100%;
-	height: auto; 
+	height: auto;
 	margin-bottom: 10px;
 	border-radius: 15px;
 	object-fit: cover;
@@ -77,19 +77,20 @@ body {
 .paginacion button:hover {
 	background: var(--secondary-color);
 }
+
 /* Media Queries para tamaños de pantalla específicos */
 @media (max-width: 768px) {
 	.contenedor {
-			gap: 15px;
-			padding: 0 10px;
+		gap: 15px;
+		padding: 0 10px;
 	}
 
 	.paginacion {
-			padding: 5px;
+		padding: 5px;
 	}
 
 	.paginacion button {
-			width: 140px;
-			font-size: 14px;
+		width: 140px;
+		font-size: 14px;
 	}
 }
