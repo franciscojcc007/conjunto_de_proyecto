@@ -1,7 +1,8 @@
 let intervalId;
+const d = document;
 function move() {
     if (!intervalId) {
-        const myBar = document.getElementById("myBar");
+        const myBar = d.getElementById("myBar");
         let width = 0;
         intervalId = setInterval(() => {
             if (width >= 100) {
