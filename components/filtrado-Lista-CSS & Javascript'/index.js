@@ -1,8 +1,9 @@
+const d = document;
 function myFunc(){
     var input, filter, ul, li, a, i, textValue;
-    input = document.getElementById("myInput");
+    input = d.getElementById("myInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("list");
+    ul = d.getElementById("list");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++){
         a = li[i].getElementsByTagName("a")[0];
