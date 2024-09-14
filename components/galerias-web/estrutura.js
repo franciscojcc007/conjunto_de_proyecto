@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
    const d = document;
+   const w = window;
    const modal = d.getElementById("gallery-modal");
    const modalImg = d.querySelector(".modal-img");
    const closeButton = d.querySelector(".close-button");
@@ -23,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
          modal.style.display = "none";
    });
 
-   window.addEventListener("click", function(e) {
+   w.addEventListener("click", function(e) {
          if (e.target === modal) {
             modal.style.display = "none";
          }
    });
 
-   window.addEventListener("keydown", function(e) {
+   w.addEventListener("keydown", function(e) {
          if (modal.style.display === "block") {
             if (e.key === "ArrowRight") {
                updateModalImage((currentIndex + 1) % images.length);
