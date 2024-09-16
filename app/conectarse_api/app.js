@@ -1,6 +1,8 @@
 let pagina = 1;
-const btnAnterior = document.getElementById('btnAnterior');
-const btnSiguiente = document.getElementById('btnSiguiente');
+const d = document;
+
+const btnAnterior = d.getElementById('btnAnterior');
+const btnSiguiente = d.getElementById('btnSiguiente');
 
 btnSiguiente.addEventListener('click', () => {
 	if(pagina < 1000){
@@ -36,7 +38,7 @@ const cargarPeliculas = async() => {
 				`;
 			});
 
-			document.getElementById('contenedor').innerHTML = peliculas;
+			d.getElementById('contenedor').innerHTML = peliculas;
 
 		} else if(respuesta.status === 401){
 			console.log('Pusiste la llave mal');
