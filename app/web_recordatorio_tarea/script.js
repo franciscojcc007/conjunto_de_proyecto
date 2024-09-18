@@ -3,18 +3,19 @@
     import checkComplete from './componentsScript/checkComplete.js';
     import deleteIcon from './componentsScript/deleteIcon.js';
 
-    const btn = document.querySelector('[data-form-btncreate]');
+    const d = document;
+    const btn = d.querySelector('[data-form-btncreate]');
 
     const createtask = (evento) => {
       evento.preventDefault();
-      const input = document.querySelector('[data-form-input]');
+      const input = d.querySelector('[data-form-input]');
       const value = input.value;
-      const list = document.querySelector('[data-list]');
-      const task = document.createElement('li');
+      const list = d.querySelector('[data-list]');
+      const task = d.createElement('li');
       task.classList.add("card");
       input.value = '';
-      const taskContent = document.createElement('div');
-      const titleTask = document.createElement('span');
+      const taskContent = d.createElement('div');
+      const titleTask = d.createElement('span');
       titleTask.classList.add('task');
       titleTask.innerText = value;
       taskContent.appendChild(checkComplete());
