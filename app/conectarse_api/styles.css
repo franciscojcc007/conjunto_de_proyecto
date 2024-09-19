@@ -78,12 +78,13 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	transition: .3s ease all;
+	
+	&:hover{
+		background: var(--secondary-color-bnt);
+		color: var(--background-color-primary);
+	}
 }
 
-.paginacion button:hover {
-	background: var(--secondary-color-bnt);
-	color: var(--background-color-primary);
-}
 
 /* Media Queries para tamaños de pantalla específicos */
 @media (max-width: 768px) {

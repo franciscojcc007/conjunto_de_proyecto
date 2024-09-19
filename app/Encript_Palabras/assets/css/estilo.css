@@ -122,12 +122,13 @@ html{
   
   .textarea-original{
     color: var(--secondary-color);
+    
+    &::placeholder{
+      color: var(--secondary-color);
+    }
   }
   
-  .textarea-original::placeholder{
-    color: var(--secondary-color);
-    
-  }
+  
   
   .textarea-modificada{
     background-color: var(--primary-color);
@@ -143,11 +144,12 @@ html{
     border-radius: 24px;
     padding: 5px;
     margin: 5px 10px;
+    &:hover{
+      background-color: var(--boton-color-hover)
+    }
+    
   }
-  .boton:hover{
-    background-color: var(--boton-color-hover)
-  }
-  
+
   .close-button {
     z-index: 1;
   }
@@ -262,7 +264,6 @@ html{
       font-size: 0.8rem;
       width: 100px;
       height: 6vh;
-    
     }
   
     .titulo-mensaje{
