@@ -1,3 +1,4 @@
+const d = document;
 //creamos un objeto con las llaves
 const llaves = {
     "e": "enter",
@@ -41,11 +42,11 @@ const llaves = {
   
   //Creamos la función para encriptar y la asignamos al boton con onclick
   function obtenerTextoEntrada() {
-    return document.getElementById("textoOriginal").value.trim();
+    return d.getElementById("textoOriginal").value.trim();
   }
   
   function actualizarSalida(texto) {
-    document.getElementById("textoEncriptado").value = texto;
+    d.getElementById("textoEncriptado").value = texto;
   }
   
   function procesar() {
@@ -56,7 +57,7 @@ const llaves = {
     }
     const resultado = encriptar(texto);
     contadorPalabras += contarPalabras(texto);
-    document.getElementById("contadorPalabras").innerText = `Palabras Encriptadas: ${contadorPalabras}`;
+    d.getElementById("contadorPalabras").innerText = `Palabras Encriptadas: ${contadorPalabras}`;
     actualizarSalida(resultado);
   }
   
@@ -72,7 +73,7 @@ const llaves = {
   
  // Creamos la función procesarBotonCopiar para el botón "copiar"
 function btnCopiar() {
-  let texto = document.getElementById("textoEncriptado").value.trim();
+  let texto = d.getElementById("textoEncriptado").value.trim();
   if (!texto) {
     notificarNadaQueCopiar();
     return;
@@ -80,11 +81,11 @@ function btnCopiar() {
   copiarAlPortapapeles(texto);
 }
 function btnLimpiar(){
-  let texto = document.getElementById("textoEncriptado").value.trim();
-  let texto2 = document.getElementById("textoOriginal").value.trim();
-  document.getElementById("textoEncriptado").value = "";
-  document.getElementById("textoOriginal").value = "";
-  document.getElementById("contadorPalabras").innerText = "Palabras Encriptadas";
+  let texto = d.getElementById("textoEncriptado").value.trim();
+  let texto2 = d.getElementById("textoOriginal").value.trim();
+  d.getElementById("textoEncriptado").value = "";
+  d.getElementById("textoOriginal").value = "";
+  d.getElementById("contadorPalabras").innerText = "Palabras Encriptadas";
   contadorPalabras = 0;
 }
 // Creamos la función para copiar al portapapeles
@@ -93,34 +94,34 @@ function copiarAlPortapapeles(texto) {
     return;
   }
 
-  const inputTemp = document.createElement("input");
+  const inputTemp = d.createElement("input");
   inputTemp.value = texto;
-  document.body.appendChild(inputTemp);
+  d.body.appendChild(inputTemp);
   inputTemp.select();
   inputTemp.setSelectionRange(0, 99999); 
-  document.execCommand("copy");
-  document.body.removeChild(inputTemp);
+  d.execCommand("copy");
+  d.body.removeChild(inputTemp);
 
 }
 
   function borrarSegundoTextarea() {
-    let salida = document.getElementById("textoEncriptado");
+    let salida = d.getElementById("textoEncriptado");
     let texto = salida.value.trim();
   
     if (texto === "") {
       mostrarNotificacion("No hay nada que limpiar");
       return;
     }
-  
+
     salida.value = "";
     mostrarNotificacion("Limpieza realizada");
   } 
   function mostrarOcultarDivs() {
     setTimeout(() => {
-      let texto = document.getElementById("textoOriginal").value;
-      let divPasivo = document.getElementById("pasivo");
-      let divActivo = document.getElementById("activo");
-      let textoEncriptado = document.getElementById("textoEncriptado");
+      let texto = d.getElementById("textoOriginal").value;
+      let divPasivo = d.getElementById("pasivo");
+      let divActivo = d.getElementById("activo");
+      let textoEncriptado = d.getElementById("textoEncriptado");
       if (texto == "") {
         divPasivo.style.display = "block";
         divActivo.style.display = "none";
