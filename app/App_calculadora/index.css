@@ -37,8 +37,10 @@ body {
      flex-basis: 400px;
      height: 540px;
      padding: 20px 35px;
-     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
-     10px 10px 70px rgba(116, 115, 115, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+     box-shadow: 
+     25px 25px 75px rgba(0, 0, 0, 0.25),
+     10px 10px 70px rgba(116, 115, 115, 0.25),
+     inset -5px -5px 15px rgba(0, 0, 0, 0.25),
      inset 5px 5px 15px rgba(0, 0, 0, 0.25);
 
      
@@ -101,8 +103,10 @@ body {
                background-color: inherit;
                font-size: 30px;
                color: var(--color-text-light);
-               box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
-               10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
+               box-shadow: 
+               25px 25px 75px rgba(0, 0, 0, 0.061),
+               10px 10px 70px rgba(0, 0, 0, 0.044),
+               inset -5px -5px 15px rgba(0, 0, 0, 0.052),
                inset 5px 5px 15px rgba(0, 0, 0, 0.083);
           }
      
@@ -157,8 +161,10 @@ body {
           &:hover{
                background-color: inherit;
                color: var(--color-text-light);
-               box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.061),
-               10px 10px 70px rgba(0, 0, 0, 0.044), inset -5px -5px 15px rgba(0, 0, 0, 0.052),
+               box-shadow: 
+               25px 25px 75px rgba(0, 0, 0, 0.061),
+               10px 10px 70px rgba(0, 0, 0, 0.044), 
+               inset -5px -5px 15px rgba(0, 0, 0, 0.052),
                inset 5px 5px 15px rgba(0, 0, 0, 0.083);
           }
      
