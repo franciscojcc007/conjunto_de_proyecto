@@ -17,6 +17,7 @@ body{
     --background-color: #333333;
     --btn-color-hover: #047001ea;
     --btn-color-active: #18b713;
+    --caution-color:#ff4367;
 }
 
 .header{
@@ -96,7 +97,7 @@ body{
     top: -20px;
     right: 10px;
     font-size: 50px;
-    color: #ff4367;
+    color: var(--caution-color);
     cursor: pointer;
 
 }
@@ -169,7 +170,7 @@ input[type="submit"]:active{
 }
 
 .login-form  .password a{
-    color: #ff4367;
+    color: var(--caution-color);
     cursor: pointer;
 }
 @media (max-width: 360px) and (orientation: portrait){
