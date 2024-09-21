@@ -1,6 +1,7 @@
+const d = document;
 (() => {
-  const $fetch = document.getElementById("fetch"),
-    $fragment = document.createDocumentFragment();
+  const $fetch = d.getElementById("fetch"),
+    $fragment = d.createDocumentFragment();
 
   //fetch("assets/users.json")
   fetch("https://jsonplaceholder.typicode.com/users")
@@ -13,7 +14,7 @@
       console.log(json);
       //$fetch.innerHTML = json;
       json.forEach((el) => {
-        const $li = document.createElement("li");
+        const $li = d.createElement("li");
         $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
         $fragment.appendChild($li);
       });
@@ -33,8 +34,8 @@
 })();
 
 (() => {
-  const $fetchAsync = document.getElementById("fetch-async"),
-    $fragment = document.createDocumentFragment();
+  const $fetchAsync = d.getElementById("fetch-async"),
+    $fragment = d.createDocumentFragment();
 
   async function getData() {
     try {
@@ -47,7 +48,7 @@
       if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
       json.forEach((el) => {
-        const $li = document.createElement("li");
+        const $li = d.createElement("li");
         $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
         $fragment.appendChild($li);
       });
