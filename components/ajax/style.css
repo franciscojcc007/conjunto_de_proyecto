@@ -21,9 +21,15 @@ small{
 ul li {
   list-style: none;
 }
+ol li{
+  margin-top: 10px;
+}
 
 h2{
   margin-bottom: 10px;
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
 }
 
 a{
