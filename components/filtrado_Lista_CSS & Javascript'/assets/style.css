@@ -10,7 +10,7 @@
 }
 
 #myInput{
-    background-image: url(../img/search.png);
+    background-image: url(./img/search.png);
     background-repeat: no-repeat;
     background-position: 10px 12px;
     width: 100%;
