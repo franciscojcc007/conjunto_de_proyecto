@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+    background: url(./img/fondo-pizza.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 80svh;
+    width: 80svh;
+    max-width: 600px;
+    background-color: rgb(248, 252, 255);
+    border: 2px solid rgb(3, 50, 3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 15px 10px;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+}
+
+.topping {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    height: 80px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.fondo-amarillo {
+    background-color: #5274fa;
+}
+
+.fondo-verde {
+    background-color: #b4b12d;
+}
