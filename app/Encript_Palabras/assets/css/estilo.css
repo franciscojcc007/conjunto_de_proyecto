@@ -167,7 +167,7 @@ footer {
 }
 
 
-@media (max-width > 665px) {
+@media (max-width: 665px) {
 
     h1 {
         font-size: 4vw;
