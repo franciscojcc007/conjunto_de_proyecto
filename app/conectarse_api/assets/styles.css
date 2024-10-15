@@ -87,7 +87,7 @@ body {
 
 
 /* Media Queries para tamaños de pantalla específicos */
-@media (max-width: 768px) {
+@media (width > 768px) {
 	.contenedor {
 		gap: 15px;
 		padding: 0 10px;
