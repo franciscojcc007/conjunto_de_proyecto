@@ -1,13 +1,15 @@
+const d = document;
+
 const generarTabla = () => {
-  const valor = parseInt(document.getElementById("valor").value);
-  const tablaResultado = document.getElementById("tablaResultado");
+  const valor = parseInt(d.getElementById("valor").value);
+  const tablaResultado = d.getElementById("tablaResultado");
   tablaResultado.innerHTML = ""; 
 
-  const fragment = document.createDocumentFragment();
+  const fragment = d.createDocumentFragment();
 
   for (let i = 1; i <= 12; i++) {
     const resultado = valor * i;
-    const row = document.createElement("tr");
+    const row = d.createElement("tr");
     row.innerHTML = `
       <td>${valor}</td>
       <td>${i}</td>
