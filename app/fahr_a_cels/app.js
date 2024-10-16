@@ -1,4 +1,4 @@
-let fahr = parseInt(prompt("ingrese sus datos en fahrenheit"))
+let fahr = parseFloat(prompt("ingrese sus datos en fahrenheit"))
 
 const conversion =(fahr)=>{
     let cels = ( (fahr -32) * (5 / 9)) ;
