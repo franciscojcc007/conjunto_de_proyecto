@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(./img/fondo-pared.jpeg) no-repeat center center /cover ;
+}
+
+.contenedor-principal{
+  width: 80vw;
+  max-width: 600px;
+  min-height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+#cronometro{
+  width: 100%;
+  font-size: 80px;
+  font-family: bold;
+  user-select: none;
+  font-family: arial;
+}
+
+.contenedor-botones{
+  padding: 20px;
+}
+.btn{
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+#btn-inicio-pausa.iniciar,
+#btn-inicio-pausa.iniciar i{
+  background-color: #08e008;
+
+}
+
+#btn-inicio-pausa.pausa,
+#btn-inicio-pausa.pausa i{
+  background-color: #ffdc00;
+}
+#btn-reiniciar{
+  background-color: #ff0000;
+}
+img{
+  width: 100%;
+  height: auto;
+}
