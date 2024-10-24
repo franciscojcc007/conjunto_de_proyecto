@@ -38,5 +38,7 @@ body{
 }
 label, p{
     margin: 20px;
-    
+}
+p{
+    font-family: Arial;
 }
