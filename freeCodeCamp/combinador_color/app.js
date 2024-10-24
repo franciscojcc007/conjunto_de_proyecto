@@ -28,12 +28,12 @@ inputRojo.addEventListener("change", (e) => {
 
 inputVerde.addEventListener("change", (e) => {
   verde = e.target.value;
-  textoRojo.innerText = verde;
+  textoVerde.innerText = verde;
   actualizar(rojo, verde, azul);
 });
 
 inputAzul.addEventListener("change", (e) => {
   azul = e.target.value;
-  textoRojo.innerText = azul;
+  textoAzul.innerText = azul;
   actualizar(rojo, verde, azul);
 });
