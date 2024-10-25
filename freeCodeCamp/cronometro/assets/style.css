@@ -34,23 +34,25 @@ body{
 .contenedor-botones{
   padding: 20px;
 }
+
 .btn{
   width: 80px;
   height: 80px;
   font-size: 50px;
   margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 15px;
   border: none;
 }
-#btn-inicio-pausa.iniciar,
-#btn-inicio-pausa.iniciar i{
-  background-color: #08e008;
 
+#btn-inicio-pausa.iniciar,
+#btn-inicio-pausa.iniciar img{
+  background-color: #08e008;
 }
 
+
 #btn-inicio-pausa.pausa,
-#btn-inicio-pausa.pausa i{
+#btn-inicio-pausa.pausa img{
   background-color: #ffdc00;
 }
 #btn-reiniciar{
