@@ -5,12 +5,14 @@
 
     const d = document;
     const btn = d.querySelector('[data-form-btncreate]');
+    const input = d.querySelector('[data-form-input]');
+    const list = d.querySelector('[data-list]');
+
 
     const createtask = (evento) => {
+      if(input.value){
       evento.preventDefault();
-      const input = d.querySelector('[data-form-input]');
       const value = input.value;
-      const list = d.querySelector('[data-list]');
       const task = d.createElement('li');
       task.classList.add("card");
       input.value = '';
@@ -23,6 +25,10 @@
       task.appendChild(taskContent);
       task.appendChild(deleteIcon());
       list.appendChild(task);
+      }else{
+        alert('por favor agregue una tarea')
+        evento.preventDefault();
+      }
     };
     
     btn.addEventListener('click', createtask);
