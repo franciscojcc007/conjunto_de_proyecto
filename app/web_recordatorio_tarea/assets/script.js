@@ -10,8 +10,8 @@
 
 
     const createtask = (evento) => {
-      if(input.value){
       evento.preventDefault();
+      if(input.value){
       const value = input.value;
       const task = d.createElement('li');
       task.classList.add("card");
@@ -27,7 +27,6 @@
       list.appendChild(task);
       }else{
         alert('por favor agregue una tarea')
-        evento.preventDefault();
       }
     };
     
