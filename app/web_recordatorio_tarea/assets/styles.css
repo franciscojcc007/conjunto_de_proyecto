@@ -55,6 +55,7 @@ form {
     width: 65%;
     border: none;
     margin-left: 15px;
+    border-radius: 5px;
 
     &::placeholder {
         padding: 0px;
@@ -113,6 +114,12 @@ form {
 
 .completeIcon {
     color: var(--color-primary);
+    
+}
+
+.through{
+    text-decoration: line-through;
+    color: #8e8e8e;
 }
 
 .trashIcon:hover {

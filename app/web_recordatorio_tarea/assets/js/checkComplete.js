@@ -1,5 +1,7 @@
+const i = document.createElement("i");
+
 const checkComplete = () => {
-    const i = document.createElement("i");
+
     i.classList.add("far", "fa-check-square", "icon");
     i.addEventListener('click', completeTask);
     return i;
@@ -10,6 +12,10 @@ const checkComplete = () => {
     element.classList.toggle('fas');
     element.classList.toggle('completeIcon');
     element.classList.toggle('far');
+    completeThrough(event)
 }
-
+function completeThrough(e){
+  let task = e.target.nextElementSibling;
+  task.classList.toggle('through')
+}
 export default checkComplete;
