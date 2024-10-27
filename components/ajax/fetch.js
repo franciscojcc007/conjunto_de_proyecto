@@ -62,7 +62,6 @@ const d = document;
       console.log("Esto se ejecutará independientemente del try... catch");
     }
   }
-
   getData();
 })();
 
