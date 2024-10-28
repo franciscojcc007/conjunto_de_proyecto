@@ -88,7 +88,7 @@ form {
 }
 
 .card {
-    width: 95%;
+    width: 98%;
     padding: 15px;
     box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
     display: flex;
@@ -98,6 +98,7 @@ form {
     margin: 5px 0px;
     position: relative;
     background-color: var(--color-secondary);
+    border-radius: 5px;
 }
 
 .task {
@@ -106,7 +107,7 @@ form {
 
 .icon {
     cursor: pointer;
-
+    /* font-weight: 900; */
     &:hover {
         color: var(--color-primary);
     }
@@ -118,7 +119,7 @@ form {
 }
 
 .through{
-    text-decoration: line-through;
+    text-decoration: line-through black;
     color: #8e8e8e;
 }
 
