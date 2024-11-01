@@ -9,8 +9,6 @@
  *   del lenguaje (cadenas de texto, enteros, booleanos...).
  * - Imprime por terminal el texto: "¡Hola, [y el nombre de tu lenguaje]!"
  *
- * ¿Fácil? No te preocupes, recuerda que esta es una ruta de estudio y
- * debemos comenzar por el principio.
 /*
 https://developer.mozilla.org/es/docs/Web/JavaScript
 
