@@ -10,48 +10,48 @@
  *   (y tener en cuenta que cada lenguaje puede poseer más o menos posibilidades)
  *
  */
-let a = 2;
-let b = 3;
-function function1() {}
-function1();
+// let a = 2;
+// let b = 3;
+// function function1() {}
+// function1();
 
-function function2(a, b = null) {
-  return a + b;
-}
-console.log(function2(2));
+// function function2(a, b = null) {
+//   return a + b;
+// }
+// console.log(function2(2));
 
-const function3 = () => {
-  console.log("aro function");
-};
-function3();
-const function4 = function () {};
-function4();
+// const function3 = () => {
+//   console.log("aro function");
+// };
+// function3();
+// const function4 = function () {};
+// function4();
 
-(function () {
-  console.log("Esto se ejecuta de inmediato");
-})();
+// (function () {
+//   console.log("Esto se ejecuta de inmediato");
+// })();
 
-const multipleArgumento = (...names) => {
-  for (argumento of names) {
-    console.log(argumento);
-  }
-};
-multipleArgumento("juan", "jose", "ana");
+// const multipleArgumento = (...names) => {
+//   for (argumento of names) {
+//     console.log(argumento);
+//   }
+// };
+// multipleArgumento("juan", "jose", "ana");
 
-function usoF() {
-  const f = () => console.log("soy yo yo");
-  f();
-}
+// function usoF() {
+//   const f = () => console.log("soy yo yo");
+//   f();
+// }
 
-usoF();
+// usoF();
 // Variable local y global
-var global = 20
-function func() {
-  var local = 10
-  console.log(local, global)
-}
+// var global = 20
+// function func() {
+//   var local = 10
+//   console.log(local, global)
+// }
 
-func()
+// func()
 
 /*
 * DIFICULTAD EXTRA (opcional):
@@ -63,3 +63,19 @@ func()
  *   - La función retorna el número de veces que se ha impreso el número en lugar de los textos.
  */
 
+
+function extra(a , b) {
+  let acc = 0
+  for (let i= 1 ; i <= 100; i++) {
+    if(i % 3 === 0 && i % 5 === 0)console.log(`es ${a} ${b}`)  
+    else if(i % 3 === 0)console.log(a)
+    else if(i % 5 === 0)console.log(b)
+    else {
+      console.log(i)
+      acc += 1
+    }
+  }
+  return acc
+}
+
+console.log(extra("Fizz", "Buzz"))
