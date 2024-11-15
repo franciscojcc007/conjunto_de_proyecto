@@ -78,11 +78,11 @@ function flushOperation(intbuffer) {
     runningTotal /= intbuffer;
   }
 }
-function handleNumber(numerString) {
+function handleNumber(numberString) {
   if (buffer === "0") {
-    buffer = numerString;
+    buffer = numberString;
   } else {
-    buffer += numerString;
+    buffer += numberString;
   }
 }
 function init() {
