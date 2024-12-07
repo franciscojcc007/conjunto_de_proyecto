@@ -1,13 +1,45 @@
 /*
  * EJERCICIO:
- * 1 Muestra ejemplos de creación de todas las estructuras soportadas por defecto
- *   en tu lenguaje.
+ * 1 Muestra ejemplos de creación de todas las estructuras soportadas por defecto en tu lenguaje.
  * 2 Utiliza operaciones de inserción, borrado, actualización y ordenación.
  */
 
-let arr = ["jose", "mateo", "victor"];
+// let obj ={
+//   "nombre": "Juan",
+//   "edad": 25,
+//   "direccion": {
+//     "calle": "calle 1",
+//     "ciudad": "ciudad 1",
+//     "pais": "pais 1"
+//   }
+// }
+// const map = new Map();
+// map.set('clave','valor');
+// map.set(1,'uno');
 
-let lista;
+// console.log(map)
+
+// const numLites =new Set([1,2,2,2,22,2,22,2,2,23,4,3,44]);
+// console.log(numLites);
+
+
+// let num = [2, 4, 6];
+// num.push(8);       // Añadir al final: [2, 4, 6, 8]
+// num.unshift(0);    // Añadir al inicio: [0, 2, 4, 6, 8]
+// num.splice(2, 0, 3); // Insertar en posición 2: [0, 2, 3, 4, 6, 8]
+
+// num.pop();         // Eliminar del final: [0, 2, 3, 4, 6]
+// num.shift();       // Eliminar del inicio: [2, 3, 4, 6]
+// num.splice(1, 2);  // Eliminar 2 elementos desde posición 1: [2, 6]
+
+// num[1] = 5;        // Cambiar el valor en posición 1: [2, 5]
+
+// num = [3, 1, 4, 2];
+// num.sort((a, b) => a - b); // Orden ascendente: [1, 2, 3, 4]
+// num.sort((a, b) => b - a); // Orden descendente: [4, 3, 2, 1]
+
+
+
 
 /*
  * DIFICULTAD EXTRA (opcional):
@@ -21,3 +53,36 @@ let lista;
  *   de 11 dígitos (o el número de dígitos que quieras).
  * 5 También se debe proponer una operación de finalización del programa.
  */
+
+const agenda = ()=>{
+
+  while (true) {
+    console.log("\n1. Buscar contacto")
+    console.log("2. insertar contacto")
+    console.log("3. Actualizar contacto")
+    console.log("4. Eliminar contacto")
+    console.log("5. Finalizar programa")
+
+    
+    const opcion = readline("\n¿Qué operación deseas realizar? ");
+
+    
+    switch (opcion) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        print("saliendo de la agenda")
+        break;
+        
+      default:
+        print("Opción no válida.Las opciones son del 1 al 5");
+    } 
+  }
+
+}
+
+
+
+agenda();
