@@ -36,7 +36,7 @@
 //     console.log(argumento);
 //   }
 // };
-// multipleArgumento("juan", "jose", "ana");
+// multipleArgumento("juan", "José", "ana");
 
 // function usoF() {
 //   const f = () => console.log("soy yo yo");
