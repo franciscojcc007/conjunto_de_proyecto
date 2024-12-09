@@ -7,11 +7,11 @@
  * longitud.✔️
  * concatenación.✔️
  * repetición.✔️
- * recorrido.
+ * recorrido.✔️
  * conversión a mayúsculas y minúsculas.✔️
  * reemplazo.✔️ 
  * división.✔️
- * unión.
+ * unión.✔️
  * interpolación.✔️
  * verificación...✔️
  */
@@ -28,7 +28,6 @@ console.log(string1[3]);
 console.log(string1.length);
 console.log(`${string1} ${string2}`)
 console.log(string1.repeat(3))
-
 console.log(string1.toUpperCase());
 console.log(string1.toLowerCase());
 console.log(string1.replace("Mariana", "Mariana1"));
@@ -36,9 +35,6 @@ console.log(string1.split("i"));
 console.log(arr.join(" "))
 console.log(`name: ${string1} lastName: ${string2}`)
 console.log(string1.includes("a"));
-
-
-
 
 
 
