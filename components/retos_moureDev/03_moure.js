@@ -53,62 +53,90 @@
 const agenda = () => {
   const dict = {};
   const readline = require("readline");
-  let op = 0;
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
 
-  while (true) {
+  const menu = () => {
     console.log("\n1. Buscar contacto");
-    console.log("2. insertar contacto");
+    console.log("2. Insertar contacto");
     console.log("3. Actualizar contacto");
     console.log("4. Eliminar contacto");
     console.log("5. Finalizar programa");
 
-    rl.op("\n¿Qué operación deseas realizar? ");
+    rl.question("\n¿Qué operación deseas realizar?: ", (opcion) => {
+      switch (parseInt(opcion)) {
+        case 1:
+          rl.question("Introduce el nombre del contacto a buscar: ", (name) => {
+            if (dict[name]) {
+              console.log(`El contacto ${name} tiene el número ${dict[name]}`);
+            }else{
+              console.log(`No hay un contacto con el nombre ${name}`);
+            }
+            menu();
+          });
+          break;
 
-    switch (opcion) {
-      case 1:
-        name = readline("Introduce el nombre del contacto a buscar: ");
-        if (dict[name]) {
-          console.log(
-            `El contacto ${name} tiene el número de teléfono ${dict[name]}`
-          );
-        } else {
-          console.log(`No hay un contacto con el nombre ${name}`);
-        }
-      case 2:
-        let name = readline("Introduce un nombre: ");
-        let phono = readline("Introduce un numero: ");
-        if (phono === Number && phono.length > 0 && phono.length <= 11) {
-          dict[name] = phono;
-        } else {
-          console.log(`Error,la longitud ${phono} del teléfono no es correcta`);
-        }
-      case 3:
-        name = readline("Introduce el nombre del contacto a actualizar: ");
-        phono = readline("Introduce el nuevo número de teléfono: ");
-        if (phono === Number && phono.length > 0 && phono.length <= 11) {
-          dict[name] = phono;
-        } else {
-          console.log(`Error,la longitud ${phono} del teléfono no es correcta`);
-        }
-      case 4:
-        name = readline("Introduce el nombre de contacto a eliminar: ");
-        if (dict[name]) {
-          delete dict[name];
-        } else {
-          console.log(`No hay un contacto con el nombre ${name}`);
-        }
-      case 5:
-        print("saliendo de la agenda");
-        break;
+        case 2:
+          rl.question("Introduce un nombre: ", (name) => {
+            rl.question("Introduce un número: ", (phono) => {
+              if (/^\d{1,11}$/.test(phono)) {
+                dict[name] = phono;
+                console.log(`Contacto agregado: ${name} - ${phono}`);
+              }else{
+                console.log(`Error, la longitud o formato del teléfono ${phono} no es correcto`);
+              }
+              menu();
+            });
+          });
+          break;
 
-      default:
-        print("Opción no válida.Las opciones son del 1 al 5");
-    }
-  }
+        case 3:
+          rl.question("Introduce el nombre del contacto a actualizar: ",(name) => {
+              if (dict[name]) {rl.question("Introduce el nuevo número de teléfono: ",(phono) => {
+                    if (/^\d{1,11}$/.test(phono)) {
+                      dict[name] = phono;
+                      console.log(`Contacto actualizado: ${name} - ${phono}`);
+                    }else{
+                      console.log(
+                        `Error, la longitud o formato del teléfono ${phono} no es correcto`
+                      );
+                    }
+                    menu();
+                  });
+              } else {
+                console.log(`No hay un contacto con el nombre ${name}`);
+                menu();
+              }
+            });
+          break;
+
+        case 4:
+          rl.question("Introduce el nombre del contacto a eliminar: ",(name) => {
+              if (dict[name]) {
+                delete dict[name];
+                console.log(`Contacto eliminado: ${name}`);
+              }else{
+                console.log(`No hay un contacto con el nombre ${name}`);
+              }
+              menu();
+            });
+          break;
+
+        case 5:
+          console.log("Saliendo de la agenda.");
+          rl.close();
+          break;
+
+        default:
+          console.log("Opción no válida. Por favor, selecciona entre 1 y 5.");
+          menu();
+      }
+    });
+  };
+
+  menu();
 };
 
 agenda();
