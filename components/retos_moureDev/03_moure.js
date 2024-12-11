@@ -50,6 +50,8 @@
  * 5 También se debe proponer una operación de finalización del programa.
  */
 
+// require("colors");
+
 const agenda = () => {
   const dict = {};
   const readline = require("readline");
@@ -59,7 +61,7 @@ const agenda = () => {
   });
 
   const menu = () => {
-    console.log("\n1. Buscar contacto");
+    console.log(`\n1. Buscar contacto`);
     console.log("2. Insertar contacto");
     console.log("3. Actualizar contacto");
     console.log("4. Eliminar contacto");
