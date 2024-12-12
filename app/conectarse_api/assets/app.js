@@ -1,49 +1,49 @@
-let pagina = 1;
+let page = 1;
 const d = document;
 
-const btnAnterior = d.getElementById("btnAnterior");
-const btnSiguiente = d.getElementById("btnSiguiente");
+const btnPrevious = d.getElementById("btnPrevious");
+const btnFollowing = d.getElementById("btnFollowing");
 
-btnSiguiente.addEventListener("click", () => {
-  if (pagina < 1000) {
-    pagina += 1;
-    cargarPeliculas();
+btnFollowing.addEventListener("click", () => {
+  if (page < 1000) {
+    page += 1;
+    LoadMovie();
   }
 });
 
-btnAnterior.addEventListener("click", () => {
-  if (pagina > 1) {
-    pagina -= 1;
-    cargarPeliculas();
+btnPrevious.addEventListener("click", () => {
+  if (page > 1) {
+    page -= 1;
+    LoadMovie();
   }
 });
 
-const cargarPeliculas = async () => {
+const LoadMovie = async () => {
   try {
-    const respuesta = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=${pagina}`
+    const answer = await fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=${page}`
     );
 
-    // console.log(respuesta);
+    // console.log(answer);
 
     // Si la respuesta es correcta
-    if (respuesta.status === 200) {
-      const datos = await respuesta.json();
+    if (answer.status === 200) {
+      const datos = await answer.json();
 
-      let peliculas = "";
-      datos.results.forEach((pelicula) => {
-        peliculas += `
-					<div class="pelicula">
-						<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
-						<h3 class="titulo">${pelicula.title}</h3>
+      let Movies = "";
+      datos.results.forEach((Movie) => {
+        Movies += `
+					<div class="movie">
+						<img class="poster" src="https://image.tmdb.org/t/p/w500/${Movie.poster_path}">
+						<h3 class="title">${Movie.title}</h3>
 					</div>
 				`;
       });
 
-      d.getElementById("contenedor").innerHTML = peliculas;
-    } else if (respuesta.status === 401) {
+      d.getElementById("container").innerHTML = Movies;
+    } else if (answer.status === 401) {
       console.log("Pusiste la llave mal");
-    } else if (respuesta.status === 404) {
+    } else if (answer.status === 404) {
       console.log("La pelicula que buscas no existe");
     } else {
       console.log("Hubo un error y no sabemos que paso");
@@ -53,4 +53,4 @@ const cargarPeliculas = async () => {
   }
 };
 
-cargarPeliculas();
+LoadMovie();
