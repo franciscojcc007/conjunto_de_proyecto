@@ -18,7 +18,7 @@ body {
 	color: var(--text-color);
 }
 
-.contenedor {
+.container {
 	width: 90%;
 	max-width: 1000px;
 	margin: 40px auto 100px;
@@ -28,22 +28,22 @@ body {
 	padding: 0 10px
 }
 
-.contenedor .pelicula {
+.container .movie {
 	text-align: center;
 }
-.pelicula{
+.movie{
 	background-color: rgb(235, 235, 235);
 	padding: 10px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 	border-radius: 15px;
 
 }
-.contenedor .pelicula .titulo {
+.container .movie .title {
 	font-size: 18px;
 	font-weight: 800;
 }
 
-.contenedor .pelicula .poster {
+.container .movie .poster {
 	width: 100%;
 	height: auto;
 	margin-bottom: 10px;
@@ -51,7 +51,7 @@ body {
 	object-fit: cover;
 }
 
-.paginacion {
+.pagination {
 	position: fixed;
 	bottom: 0;
 	background: var(--background-color-secondary);
@@ -63,7 +63,7 @@ body {
 	border-radius: 5px;
 }
 
-.paginacion button {
+.pagination button {
 	cursor: pointer;
 	border: none;
 	display: flex;
@@ -86,18 +86,18 @@ body {
 }
 
 
-/* Media Queries para tamaños de pantalla específicos */
+/* Media Queries */
 @media (width: 768px) {
-	.contenedor {
+	.container {
 		gap: 15px;
 		padding: 0 10px;
 	}
 
-	.paginacion {
+	.pagination {
 		padding: 5px;
 	}
 
-	.paginacion button {
+	.pagination button {
 		width: 140px;
 		font-size: 14px;
 	}
