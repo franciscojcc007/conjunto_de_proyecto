@@ -11,17 +11,17 @@
 
 <body>
   <header>
-    <div class="contenedor_cabesera">
-      <h1 class="titulo_principal">Tabla de multiplicar</h1>
-      <a class="btn_inicio" href="./index.html" type="button">Inicio</a>
+    <div class="container_header">
+      <h1 class="title_main">Tabla de multiplicar</h1>
+      <a class="btn_home" href="./index.html" type="button">Inicio</a>
     </div>
   </header>
-  <div class="contenedor">
+  <div class="container">
     <section>
-      <div class="contenedor_opciones">
-        <div class="contenedor_label_select">
-          <label class="lab" for="valor">Selecciona un número del 1 al 12:</label>
-          <select id="valor" class="select">
+      <div class="container_options">
+        <div class="container_label_select">
+          <label class="lab" for="value">Selecciona un número del 1 al 12:</label>
+          <select id="value" class="select">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -36,14 +36,14 @@
             <option value="12">12</option>
           </select>
         </div>
-        <div class="contenedor_btn_generar">
-          <button class="btn_generar" onclick="generarTabla()">Generar Tabla</button>
+        <div class="container_btn_generate">
+          <button class="btn_generate" onclick="generarTabla()">Generar Tabla</button>
         </div>
       </div>
     </section>
 
     <section>
-      <table class="tabla">
+      <table class="table">
         <thead>
           <tr>
             <th>Número</th>
@@ -51,7 +51,7 @@
             <th>Resultado</th>
           </tr>
         </thead>
-        <tbody id="tablaResultado">
+        <tbody id="resultTable">
         </tbody>
       </table>
     </section>
