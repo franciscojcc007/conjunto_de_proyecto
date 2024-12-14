@@ -45,7 +45,6 @@ body {
         inset 5px 5px 15px rgba(0, 0, 0, 0.25);
 
 
-
     .screen {
         backdrop-filter: blur(5.5px);
         background: var(--background-color);
@@ -59,7 +58,7 @@ body {
         text-align: right;
         width: auto;
 
-        filter: drop-shadow(0 0 10px rgba(255, 190, 12, 0.752));
+        filter: drop-shadow(0 0 10px rgba(133, 103, 22, 0.752));
     }
 }
 
