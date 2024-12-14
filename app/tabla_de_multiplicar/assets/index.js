@@ -1,22 +1,22 @@
 const d = document;
 
-const generarTabla = () => {
-  const valor = parseInt(d.getElementById("valor").value);
-  const tablaResultado = d.getElementById("tablaResultado");
-  tablaResultado.innerHTML = ""; 
+const generateTable = () => {
+  const value = parseInt(d.getElementById("value").value);
+  const resultTable = d.getElementById("resultTable");
+  resultTable.innerHTML = ""; 
 
   const fragment = d.createDocumentFragment();
 
   for (let i = 1; i <= 12; i++) {
-    const resultado = valor * i;
+    const result = value * i;
     const row = d.createElement("tr");
     row.innerHTML = `
-      <td>${valor}</td>
+      <td>${value}</td>
       <td>${i}</td>
-      <td>${valor} x ${i} = ${resultado}</td>
+      <td>${value} x ${i} = ${result}</td>
       `;
     fragment.appendChild(row);
   }
 
-  tablaResultado.appendChild(fragment);
+  resultTable.appendChild(fragment);
 };

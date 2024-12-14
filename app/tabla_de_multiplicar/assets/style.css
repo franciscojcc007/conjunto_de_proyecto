@@ -51,7 +51,7 @@ header::before {
     top: 0;
 }
 
-.contenedor {
+.container {
     position: relative;
     content: "";
     left: 0;
@@ -60,14 +60,14 @@ header::before {
     top: 0;
 }
 
-.contenedor_cabesera {
+.container_header {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.titulo_principal {
+.title_main {
     color: var(--text-primary-color);
     text-align: center;
     margin-top: 2rem;
@@ -77,7 +77,7 @@ header::before {
         -1px 1px 0 var(--text-border-color), 1px 1px 0 var(--text-border-color);
 }
 
-.btn_inicio {
+.btn_home{
     background-color: var(--primary-color);
     border-radius: 15px;
     color: var(--text-color-btn);
@@ -97,19 +97,19 @@ header::before {
     }
 }
 
-.contenedor {
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.contenedor_opciones {
+.container_options {
     margin-top: 2rem;
     text-align: center;
 }
 
-.contenedor_label_select {
+.container_label_select {
     display: flex;
     align-items: center;
 }
@@ -129,11 +129,11 @@ header::before {
     font-size: 2rem;
 }
 
-.contenedor_btn_generar {
+.container_btn_generate {
     margin-top: 1rem;
 }
 
-.btn_generar {
+.btn_generate {
     background-color: var(--secondary-color);
     border-radius: 15px;
     color: var(--text-color-btn);
@@ -151,7 +151,7 @@ header::before {
     }
 }
 
-.tabla {
+.table {
     margin-top: 2rem;
     color: var(--text-secondary-color);
     font-size: 2rem;
