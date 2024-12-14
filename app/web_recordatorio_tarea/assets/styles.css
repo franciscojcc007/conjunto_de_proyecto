@@ -76,6 +76,11 @@ form {
     }
 }
 
+/* .card-body{
+    background-color: black;
+    resize: none;
+    field-sizing: content;
+} */
 .cardsList {
     width: 95%;
     display: flex;
