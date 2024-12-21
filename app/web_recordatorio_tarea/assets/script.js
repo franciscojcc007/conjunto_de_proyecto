@@ -1,5 +1,5 @@
-import {checkComplete} from "./js/checkComplete.js"
-import {deleteIcon} from "./js/deleteIcon.js"
+import {checkComplete} from "@/js/checkComplete.js"
+import {deleteIcon} from "@/js/deleteIcon.js"
 
 const d = document
 const $btn = d.querySelector('[data-form-btncreate]')
