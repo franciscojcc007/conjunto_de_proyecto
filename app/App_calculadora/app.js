@@ -78,13 +78,11 @@ function flushOperation(intbuffer) {
     runningTotal /= intbuffer
   }
 }
+
 function handleNumber(numberString) {
-  if (buffer === '0') {
-    buffer = numberString
-  } else {
-    buffer += numberString
-  }
+  buffer = buffer === '0' ? numberString : buffer + numberString;
 }
+
 function init() {
   d.querySelector('.calc-buttons').addEventListener('click', function (event) {
     buttonClick(event.target.innerText)
