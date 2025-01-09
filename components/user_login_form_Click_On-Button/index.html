@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostrar formulario || inicio de sesión de usuario</title>
-    <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar formulario || inicio de sesión de usuario</title>
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-    <h2 class="header">Formulario de inicio de sesión</h2>
-    <div class="login-button-form">
-        <button onclick="document.getElementById('user-login').style.display = 'block' " id="login" type="submit"
-            class="login-button">Iniciar sesión</button>
-    </div>
-    <div id="user-login" class="login-form">
-        <form action="" class="login-container">
-            <div class="img-container">
-                <span class="close"
-                    onclick="document.getElementById('user-login').style.display = 'none' ">&times;</span>
-                <img src="./assets/img/servicio-al-cliente.png" alt="">
-            </div>
-            <div class="container">
-                <label for="username">usuario</label>
-                <input type="text" id="username" placeholder="Ingrese el nombre de usuario" required>
-                <label for="password">contraseña</label>
-                <input type="password" id="password" placeholder="Introduzca la contraseña" required>
-                <input type="submit" class="btn" value="Iniciar sesión">
-                <div class="checkbox">
-                    <input type="checkbox"> Recuérdeme
-                </div>
-                <span class="password">Olvidó <a href="#">contraseña ?</a></span>
-            </div>
-        </form>
-    </div>
-    <script src="./assets/index.js"></script>
+  <h2 class="header">Formulario de inicio de sesión</h2>
+  <div class="login-button-form">
+    <button onclick="document.getElementById('user-login').style.display = 'block' " id="login" type="submit"
+      class="login-button">Iniciar sesión</button>
+  </div>
+  <div id="user-login" class="login-form">
+    <form action="" class="login-container">
+      <div class="img-container">
+        <span class="close" onclick="document.getElementById('user-login').style.display = 'none' ">&times;</span>
+        <img src="./assets/img/servicio-al-cliente.png" alt="">
+      </div>
+      <div class="container">
+        <label for="username">usuario</label>
+        <input type="text" id="username" placeholder="Ingrese el nombre de usuario" required>
+        <label for="password">contraseña</label>
+        <input type="password" id="password" placeholder="Introduzca la contraseña" required>
+        <input type="submit" class="btn" value="Iniciar sesión">
+        <div class="checkbox">
+          <input type="checkbox"> Recuérdeme
+        </div>
+        <span class="password">Olvidó <a href="#">contraseña ?</a></span>
+      </div>
+    </form>
+  </div>
+  <script src="./assets/index.js"></script>
 </body>
 
 </html>
