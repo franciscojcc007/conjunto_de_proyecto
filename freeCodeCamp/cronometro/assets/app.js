@@ -10,7 +10,7 @@ let estado = "pausado";
 
 function actualizar() {
   segundos++;
-  if (segundos == 60) {
+  if (segundos === 60) {
     minutos++;
     segundos = 0;
     if (minutos / 60 === 1) {
@@ -52,5 +52,5 @@ btnReiniciar.addEventListener('click', function(){
   btnInicioPausa.innerHTML = '<img src="./assets/img/solar--play-bold.png" alt="icono del boton de play"></img>';
   btnInicioPausa.classList.remove('pausa')
   btnInicioPausa.classList.add('iniciar')
-  estado = 'pausado'
-});
+  estado = 'pausado';
+})
