@@ -1,63 +1,54 @@
-// function canPyramidHeadReach(room) {
-//   const directions = [
-//     [0, 1], // derecha
-//     [1, 0], // abajo
-//     [0, -1], // izquierda
-//     [-1, 0], // arriba
-//   ];
-
-//   const n = room.length;
-//   let start = null;
-//   let target = null;
-
-//   // Encontrar la posición inicial de ▲ y T
-//   for (let i = 0; i < n; i++) {
-//     for (let j = 0; j < n; j++) {
-//       if (room[i][j] === '▲') start = [i, j];
-//       if (room[i][j] === 'T') target = [i, j];
-//     }
-//   }
-
-//   // Si no se encuentra ▲ o T, devolvemos -1
-//   if (!start || !target) return -1;
-
-//   const queue = [[...start, 0]]; // [fila, columna, pasos]
-//   const visited = Array.from({ length: n }, () => Array(n).fill(false));
-//   visited[start[0]][start[1]] = true;
-
-//   while (queue.length > 0) {
-//     const [x, y, steps] = queue.shift();
-
-//     // Si llegamos a la posición de T, devolvemos los pasos
-//     if (x === target[0] && y === target[1]) return steps;
-
-//     for (const [dx, dy] of directions) {
-//       const nx = x + dx;
-//       const ny = y + dy;
-
-//       // Verificar si la celda vecina es válida
-//       if (
-//         nx >= 0 &&
-//         ny >= 0 &&
-//         nx < n &&
-//         ny < n &&
-//         !visited[nx][ny] &&
-//         room[nx][ny] !== '#'
-//       ) {
-//         visited[nx][ny] = true;
-//         queue.push([nx, ny, steps + 1]);
-//       }
-//     }
-//   }
-
-//   // Si no se encuentra un camino, devolvemos -1
-//   return -1;
-// }
-
-
 function escapePyramidHead(room) {
+  const directions = [
+    [0, 1], 
+    [1, 0], 
+    [0, -1], 
+    [-1, 0], 
+  ];
 
-  return -1
+  const n = room.length;
+  let start = null;
+  let target = null;
+
+  // Encontrar la posición inicial de ▲ y T
+  for (let index = 0; index < n * n; index++) {
+    const i = Math.floor(index / n); 
+    const j = index % n;            
+  
+    if (room[i][j] === '▲') start = [i, j];
+    if (room[i][j] === 'T') target = [i, j];
+  }
+  
+
+  const queue = [[...start, 0]];
+  const visited = Array.from({ length: n }, () => Array(n).fill(false));
+  visited[start[0]][start[1]] = true;
+
+  while (queue.length > 0) {
+    const [x, y, steps] = queue.shift();
+
+    // Si llegamos a la posición de T, devolvemos los pasos
+    if (x === target[0] && y === target[1]) return steps;
+    
+    for (const [dx, dy] of directions) {
+      const nx = x + dx;
+      const ny = y + dy;
+      // Verificar si la celda vecina es válida
+      if (
+        nx >= 0 &&
+        ny >= 0 &&
+        nx < n &&
+        ny < n &&
+        !visited[nx][ny] &&
+        room[nx][ny] !== '#'
+      ) {
+        visited[nx][ny] = true;
+        queue.push([nx, ny, steps + 1]);
+      }
+    }
+  }
+
+  return -1;
 }
 
 
