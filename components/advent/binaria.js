@@ -27,6 +27,6 @@ function binarySearch(arr, l, r, x) {
   }
 }
 
-const arr = [2, 10, 4, 1, 20, 9, 14, 16, 5, 7, 17];
+const arr = [1,2,3,4,5,7,8,9];
 console.log(quickSort(arr));
 console.log(binarySearch(arr, 0, arr.length - 1, 2));

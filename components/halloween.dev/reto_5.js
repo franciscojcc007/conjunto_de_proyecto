@@ -55,10 +55,10 @@
 // }
 
 
-// function escapePyramidHead(room) {
+function escapePyramidHead(room) {
 
-//   return -1
-// }
+  return -1
+}
 
 
 const room = [
