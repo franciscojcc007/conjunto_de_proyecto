@@ -1,4 +1,5 @@
 const d = document;
+
 (() => {
   const $fetch = d.getElementById("fetch"),
     $fragment = d.createDocumentFragment();
