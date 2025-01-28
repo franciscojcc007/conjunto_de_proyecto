@@ -13,25 +13,14 @@ body {
     min-height: 100vh;
     overflow: hidden;
     user-select: none;
-    background: #e5e5e5;
-}
-
-.white-bkg {
-    position: absolute;
-    background: #f6f6f6;
-    inset: 0;
-    z-index: -10;
-}
-
-.shadow {
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    background: #aaaaaa;
 }
 
 main {
-    background: url('./img/iphone.webp') no-repeat;
+    background: url('./img/front-view-smartphone-mochup.png') no-repeat;
     background-size: contain;
     width: 320px;
-    height: 640px;
+    height: 645px;
     display: flex;
     position: relative;
 }
@@ -40,12 +29,23 @@ section {
     width: 100%;
     border-radius: 32px;
     display: flex;
-    gap: 24px;
+    gap: 20px;
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    padding: 16px 6px;
-    margin: 24px;
+    padding: 16px 10px;
+    margin: 18px 21px;
+}
+
+.shadow {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.white-bkg {
+    position: absolute;
+    background: #f6f6f6;
+    inset: 0;
+    z-index: -10;
 }
 
 header {
@@ -59,58 +59,12 @@ header {
     }
 }
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    padding: 0 24px;
-    justify-content: center;
-    align-items: center;
-
-    & button {
-        background: url('./img/tinder-icons.webp') no-repeat;
-        background-position: 0px 0px;
-        background-size: 175px;
-        height: 32px;
-        width: 32px;
-        border-radius: 50%;
-        border: 0;
-        cursor: pointer;
-        transition: scale .3s ease;
-
-        &:hover {
-            scale: 1.4;
-        }
-
-        &.is-big {
-            background-size: 250px;
-            width: 48px;
-            height: 48px;
-        }
-
-        &.is-undo {
-            background-position: -140px 0;
-        }
-
-        &.is-remove {
-            background-position: -150px 0;
-        }
-
-        &.is-fav {
-            background-position: -50px 0;
-        }
-
-        &.is-star {
-            background-position: -70px 0px;
-        }
-    }
-}
-
 .cards {
     position: relative;
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    padding: 0 5px;
 
     &>span {
         display: grid;
@@ -205,6 +159,53 @@ footer {
             margin-left: 6px;
             font-size: 18px;
             font-weight: 400;
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 0 24px;
+    justify-content: center;
+    align-items: center;
+
+    & button {
+        background: url('./img/tinder-icons.webp') no-repeat;
+        background-position: 0px 0px;
+        background-size: 175px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        transition: scale .3s ease;
+
+        &:hover {
+            scale: 1.4;
+        }
+
+        &.is-big {
+            background-size: 250px;
+            width: 48px;
+            height: 48px;
+        }
+
+        &.is-undo {
+            background-position: -140px 0;
+        }
+
+        &.is-remove {
+            background-position: -150px 0;
+        }
+
+        &.is-fav {
+            background-position: -50px 0;
+        }
+
+        &.is-star {
+            background-position: -70px 0px;
         }
     }
 }
