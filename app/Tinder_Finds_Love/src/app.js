@@ -1,29 +1,29 @@
-
+const d = document
 const DECISION_THRESHOLD = 75
 
 let isAnimating = false
 let pullDeltaX = 0 // distance from the card being dragged
 
-function startDrag(event) {
+function startDrag(e) {
   if (isAnimating) return
 
   // get the first article element
-  const actualCard = event.target.closest('article')
+  const actualCard = e.target.closest('article')
   if (!actualCard) return
 
   // get initial position of mouse or finger
-  const startX = event.pageX ?? event.touches[0].pageX
+  const startX = e.pageX ?? e.touches[0].pageX
 
   // listen the mouse and touch movements
-  document.addEventListener('mousemove', onMove)
-  document.addEventListener('mouseup', onEnd)
+  d.addEventListener('mousemove', onMove)
+  d.addEventListener('mouseup', onEnd)
 
-  document.addEventListener('touchmove', onMove, { passive: true })
-  document.addEventListener('touchend', onEnd, { passive: true })
+  d.addEventListener('touchmove', onMove, { passive: true })
+  d.addEventListener('touchend', onEnd, { passive: true })
 
-  function onMove(event) {
+  function onMove(e) {
     // current position of mouse or finger
-    const currentX = event.pageX ?? event.touches[0].pageX
+    const currentX = e.pageX ?? e.touches[0].pageX
 
     // the distance between the initial and current position
     pullDeltaX = currentX - startX
@@ -54,13 +54,13 @@ function startDrag(event) {
     choiceEl.style.opacity = opacity
   }
 
-  function onEnd(event) {
+  function onEnd(e) {
     // remove the event listeners
-    document.removeEventListener('mousemove', onMove)
-    document.removeEventListener('mouseup', onEnd)
+    d.removeEventListener('mousemove', onMove)
+    d.removeEventListener('mouseup', onEnd)
 
-    document.removeEventListener('touchmove', onMove)
-    document.removeEventListener('touchend', onEnd)
+    d.removeEventListener('touchmove', onMove)
+    d.removeEventListener('touchend', onEnd)
 
     // saber si el usuario tomo una decisión
     const decisionMade = Math.abs(pullDeltaX) >= DECISION_THRESHOLD
@@ -98,6 +98,6 @@ function startDrag(event) {
   }
 }
 
-document.addEventListener('mousedown', startDrag)
-document.addEventListener('touchstart', startDrag, { passive: true })
+d.addEventListener('mousedown', startDrag)
+d.addEventListener('touchstart', startDrag, { passive: true })
 
