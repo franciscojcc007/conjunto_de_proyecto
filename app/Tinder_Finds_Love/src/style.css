@@ -5,14 +5,14 @@ body {
   min-height: 100vh;
   overflow: hidden;
   user-select: none;
-  background: #736868;
+  background: #edf3e8;
 }
 
 main {
-  background: url('./img/front-view-smartphone-mochup.png') no-repeat;
+  background: url('./img/front-view-smartphone-mockup.png') no-repeat;
   background-size: contain;
-  width: 320px;
-  height: 645px;
+  width: 420px;
+  height: 845px;
   display: flex;
   position: relative;
   
@@ -22,12 +22,12 @@ section {
   width: 100%;
   border-radius: 32px;
   display: flex;
-  gap: 20px;
+  gap: 18px;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  padding: 16px 10px;
-  margin: 18px 21px;
+  padding: 25px 24px;
+  margin: 20px 25px;
   box-shadow:30px 25px 25px rgba(0, 0, 0, 0.404);
 }
 
@@ -48,8 +48,8 @@ header {
   padding-left: 1rem;
 
   & img {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -71,8 +71,8 @@ header {
   }
 
   & article {
-    border-radius: 8px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.116); */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
     cursor: grab;
     overflow: hidden;
     position: absolute;
@@ -162,7 +162,7 @@ header {
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  gap: 10px;
   padding: 0 24px;
   justify-content: center;
   align-items: center;
@@ -170,7 +170,7 @@ footer {
   & button {
     background: url('./img/tinder-icons.webp') no-repeat;
     background-position: 0px 0px;
-    background-size: 175px;
+    background-size: 170px;
     height: 32px;
     width: 32px;
     border-radius: 50%;
@@ -181,6 +181,7 @@ footer {
     &:hover {
       scale: 1.2;
     }
+
     &:active{
       scale: 1;
     }
@@ -192,19 +193,19 @@ footer {
     }
 
     &.is-undo {
-      background-position: -140px 0;
+      background-position: -138px 0;
     }
 
     &.is-remove {
-      background-position: -150px 0;
+      background-position: -155px 0;
     }
 
     &.is-fav {
-      background-position: -50px 0;
+      background-position: -52px 0;
     }
 
     &.is-star {
-      background-position: -70px 0px;
+      background-position: -68px 0px;
     }
   }
 }
