@@ -231,19 +231,105 @@
 // }
 
 // console.log(message); // This will show the result
-let inp = '5'
-let rainfall = parseInt(inp); // Don't change this line
-let rainCondition = "unset";
-// Type your code below
-if(rainfall < 1){
-  rainCondition = "Dry"
-}else if(rainfall >= 1 && rainfall <= 10){
-  rainCondition = "Light rain"
-}else if(rainfall >= 11 && rainfall <= 50){
-  rainCondition = "Moderate Rain"
-}else if(rainfall > 50){
-  rainCondition = "Heavy Rain"
-}
+// let inp = '5'
+// let rainfall = parseInt(inp); // Don't change this line
+// let rainCondition = "unset";
+// // Type your code below
+// if(rainfall < 1){
+//   rainCondition = "Dry"
+// }else if(rainfall >= 1 && rainfall <= 10){
+//   rainCondition = "Light rain"
+// }else if(rainfall >= 11 && rainfall <= 50){
+//   rainCondition = "Moderate Rain"
+// }else if(rainfall > 50){
+//   rainCondition = "Heavy Rain"
+// }
 
-// Don't change the line below
-console.log(rainCondition);
+// // Don't change the line below
+// console.log(rainCondition);
+
+
+// let inp = 95
+// // Get the number grade from the user
+// let numGrade = inp;
+
+// // Convert input to a number
+// numGrade = parseInt(numGrade);
+
+// // Determine the letter grade using a switch statement
+// let letterGrade;
+
+// switch (true) {
+//   // Write your code here
+//   case numGrade >= 90 && numGrade <= 100:
+//     letterGrade = "A";
+//     break;
+//   case numGrade >= 80 && numGrade <= 89 :
+//     letterGrade = "B";
+//     break;
+//   case numGrade >= 70 && numGrade <= 79:
+//     letterGrade = "C";
+//     break;
+//   case numGrade >= 60 && numGrade <= 69:
+//     letterGrade = "D";
+//     break;
+//   case numGrade <= 59:
+//     letterGrade = "F";
+//     break;
+//   default:
+//     letterGrade = "Invalid grade";
+//     break;
+// }
+
+// // Print the letter grade
+// console.log(`Letter grade: ${letterGrade}`);
+
+
+// console.log(2 + 2, '4')
+
+// console.log('Welcome to Coddy!')
+// console.log('JavaScript is fun.')
+
+
+// inp = 5
+// let rnd = inp; // Don't change this line
+
+// console.log("The input is: " + rnd)
+
+
+// let name = "Alice"
+// let age = 30
+// console.log(name)
+// console.log(age)
+// console.log(10,20)
+
+// inp = 5
+// let rnd = inp; // Don't change this line
+// console.log("The input is: " + rnd)
+// if(rnd % 2 === 0){
+//   console.log("The number is even.")
+// }else{
+//   console.log("The number is odd.")
+// }
+
+// "10" + 5
+// console.log("10" + 5) // "105"
+// let inp = ['5' , '3.2']
+// let length = inp[0] // Don't change this line
+// let width = inp[1] // Don't change this line
+
+// // Write code below
+// // console.log(var1 * var2)
+
+// length = parseFloat(length) 
+// width = parseFloat(width)
+
+// let area = length * width
+// let perimeter = 2 * (length + width)
+// console.log(`The area is: ${area} and the perimeter is: ${perimeter}`)
+
+let inp = 25
+let age = parseInt(inp); // Don't change this line
+// Type your code below
+let faltantes = 120 - age
+console.log(`${faltantes} years till 120`)
