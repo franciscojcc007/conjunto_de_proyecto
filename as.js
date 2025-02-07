@@ -217,3 +217,33 @@
 
 // let b = Boolean('false')
 // console.log(b)
+
+// let temperature = 25;
+// let message = ""; // Set the message based on temperature
+
+// // Add your if statements below
+// if (temperature > 30){
+//   message = "Too hot!"
+// }else if(temperature < 10){
+//   message = "Too cold!"
+// }else if(temperature >= 10 && temperature <= 30){
+//   message = "Just right!"
+// }
+
+// console.log(message); // This will show the result
+let inp = '5'
+let rainfall = parseInt(inp); // Don't change this line
+let rainCondition = "unset";
+// Type your code below
+if(rainfall < 1){
+  rainCondition = "Dry"
+}else if(rainfall >= 1 && rainfall <= 10){
+  rainCondition = "Light rain"
+}else if(rainfall >= 11 && rainfall <= 50){
+  rainCondition = "Moderate Rain"
+}else if(rainfall > 50){
+  rainCondition = "Heavy Rain"
+}
+
+// Don't change the line below
+console.log(rainCondition);
