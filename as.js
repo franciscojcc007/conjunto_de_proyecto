@@ -328,8 +328,56 @@
 // let perimeter = 2 * (length + width)
 // console.log(`The area is: ${area} and the perimeter is: ${perimeter}`)
 
-let inp = 25
-let age = parseInt(inp); // Don't change this line
-// Type your code below
-let faltantes = 120 - age
-console.log(`${faltantes} years till 120`)
+// let inp = 25
+// let age = parseInt(inp); // Don't change this line
+// // Type your code below
+// let faltantes = 120 - age
+// console.log(`${faltantes} years till 120`)
+
+
+// inp = 1
+// let num = parseInt(inp); // Don't change this line
+// // Type your code below
+// if (num > 0) {
+//   console.log("T")
+// } else {
+//   console.log("F")
+// }
+
+
+// let inp =[64.3, 9.0, 2]
+// let billAmount = parseFloat(inp[0]); // Don't change this line
+// let tipPercentage = parseFloat(inp[1]); // Don't change this line
+// let numPeople = parseInt(inp[2]); // Don't change this line
+
+// // Type your code below
+// console.log('Bill Split Calculator')
+// let total= billAmount + (billAmount / 100 * tipPercentage)
+// // console.log(total)
+// console.log(`Total (including tip): ${total}`)
+// let split = total / numPeople
+// // console.log(split)
+// console.log( `Each person pays: ${split}`)
+
+// for(let i = 3; i <= 27; i++){
+//   console.log(`Hello Coddy: ${i}`)
+// }
+
+// let result = 1;
+// for (let i = 1; i < 5; i++) {
+//     result *= i;
+//     console.log(result);
+// }
+// console.log(result);
+
+// for(let i = 1; i <= 10; i++){
+//   console.log(`7 x ${i} = ${7 * i}`)
+// }
+
+// let inp = 12
+// let number = parseFloat(inp); // Don't change this line
+// while (number >= 3.5) {
+//   number /= 2
+// }
+
+// console.log(number)
