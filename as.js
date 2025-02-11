@@ -415,3 +415,55 @@
 //   }
 //   console.log(i);
 // }
+
+// let inp = 8
+// let n = parseInt(inp); // Don't change this line
+// let res = 1
+
+// for (let i = 1; i <= n; i++) {
+//   res *= i
+// }
+
+// console.log(res)
+
+
+// let count = 5
+// do {
+//   console.log(count)
+//   count-= 1
+// } while (count > 0);
+
+
+// let count = 10;
+
+// do {
+//   console.log(`Counting down:  ${count}`)
+//   count-= 2
+// } while (count >= 0);
+
+
+// do {
+//     console.log("Counting down:", count);
+//     count -= 2;
+// } while (count >= 0);
+// let inp = 12
+// let n = parseInt(inp); // Don't change this line
+
+// Write your code below
+// for (let x = 1; x < n; x++) {
+//   for (let y = 1; y < n; y++) {
+//     if (x + y === n) {
+//       console.log(`${x} ${y}`);
+//     }
+//   }
+// }
+// Escribe un programa que encuentre todos los pares de factores del uso de números desde hasta .n1n
+
+// Por ejemplo, si , la salida debe ser:n = 12
+// for (let x = 1; x <= n; x++) {
+//   for (let y = 1; y <= n; y++) {
+//     if (x * y === n) {
+//       console.log(`${x} ${y}`);
+//     }
+//   }
+// }
