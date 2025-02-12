@@ -467,3 +467,99 @@
 //     }
 //   }
 // }
+
+// Write the function below
+
+// let inp = 5
+// let n = parseInt(inp); // Don't change this line
+
+// // Execute your function n times with a loop
+// function suma() {
+//   for (let i = 0; i < n; i++) {
+//     let num = 10000
+//     console.log(num * (num + 1) / 2)
+//   }
+// }
+
+// suma()
+
+// function printMessage(){
+//   console.log("This is a reusable function!")
+// }
+
+// printMessage()
+// printMessage()
+// printMessage()
+// let inp = [3,5] 
+// let a = parseInt(inp[0]); // Don't change this line
+// let b = parseInt(inp[1]); // Don't change this line
+// // Type your code below
+
+// function producto(a,b){
+//   return a * b
+// }
+
+// console.log(producto(a, b))
+// let inp = [3,5]
+// let num1 = parseInt(inp[0]); // Don't change this line
+// let num2 = parseInt(inp[1]); // Don't change this line
+// // Type your code below
+
+// function sumRange(start,end){
+//   let sum = 0
+//   for(let i = start; i <= end; i++){
+//     sum += i
+//   }
+//   return (`The sum of numbers from ${start} to ${end} is ${sum}.`)
+// }
+
+// console.log(sumRange(num1, num2))
+
+
+// let inp = 33
+// let num = parseInt(inp); // Don't change this line
+// // Type your code below
+// function square(p) {
+//   return p * p
+// }
+// console.log(square(num))
+
+// let inp = [3, 5, 2]
+// let num1 = parseInt(inp[0]); // Don't change this line
+// let num2 = parseInt(inp[1]); // Don't change this line
+// let num3 = parseInt(inp[2]); // Don't change this line
+// function findMax(a, b, c) {
+//   let max
+//   if (a > b && a > c) {
+//     max = a
+//   } else if (b > a && b > c) {
+//     max = b
+//   } else {
+//     max = c
+//   }
+//   return max
+// }
+
+// console.log(findMax(num1, num2, num3))
+
+
+// function sigma(n) {
+//   // Write code here
+//   let sum = 0
+//   for(let i = 1; i<= n; i++){
+//     sum += i
+//   }
+//   return sum
+// }
+
+// console.log(sigma(9))
+
+
+// Type your code below
+function calculateArea(length, width) {
+  return length * width
+}
+
+// Don't change the lines below
+console.log(calculateArea(5, 10));
+console.log(calculateArea(3, 7));
