@@ -556,10 +556,42 @@
 
 
 // Type your code below
-function calculateArea(length, width) {
-  return length * width
-}
+// function calculateArea(length, width) {
+//   return length * width
+// }
 
-// Don't change the lines below
-console.log(calculateArea(5, 10));
-console.log(calculateArea(3, 7));
+// // Don't change the lines below
+// console.log(calculateArea(5, 10));
+// console.log(calculateArea(3, 7));
+
+// function calculatePrice(price, tax = price * 0.1) {
+//   return price + tax;
+// }
+
+// console.log(calculatePrice(100));  
+// console.log(calculatePrice(100, 20));  
+// console.log(calculatePrice(100, 0));
+
+// let square = (x) => x * x
+// console.log(square(5))
+
+// Type your code below
+// function calculateBMI(weight, height) {
+//   return weight / (height * height)
+// }
+
+// // Don't change the lines below
+// console.log(calculateBMI(70, 1.75));
+// console.log(calculateBMI(80, 1.8));
+
+// Type your code below
+// function calculateVolume(length, width, height) {
+//   return length * width * height
+
+// }
+
+// // Don't change the lines below
+// console.log(calculateVolume(3, 4, 5));
+// console.log(calculateVolume(2, 2, 2));
+// console.log(calculateVolume(1, 4, 2));
+// console.log(calculateVolume(9, 8, 7));
