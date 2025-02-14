@@ -595,3 +595,28 @@
 // console.log(calculateVolume(2, 2, 2));
 // console.log(calculateVolume(1, 4, 2));
 // console.log(calculateVolume(9, 8, 7));
+
+// const sumOfEvens = (n) => {
+//   let sum = 0; 
+//   for (let i = 0; i <= n; i++) {
+//     if (i % 2 === 0) {
+//       sum += i; 
+//     }
+//   }
+//   return sum; 
+// };
+
+// console.log(sumOfEvens(5)); 
+
+// const isValid =(username, password)=>{
+//   let valid = false
+//   if(username === 'user' && password === 'qweasd'){
+//     return valid = true
+//   }else if(username === 'admin'){
+//     return valid = true
+//   }else{
+//     return valid
+//   }
+// }
+// console.log(isValid('user', 'qweasd'))
+// console.log(isValid('admin',''))
