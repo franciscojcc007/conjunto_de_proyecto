@@ -620,3 +620,26 @@
 // }
 // console.log(isValid('user', 'qweasd'))
 // console.log(isValid('admin',''))
+
+// let inp = 100
+// let num = parseInt(inp); // Don't change this line
+
+// console.log("Welcome to FizzBuzz!");
+
+// function fizzbuzz(n) {
+//     let result = ""
+//     if (n % 3 === 0) {
+//         result += "Fizz"
+//     }
+//     if (n % 7 === 0) {
+//         result += "Buzz"
+//     }
+//     if (result === "") {
+//         result = String(n)
+//     }
+//     return result
+// }
+
+// for (let i = 1; i <= num; i++) {
+//     console.log(fizzbuzz(i))
+// }
