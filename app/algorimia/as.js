@@ -621,21 +621,24 @@
 // console.log(isValid('user', 'qweasd'))
 // console.log(isValid('admin',''))
 
-// let inp = 100
+// let inp = 14
 // let num = parseInt(inp); // Don't change this line
 
 // console.log("Welcome to FizzBuzz!");
 
 // function fizzbuzz(n) {
 //     let result = ""
-//     if (n % 3 === 0) {
+//     if (n % 3 == 0) {
 //         result += "Fizz"
 //     }
-//     if (n % 7 === 0) {
+//     if (n % 7 == 0) {
 //         result += "Buzz"
 //     }
-//     if (result === "") {
+//     if (result == "") {
 //         result = String(n)
+//         if (result.includes("3")) {
+//             result = "Almost Fizz"
+//         }
 //     }
 //     return result
 // }
@@ -643,3 +646,27 @@
 // for (let i = 1; i <= num; i++) {
 //     console.log(fizzbuzz(i))
 // }
+// let shoppingList =['bread','eggs','milk','butter']
+// console.log(shoppingList)
+
+// let favoriteColors = ['red','blue','green','yellow']
+// console.log(favoriteColors)
+// let colors = ['red', 'blue', 'green', 'yellow', 'purple']
+// console.log(colors[colors.length - 2])
+
+// function values(arr) {
+//     // Write code here
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i])
+//     }
+// }
+
+// let arr = [1,2,3]
+// values(arr)
+
+// function firstAndLast(arr){
+//     return arr[0] + arr[arr.length - 1];
+// }
+
+// let arr = [10,20,30,40,50]
+// console.log(firstAndLast(arr))
