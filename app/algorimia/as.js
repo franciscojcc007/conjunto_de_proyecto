@@ -680,52 +680,13 @@
 // let s =[1,2,3,4]
 // console.log(checkSizeOfStack(c,s))
 
-// const fun1 = function (name){
-//     console.log(`klk ${name}`)
-// }
+function changeElement(arr, index, newElement) {
+    // Write code here
+    arr[index] = newElement
+    return arr
+}
 
-// fun1("jairo")
-
-// function fun2(fun, name) {
-//     fun(name)
-// }
-
-// fun2(fun1, "junior")
-
-// function fun3(){
-//     return fun1
-// }
-
-// let cont = fun3()
-// cont('mello')
-
-// let longitud = (arr) => arr.length
-// console.log(longitud([1,2,3,]))
-
-
-// (function() {
-//     console.log("IIFE clásico")
-// })();
-
-// (()=>{
-//     console.log("IIFE Arrow")
-// })();
-
-// function list(...name) {
-//     name.forEach(list => console.log(list))
-// }
-
-// function list(...name) {
-//   let arr = name.forEach(list => {
-//     console.log(list)
-//   })
-// }
-
-// list('Carlos','amerce','ana')
-
-// function sum(...number) {
-//   return number.reduce((acc, n) => acc + n, 0);
-// }
-
-// console.log(sum(1,2,3,4,))
-
+let arr = [1,2,3]
+let i = 0
+let newElement = 9
+console.log(changeElement(arr, i, newElement))
