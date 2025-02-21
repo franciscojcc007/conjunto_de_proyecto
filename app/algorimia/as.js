@@ -473,11 +473,13 @@
 // let inp = 5
 // let n = parseInt(inp); // Don't change this line
 
-// // Execute your function n times with a loop
-// function suma() {
+// // // Execute your function n times with a loop
+// function suma() { 
+//   const num = 10000;
+//   const resultado = (num * (num + 1)) / 2;
+  
 //   for (let i = 0; i < n; i++) {
-//     let num = 10000
-//     console.log(num * (num + 1) / 2)
+//     console.log(resultado);
 //   }
 // }
 
@@ -608,18 +610,10 @@
 
 // console.log(sumOfEvens(5)); 
 
-// const isValid =(username, password)=>{
-//   let valid = false
-//   if(username === 'user' && password === 'qweasd'){
-//     return valid = true
-//   }else if(username === 'admin'){
-//     return valid = true
-//   }else{
-//     return valid
-//   }
-// }
-// console.log(isValid('user', 'qweasd'))
-// console.log(isValid('admin',''))
+const isValid = (username, password) => username === 'admin' || (username === 'user' && password === 'qweasd');
+
+console.log(isValid('user', 'qweasd'))
+console.log(isValid('admin',''))
 
 // let inp = 14
 // let num = parseInt(inp); // Don't change this line
@@ -715,10 +709,11 @@
 // console.log(removedClores)
 // console.log(lasColor)
 
-function findElement(arr, num) {
-    return arr.indexOf(num);
-}
+// function findElement(arr, num) {
+//     return arr.indexOf(num);
+// }
 
-let arr = [1,2,3,5]
-let num = 3
-console.log(findElement(arr, num))
+// let arr = [1,2,3,5]
+// let num = 3
+// console.log(findElement(arr, num))
+
