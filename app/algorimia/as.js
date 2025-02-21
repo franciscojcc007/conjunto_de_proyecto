@@ -615,33 +615,33 @@
 // console.log(isValid('user', 'qweasd'))
 // console.log(isValid('admin',''))
 
-let inp = 14
-let num = parseInt(inp); // Don't change this line
+// let inp = 14
+// let num = parseInt(inp); // Don't change this line
 
-function fizzbuzz(number) {
-  let result = "";
-  let isFizzBuzz = false;  // Variable para saber si ya se imprimió Fizz o Buzz
+// function fizzbuzz(number) {
+//   let result = "";
+//   let isFizzBuzz = false;  // Variable para saber si ya se imprimió Fizz o Buzz
 
-  if (number % 3 === 0) {
-      result += "Fizz";
-      isFizzBuzz = true;
-  }
-  if (number % 7 === 0) {
-      result += "Buzz";
-      isFizzBuzz = true;
-  }
+//   if (number % 3 === 0) {
+//       result += "Fizz";
+//       isFizzBuzz = true;
+//   }
+//   if (number % 7 === 0) {
+//       result += "Buzz";
+//       isFizzBuzz = true;
+//   }
 
-  if (!isFizzBuzz) { // Solo ejecuta si no es múltiplo de 3 ni 7
-      let strNum = String(number);
-      result = strNum.includes("3") ? "Almost Fizz" : strNum;
-  }
+//   if (!isFizzBuzz) { // Solo ejecuta si no es múltiplo de 3 ni 7
+//       let strNum = String(number);
+//       result = strNum.includes("3") ? "Almost Fizz" : strNum;
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-for (let i = 1; i <= num; i++) {
-  console.log(fizzbuzz(i));
-}
+// for (let i = 1; i <= num; i++) {
+//   console.log(fizzbuzz(i));
+// }
 
 // let shoppingList =['bread','eggs','milk','butter']
 // console.log(shoppingList)
@@ -720,3 +720,13 @@ for (let i = 1; i <= num; i++) {
 // let num = 3
 // console.log(findElement(arr, num))
 
+let numbers = [40, 10, 30, 20, 50, 30, 10];
+numbers.sort().reverse()
+let firstIndex = numbers.indexOf(30)
+let lastIndex = numbers.lastIndexOf(10)
+let hasHundred = numbers.includes(100)
+
+console.log(numbers)
+console.log(firstIndex)
+console.log(lastIndex)
+console.log(hasHundred)
