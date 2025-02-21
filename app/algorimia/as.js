@@ -691,16 +691,26 @@
 // let newElement = 9
 // console.log(changeElement(arr, i, newElement))
 
-function swapEnds(arr) {
-    if (arr.length < 2) {
-        return arr;
-    }
-    
-    let temp = arr[0]
-    arr[0]= arr[arr.length -1]
-    arr[arr.length -1]= temp
-    return arr
-}
+// function swapEnds(arr) {
+//     if (arr.length < 2) {
+//         return arr;
+//     }
 
-let arr = [1,2,3,4]
-console.log(swapEnds(arr))
+//     let temp = arr[0]
+//     arr[0]= arr[arr.length -1]
+//     arr[arr.length -1]= temp
+//     return arr
+// }
+
+// let arr = [1,2,3,4]
+// console.log(swapEnds(arr))
+
+let colors = ["red", "blue", "green"];
+colors.push("yellow")
+let removedClores = colors.shift("red")
+colors.unshift("purple")
+let lasColor = colors.pop()
+
+console.log(colors)
+console.log(removedClores)
+console.log(lasColor)
