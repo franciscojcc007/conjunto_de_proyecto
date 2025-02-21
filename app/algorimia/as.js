@@ -705,12 +705,20 @@
 // let arr = [1,2,3,4]
 // console.log(swapEnds(arr))
 
-let colors = ["red", "blue", "green"];
-colors.push("yellow")
-let removedClores = colors.shift("red")
-colors.unshift("purple")
-let lasColor = colors.pop()
+// let colors = ["red", "blue", "green"];
+// colors.push("yellow")
+// let removedClores = colors.shift("red")
+// colors.unshift("purple")
+// let lasColor = colors.pop()
 
-console.log(colors)
-console.log(removedClores)
-console.log(lasColor)
+// console.log(colors)
+// console.log(removedClores)
+// console.log(lasColor)
+
+function findElement(arr, num) {
+    return arr.indexOf(num);
+}
+
+let arr = [1,2,3,5]
+let num = 3
+console.log(findElement(arr, num))
