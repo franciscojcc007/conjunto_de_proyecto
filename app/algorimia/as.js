@@ -680,13 +680,27 @@
 // let s =[1,2,3,4]
 // console.log(checkSizeOfStack(c,s))
 
-function changeElement(arr, index, newElement) {
-    // Write code here
-    arr[index] = newElement
+// function changeElement(arr, index, newElement) {
+//     // Write code here
+//     arr[index] = newElement
+//     return arr
+// }
+
+// let arr = [1,2,3]
+// let i = 0
+// let newElement = 9
+// console.log(changeElement(arr, i, newElement))
+
+function swapEnds(arr) {
+    if (arr.length < 2) {
+        return arr;
+    }
+    
+    let temp = arr[0]
+    arr[0]= arr[arr.length -1]
+    arr[arr.length -1]= temp
     return arr
 }
 
-let arr = [1,2,3]
-let i = 0
-let newElement = 9
-console.log(changeElement(arr, i, newElement))
+let arr = [1,2,3,4]
+console.log(swapEnds(arr))
