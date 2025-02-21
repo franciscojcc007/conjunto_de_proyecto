@@ -610,36 +610,39 @@
 
 // console.log(sumOfEvens(5)); 
 
-const isValid = (username, password) => username === 'admin' || (username === 'user' && password === 'qweasd');
+// const isValid = (username, password) => username === 'admin' || (username === 'user' && password === 'qweasd');
 
-console.log(isValid('user', 'qweasd'))
-console.log(isValid('admin',''))
+// console.log(isValid('user', 'qweasd'))
+// console.log(isValid('admin',''))
 
-// let inp = 14
-// let num = parseInt(inp); // Don't change this line
+let inp = 14
+let num = parseInt(inp); // Don't change this line
 
-// console.log("Welcome to FizzBuzz!");
+function fizzbuzz(number) {
+  let result = "";
+  let isFizzBuzz = false;  // Variable para saber si ya se imprimió Fizz o Buzz
 
-// function fizzbuzz(n) {
-//     let result = ""
-//     if (n % 3 == 0) {
-//         result += "Fizz"
-//     }
-//     if (n % 7 == 0) {
-//         result += "Buzz"
-//     }
-//     if (result == "") {
-//         result = String(n)
-//         if (result.includes("3")) {
-//             result = "Almost Fizz"
-//         }
-//     }
-//     return result
-// }
+  if (number % 3 === 0) {
+      result += "Fizz";
+      isFizzBuzz = true;
+  }
+  if (number % 7 === 0) {
+      result += "Buzz";
+      isFizzBuzz = true;
+  }
 
-// for (let i = 1; i <= num; i++) {
-//     console.log(fizzbuzz(i))
-// }
+  if (!isFizzBuzz) { // Solo ejecuta si no es múltiplo de 3 ni 7
+      let strNum = String(number);
+      result = strNum.includes("3") ? "Almost Fizz" : strNum;
+  }
+
+  return result;
+}
+
+for (let i = 1; i <= num; i++) {
+  console.log(fizzbuzz(i));
+}
+
 // let shoppingList =['bread','eggs','milk','butter']
 // console.log(shoppingList)
 
