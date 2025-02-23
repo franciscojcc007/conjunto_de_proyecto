@@ -731,19 +731,66 @@
 // console.log(lastIndex)
 // console.log(hasHundred)
 
-function processArray(arr) {
-  arr.pop();
-  arr.push(10);
-  arr.sort();
+// function processArray(arr) {
+//   arr.pop();
+//   arr.push(10);
+//   arr.sort();
 
-  if (arr.includes(5)) {
-    arr[arr.indexOf(5)] = 50;
-  }
+//   if (arr.includes(5)) {
+//     arr[arr.indexOf(5)] = 50;
+//   }
   
-  arr.reverse();
-  return arr;
+//   arr.reverse();
+//   return arr;
+// }
+// console.log(processArray([1, 2, 3, 4, 5, 6])); // Esperado: [50, 4, 3, 2, 10, 1]
+
+// let inp = 'Bob, Josh, Alexander, Rachel, Jax'
+// let arr = inp.split(", "); // Don't change this line
+// // Write your code below
+
+// let filteredArr = arr.filter(word => word.length > 5);
+
+// console.log(filteredArr);
+// let inp = '1,2,3,4,5,6,7,8,9,10'
+// let inp = '23, 432, 213, 1234, 5555'
+
+// let arr = inp.split(",").map(Number); // Don't change this line
+// let result = []
+// arr.forEach(num=>{
+//   if(num < 50 || num % 5 === 0){ 
+//     result.push(num);
+//   }
+// })
+// console.log(result)
+
+// Write your code below
+// let str = 'I love coding!'
+// function countVowels(str) {
+//   let acc = 0
+//   const vowels = "aeiou";
+//   // Write code here
+//   for (const el of str.toLowerCase()) { 
+//     if (vowels.includes(el)) { 
+//       acc++; 
+//     }
+//   }
+
+//   return acc; 
+// }
+// console.log(countVowels(str))
+
+let str = 'I love coding!'
+function countVowels(str) {
+  let acc = 0
+  const vowels = "aeiou";
+  // Write code here
+  for (const el of str.toLowerCase()) { 
+    if (vowels.includes(el)) { 
+      acc++; 
+    }
+  }
+
+  return acc; 
 }
-console.log(processArray([1, 2, 3, 4, 5, 6])); // Esperado: [50, 4, 3, 2, 10, 1]
-
-
-
+console.log(countVowels(str))
