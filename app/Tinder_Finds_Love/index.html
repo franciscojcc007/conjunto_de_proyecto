@@ -18,54 +18,54 @@
 <body>
   <script type="module" src="./src/app.js"></script>
   <div class="shadow">
-    <main>
-      <section>
-        <div class="white-bkg"></div>
-        <header>
-          <a href="./index.html" ><img src="./src/img/tinder-logo.webp" alt="Tinder Logo" /></a>
+    <main class="main">
+      <section class="main__section">
+        <div class="main__white-bkg"></div>
+        <header class="main__header">
+          <a href="./index.html"><img src="./src/img/tinder-logo.webp" alt="Tinder Logo" /></a>
         </header>
 
         <div class="cards">
-          <article>
+          <article class="card">
             <img src="./src/photos/men-car.jpg" alt="Ramon,Man with black hair and dark skin , 31 years old" />
-            <h2>Ramon <span>28</span></h2>
-            <div class="choice nope">NOPE</div>
-            <div class="choice like">LIKE</div>
+            <h2 class="card__title">Ramon <span class="card__age">28</span></h2>
+            <div class="card__choice card__choice--nope">NOPE</div>
+            <div class="card__choice card__choice--like">LIKE</div>
           </article>
 
-          <article>
+          <article class="card">
             <img src="./src/photos/woman-597173_640.jpg" alt="Eva, Woman, 26 years old" />
-            <h2>Mei <span>34</span></h2>
-            <div class="choice nope">NOPE</div>
-            <div class="choice like">LIKE</div>
+            <h2 class="card__title">Mei <span class="card__age">34</span></h2>
+            <div class="card__choice card__choice--nope">NOPE</div>
+            <div class="card__choice card__choice--like">LIKE</div>
           </article>
 
-          <article>
+          <article class="card">
             <img src="./src/photos/man-3803551_640.jpg" alt="Max,man with white hair ,29 years old" />
-            <h2>Mei <span>34</span></h2>
-            <div class="choice nope">NOPE</div>
-            <div class="choice like">LIKE</div>
+            <h2 class="card__title">Mei <span class="card__age">34</span></h2>
+            <div class="card__choice card__choice--nope">NOPE</div>
+            <div class="card__choice card__choice--like">LIKE</div>
           </article>
 
-          <article>
+          <article class="card">
             <img src="./src/photos/woman-flave.jpg" alt="Mei, Woman Short Hair and Asian Origin, 34 years old" />
-            <h2>Mei <span>34</span></h2>
-            <div class="choice nope">NOPE</div>
-            <div class="choice like">LIKE</div>
+            <h2 class="card__title">Mei <span class="card__age">34</span></h2>
+            <div class="card__choice card__choice--nope">NOPE</div>
+            <div class="card__choice card__choice--like">LIKE</div>
           </article>
 
-          <span>
+          <span class="cards__message">
             No hay más personas cerca de ti...<br />
             Vuelve a intentarlo más tarde
           </span>
         </div>
 
-        <footer>
-          <button class="is-undo" aria-label="undo"></button>
-          <button class="is-remove is-big" aria-label="remove"></button>
-          <button class="is-star" aria-label="star"></button>
-          <button class="is-fav is-big" aria-label="fav"></button>
-          <button class="is-super-fav" aria-label="zap"></button>
+        <footer class="main__footer">
+          <button class="button button--undo" aria-label="undo"></button>
+          <button class="button button--remove button--big" aria-label="remove"></button>
+          <button class="button button--star" aria-label="star"></button>
+          <button class="button button--fav button--big" aria-label="fav"></button>
+          <button class="button button--super-fav" aria-label="zap"></button>
         </footer>
       </section>
     </main>
