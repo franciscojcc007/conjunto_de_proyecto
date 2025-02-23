@@ -477,7 +477,7 @@
 // function suma() { 
 //   const num = 10000;
 //   const resultado = (num * (num + 1)) / 2;
-  
+
 //   for (let i = 0; i < n; i++) {
 //     console.log(resultado);
 //   }
@@ -739,7 +739,7 @@
 //   if (arr.includes(5)) {
 //     arr[arr.indexOf(5)] = 50;
 //   }
-  
+
 //   arr.reverse();
 //   return arr;
 // }
@@ -774,23 +774,39 @@
 //     if (vowels.includes(el)) { 
 //       acc++; 
 //     }
-//   }
+//  
 
 //   return acc; 
 // }
 // console.log(countVowels(str))
 
-let str = 'I love coding!'
-function countVowels(str) {
+// let str = "hello123world"
+// function countVowels(str) {
+//   let acc = 0
+//   const vowels = "12346567890";
+//   // Write code here
+//   for (const el of str.toLowerCase()) { 
+//     if (vowels.includes(el)) { 
+//       acc++; 
+//     }
+//   }
+
+//   return acc; 
+// }
+// console.log(countVowels(str))
+let inp = 'apple pie'
+let text = inp;
+// Write your code below
+function letra(text) {
+  let vowels = "p";
   let acc = 0
-  const vowels = "aeiou";
-  // Write code here
-  for (const el of str.toLowerCase()) { 
-    if (vowels.includes(el)) { 
-      acc++; 
+  for (const el of text.toLowerCase()) {
+    if (vowels.includes(el)) {
+      acc++
     }
   }
-
-  return acc; 
+  return acc
 }
-console.log(countVowels(str))
+
+console.log(letra(text))
+
