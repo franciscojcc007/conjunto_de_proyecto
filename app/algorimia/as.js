@@ -720,13 +720,30 @@
 // let num = 3
 // console.log(findElement(arr, num))
 
-let numbers = [40, 10, 30, 20, 50, 30, 10];
-numbers.sort().reverse()
-let firstIndex = numbers.indexOf(30)
-let lastIndex = numbers.lastIndexOf(10)
-let hasHundred = numbers.includes(100)
+// let numbers = [40, 10, 30, 20, 50, 30, 10];
+// numbers.sort().reverse()
+// let firstIndex = numbers.indexOf(30)
+// let lastIndex = numbers.lastIndexOf(10)
+// let hasHundred = numbers.includes(100)
 
-console.log(numbers)
-console.log(firstIndex)
-console.log(lastIndex)
-console.log(hasHundred)
+// console.log(numbers)
+// console.log(firstIndex)
+// console.log(lastIndex)
+// console.log(hasHundred)
+
+function processArray(arr) {
+  arr.pop();
+  arr.push(10);
+  arr.sort();
+
+  if (arr.includes(5)) {
+    arr[arr.indexOf(5)] = 50;
+  }
+  
+  arr.reverse();
+  return arr;
+}
+console.log(processArray([1, 2, 3, 4, 5, 6])); // Esperado: [50, 4, 3, 2, 10, 1]
+
+
+
