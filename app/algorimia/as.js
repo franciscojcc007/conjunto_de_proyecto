@@ -794,19 +794,90 @@
 //   return acc; 
 // }
 // console.log(countVowels(str))
-let inp = 'apple pie'
-let text = inp;
-// Write your code below
-function letra(text) {
-  let vowels = "p";
-  let acc = 0
-  for (const el of text.toLowerCase()) {
-    if (vowels.includes(el)) {
-      acc++
-    }
-  }
-  return acc
-}
 
-console.log(letra(text))
+// let inp = 'apple pie'
+// let text = inp;
+// // // Write your code below
+// function letra(text) {
+//   let vowels = "p";
+//   let acc = 0
+//   for (const el of text.toLowerCase()) {
+//     if (vowels.includes(el)) {
+//       acc++
+//     }
+//   }
+//   return acc
+// }
 
+// console.log(letra(text))
+// let inp = '1, 2, 3, 4, 5, 6, 7,'
+// let arr = inp.split(", ").map(Number);
+// // Write your code below
+// function matricesCortadas(arr) {
+//   let mid = Math.floor(arr.length / 2);
+  
+//   if (arr.length % 2 !== 0) {
+//     return arr.slice(mid - 1, mid + 2);
+//   } else {
+//     return arr.slice(mid - 1, mid + 1);
+//   }
+// }
+
+// console.log(matricesCortadas(arr))
+
+
+// let numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+// let newNumbers= numbers.slice(2,7)
+// console.log(newNumbers)
+
+// let numbers = [1, 2, 3, 4, 5];
+// let newNumbers = numbers.concat([6, 7, 8])
+// console.log(newNumbers)
+// let string = newNumbers.join(",")
+// console.log(string)
+// let extraer = newNumbers.slice(0,3)
+// console.log(extraer)
+// numbers.splice(1, 1, 99)
+// console.log(numbers)
+// let sentence ='Coding is super fun'
+
+// function formatSentence(sentence){
+//   let words = sentence.split(" ")
+//   let newWords = words.join("-")
+//   return newWords
+// }
+
+
+// console.log(formatSentence(sentence))
+
+// let numbers = [1, 2, 3, 4, 5];
+// let newNumbers = numbers.map(num => num * 3)
+// console.log(newNumbers)
+// let mayorQue = numbers.filter(num => num > 3)
+// console.log(mayorQue)
+
+// function transformArray(arr) {
+//   let arrFilter = arr.filter(num => num >= 10)
+//   let arrMap = arrFilter.map(num2 => num2 * 2)
+//   return arrMap
+// }
+
+// console.log(transformArray([5, 12, 8, 20, 7, 15]))
+
+// function transformArray(arr) {
+//   return arr
+//       .filter(num => num >= 10)
+//       .map(num => num * 2);
+// }
+
+// let inp =['1, 2, 3 , 4, 5','3, 4, 6']
+// let arr1 = inp[0].split(", ").map(Number);
+// let arr2 = inp[1].split(", ").map(Number);
+// // Write your code below
+// function matrices(arr1 , arr2){
+//   let incluidos = arr1.filter(num => arr2.indexOf(num) === -1)
+//   return incluidos
+// }
+
+
+// console.log(matrices(arr1, arr2))
