@@ -7,7 +7,7 @@ let pullDeltaX = 0
 function startDrag(e) {
   if (isAnimating) return
 
-  const actualCard = e.target.closest('article')
+  const actualCard = e.target.closest('.card')
   if (!actualCard) return
 
   const startX = e.pageX ?? e.touches[0].pageX
@@ -34,8 +34,8 @@ function startDrag(e) {
     const isRight = pullDeltaX > 0
 
     const choiceEl = isRight
-      ? actualCard.querySelector('.choice.like')
-      : actualCard.querySelector('.choice.nope')
+      ? actualCard.querySelector('.card__choice--like')
+      : actualCard.querySelector('.card__choice--nope')
 
     choiceEl.style.opacity = opacity
   }
@@ -51,32 +51,30 @@ function startDrag(e) {
 
     if (decisionMade) {
       const goRight = pullDeltaX >= 0
-      actualCard.classList.add(goRight ? 'go-right' : 'go-left')
+      actualCard.classList.add(goRight ? 'card--go-right' : 'card--go-left')
       actualCard.addEventListener('transitionend', () => {
         actualCard.remove()
       })
     } else {
-      actualCard.classList.add('reset')
-      actualCard.classList.remove('go-right', 'go-left')
-      actualCard.querySelectorAll('.choice').forEach(choice => {
+      actualCard.classList.add('card--reset')
+      actualCard.classList.remove('card--go-right', 'card--go-left')
+      actualCard.querySelectorAll('.card__choice').forEach(choice => {
         choice.style.opacity = 0
       })
     }
 
-
     actualCard.addEventListener('transitionend', () => {
       actualCard.removeAttribute('style')
-      actualCard.classList.remove('reset')
+      actualCard.classList.remove('card--reset')
       pullDeltaX = 0
       isAnimating = false
     })
 
     actualCard
-      .querySelectorAll(".choice")
+      .querySelectorAll(".card__choice")
       .forEach((el) => (el.style.opacity = 0));
   }
 }
 
 d.addEventListener('mousedown', startDrag)
 d.addEventListener('touchstart', startDrag, { passive: true })
-
