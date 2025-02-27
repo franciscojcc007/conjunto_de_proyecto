@@ -164,7 +164,7 @@
 // }else if(wind >= 8 && wind <= 31){
 //   condition = "Breeze";
 // }else if(wind >= 32 && wind <=63){
-//   condition = "Gale"; 
+//   condition = "Gale";
 // }else{
 //   condition = "Storm";
 // }
@@ -321,7 +321,7 @@
 // // Write code below
 // // console.log(var1 * var2)
 
-// length = parseFloat(length) 
+// length = parseFloat(length)
 // width = parseFloat(width)
 
 // let area = length * width
@@ -474,7 +474,7 @@
 // let n = parseInt(inp); // Don't change this line
 
 // // // Execute your function n times with a loop
-// function suma() { 
+// function suma() {
 //   const num = 10000;
 //   const resultado = (num * (num + 1)) / 2;
 
@@ -492,7 +492,7 @@
 // printMessage()
 // printMessage()
 // printMessage()
-// let inp = [3,5] 
+// let inp = [3,5]
 // let a = parseInt(inp[0]); // Don't change this line
 // let b = parseInt(inp[1]); // Don't change this line
 // // Type your code below
@@ -570,8 +570,8 @@
 //   return price + tax;
 // }
 
-// console.log(calculatePrice(100));  
-// console.log(calculatePrice(100, 20));  
+// console.log(calculatePrice(100));
+// console.log(calculatePrice(100, 20));
 // console.log(calculatePrice(100, 0));
 
 // let square = (x) => x * x
@@ -599,16 +599,16 @@
 // console.log(calculateVolume(9, 8, 7));
 
 // const sumOfEvens = (n) => {
-//   let sum = 0; 
+//   let sum = 0;
 //   for (let i = 0; i <= n; i++) {
 //     if (i % 2 === 0) {
-//       sum += i; 
+//       sum += i;
 //     }
 //   }
-//   return sum; 
+//   return sum;
 // };
 
-// console.log(sumOfEvens(5)); 
+// console.log(sumOfEvens(5));
 
 // const isValid = (username, password) => username === 'admin' || (username === 'user' && password === 'qweasd');
 
@@ -758,7 +758,7 @@
 // let arr = inp.split(",").map(Number); // Don't change this line
 // let result = []
 // arr.forEach(num=>{
-//   if(num < 50 || num % 5 === 0){ 
+//   if(num < 50 || num % 5 === 0){
 //     result.push(num);
 //   }
 // })
@@ -770,13 +770,13 @@
 //   let acc = 0
 //   const vowels = "aeiou";
 //   // Write code here
-//   for (const el of str.toLowerCase()) { 
-//     if (vowels.includes(el)) { 
-//       acc++; 
+//   for (const el of str.toLowerCase()) {
+//     if (vowels.includes(el)) {
+//       acc++;
 //     }
-//  
+//
 
-//   return acc; 
+//   return acc;
 // }
 // console.log(countVowels(str))
 
@@ -785,13 +785,13 @@
 //   let acc = 0
 //   const vowels = "12346567890";
 //   // Write code here
-//   for (const el of str.toLowerCase()) { 
-//     if (vowels.includes(el)) { 
-//       acc++; 
+//   for (const el of str.toLowerCase()) {
+//     if (vowels.includes(el)) {
+//       acc++;
 //     }
 //   }
 
-//   return acc; 
+//   return acc;
 // }
 // console.log(countVowels(str))
 
@@ -815,7 +815,7 @@
 // // Write your code below
 // function matricesCortadas(arr) {
 //   let mid = Math.floor(arr.length / 2);
-  
+
 //   if (arr.length % 2 !== 0) {
 //     return arr.slice(mid - 1, mid + 2);
 //   } else {
@@ -881,3 +881,43 @@
 
 
 // console.log(matrices(arr1, arr2))
+// console.log('z' < 't')
+
+// let lista = []
+
+// function addItem(item) {
+//   lista = [...lista, item]
+//   console.log(`${item} added to the grocery list.`)
+// }
+
+// function removeItem(item) {
+//   if(lista.indexOf(item) === -1){
+//     console.log(`${item} is not in the grocery list.`)
+//   }else{
+//     lista = lista.filter(el => el !== item)
+//     console.log(`${item} removed from the grocery list.`)
+//   }
+// }
+
+// function viewList(item) {
+//   if(lista.length === 0){
+//     console.log('The grocery list is empty.')
+//   }else{
+//     console.log('Grocery List:')
+//     lista.forEach((el , i)=> {
+//       console.log(`${i + 1}. ${el}`)
+//     })
+//   }
+// }
+
+// viewList();
+// addItem("Milk");
+// addItem("Bread");
+// addItem("Eggs");
+// viewList();
+// removeItem("Bread");
+// viewList();
+// removeItem("Cheese");
+
+let greeting = 'hi'.repeat(3) + '!';
+console.log(greeting)
