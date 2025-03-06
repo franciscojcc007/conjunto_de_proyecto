@@ -919,5 +919,69 @@
 // viewList();
 // removeItem("Cheese");
 
-let greeting = 'hi'.repeat(3) + '!';
-console.log(greeting)
+// let greeting = 'hi'.repeat(3) + '!';
+// console.log(greeting)
+// let word = 'code';
+// let wordword= word += word[0];
+// console.log(wordword)
+
+
+// console.log('na'.repeat(2) + ' Batman!');
+
+// let inp = 5
+// let n = parseInt(inp);
+
+// function imprimirPiramide(n) {
+//   let piramide = '';
+//   for (let i = 1; i <= n; i++) {
+//     piramide += '*'.repeat(i) + '\n';
+//   }
+//   return piramide;
+// }
+
+// console.log(imprimirPiramide(n))
+
+// let n = parseInt(inp); // Don't change this line
+
+// let rows = Math.floor(n / 2) + 1;
+// for (let i = 0; i < rows; i++) {
+//   console.log("*".repeat(2 * i + 1));
+// }
+// let numbers = [1, 2, 3, 4, 5]
+
+// function doubleOdds(numbers) {
+//   for (let i = 0; i <= numbers.length; i++) {
+//     if (numbers[i] % 2 === 1) {
+//       numbers[i] *= 2
+//     }
+//   }
+//   return numbers
+// }
+
+// console.log(doubleOdds(numbers))
+
+// let prices = [10, 20, 5, 15];
+// let items = ["Notebook", "Pen", "Eraser", "Bag"];
+// let budget = 10;
+
+
+// function analyzeBudget(prices, items, budget) {
+//   let acc = 0;
+//   let affordableItems = [];
+//   let outOfBudgetItems = [];
+
+//   for (let i = 0; i < items.length; i++) {
+//     if (prices[i] <= budget) {
+//       affordableItems.push(items[i]);
+//       acc += prices[i];
+//     } else {
+//       outOfBudgetItems.push(items[i]);
+//     }
+//   }
+
+//   console.log(`Affordable items: ${affordableItems.join(", ")}`);
+//   console.log(`Total budget needed: ${acc}`);
+//   console.log(`Items out of budget: ${outOfBudgetItems.length}`);
+// }
+
+// analyzeBudget(prices, items, budget);
