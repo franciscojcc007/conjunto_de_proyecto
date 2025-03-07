@@ -23,7 +23,8 @@ Clase 2 - Estructuras avanzadas (05/02/2025)
 // 10. Transforma el mapa en un objeto, a continuación, transforma el objeto en un mapa con clave el email de cada usuario y como valor todos los datos del usuario
 
 
-<!-- /*
+<!-- 
+/*
 Clase 2 - Estructuras avanzadas (05/02/2025)
 */
 
@@ -171,4 +172,5 @@ console.log(objectFromMap)
 // Objeto a Map
 
 const mapFromObject = new Map(Object.entries(objectFromMap))
-console.log(mapFromObject) -->
+console.log(mapFromObject) 
+-->
