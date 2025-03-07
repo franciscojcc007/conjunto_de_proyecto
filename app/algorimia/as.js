@@ -922,8 +922,8 @@
 // let greeting = 'hi'.repeat(3) + '!';
 // console.log(greeting)
 // let word = 'code';
-// let wordword= word += word[0];
-// console.log(wordword)
+// let wordWord= word += word[0];
+// console.log(wordWord)
 
 
 // console.log('na'.repeat(2) + ' Batman!');
@@ -985,3 +985,46 @@
 // }
 
 // analyzeBudget(prices, items, budget);
+
+
+// function countUniqueVowels(str) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+//     let acc = 0
+//     // Write code here
+//     for (let i = 0; i < str.length; i++) {
+//         if(vowels.includes(str[i])){
+//             str = [...new Set(str)]
+//             acc += str[i].length
+//         }
+//     }
+//     return acc
+// }
+// // Do not write anything outside function
+
+// function countUniqueVowels(str) {
+//     const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+//     let uniqueVowels = new Set();
+    
+//     for (let char of str) {
+//         if (vowels.has(char)) {
+//             uniqueVowels.add(char);
+//         }
+//     }
+    
+//     return uniqueVowels.size;
+// }
+
+// console.log(countUniqueVowels('hello world'))
+
+
+// let names= ["John", "Jane", null, "Jim"]
+
+// function greetAll(names) {
+//     // Write your code here
+//     for (let i = 0; i < names.length; i++) {
+//         console.log(`Hello, ${names[i]}!`)
+//     }
+// }
+//   // Do not write anything outside function
+
+// greetAll(names)
