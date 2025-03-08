@@ -1,6 +1,7 @@
-export default function listGifts(letter) {
-  
-  return {}
+function listGifts(letter) {
+  let arr = letter.split(' ')
+  // arr = arr.filter((el) =>  )
+  console.log(arr)
 }
 
 const carta = 'bici coche balón _playstation bici coche peluche'
