@@ -1004,27 +1004,52 @@
 // function countUniqueVowels(str) {
 //     const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
 //     let uniqueVowels = new Set();
-    
+
 //     for (let char of str) {
 //         if (vowels.has(char)) {
 //             uniqueVowels.add(char);
 //         }
 //     }
-    
+
 //     return uniqueVowels.size;
 // }
 
 // console.log(countUniqueVowels('hello world'))
 
-
 // let names= ["John", "Jane", null, "Jim"]
 
 // function greetAll(names) {
 //     // Write your code here
-//     for (let i = 0; i < names.length; i++) {
-//         console.log(`Hello, ${names[i]}!`)
-//     }
+//     names.forEach(name => console.log(`Hello, ${name}!`));
 // }
 //   // Do not write anything outside function
 
 // greetAll(names)
+
+// function alternateCase(str) {
+//   // Write your code here
+//   let newStr = ''
+//   for (let i = 0; i < str.length; i++) {
+//     if(i % 2 === 0){
+//       newStr += str[i].toUpperCase()
+//     }else{
+//       newStr += str[i].toLowerCase()
+//     }
+//   }
+//   return newStr
+// }
+// // Do not write anything outside function
+
+// console.log(alternateCase('programming'))
+
+function stringWeaver(str1, str2) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  // Write your code here
+  let clearStr1 = str1.replace(/[0-9]/g, '')
+  let clearStr2 = str2.replace(/[0-9]/g, '')
+
+}
+// Do not write anything outside function
+
+console.log(stringWeaver('h2ello','w1orld'))
