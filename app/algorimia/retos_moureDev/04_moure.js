@@ -47,18 +47,49 @@ console.log(string1.includes('a'))
  * 3 Isogramas
  */
 
-let word1 = 'mano'
-let word2 = 'ana'
-
-function wordChecker(word1, word2) {
-    if (word1 === word1.split('').reverse().join('')) {
-        console.log('Es palíndromo')
-    } else if (word2 === word1.split('').sort().join('')) {
-        console.log('Es anagrama')
-    } else if (word1.length === new Set(word1).size) {
-        console.log('Es isograma')
-    } else {
-        console.log('No es nada')
-    }
+function isPalindrome(word) {
+  return word === word.split('').reverse().join('');
 }
 
+function isAnagrama(word1, word2) {
+  return word1.split('').sort().join('') === word2.split('').sort().join('');
+}
+
+function isIsograma(word) {
+  return new Set(word).size === word.length;
+}
+
+function wordChecker(word1, word2 = '') {
+  if (!word1) {
+    console.log("La primera palabra no puede estar vacía.");
+    return;
+  }
+
+  word1 = word1.toLowerCase();
+  word2 = word2.toLowerCase();
+
+  let results = [];
+
+  if (isPalindrome(word1)) {
+    results.push(`"${word1}" es un palíndromo.`);
+  }
+
+  if (word2 && isAnagrama(word1, word2)) {
+    results.push(`"${word1}" y "${word2}" son anagramas.`);
+  }
+
+  if (isIsograma(word1)) {
+    results.push(`"${word1}" es un isograma.`);
+  }
+
+  if (results.length === 0) {
+    results.push(`"${word1}" no es un palíndromo, ni un isograma, ni un anagrama de "${word2}".`);
+  }
+
+  console.log(results.join(' '));
+}
+
+
+wordChecker("amor", "roma");
+// wordChecker("reconocer");
+// wordChecker("isograma");
