@@ -1042,14 +1042,14 @@
 
 // console.log(alternateCase('programming'))
 
-function stringWeaver(str1, str2) {
-  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  // Write your code here
-  let clearStr1 = str1.replace(/[0-9]/g, '')
-  let clearStr2 = str2.replace(/[0-9]/g, '')
+// function stringWeaver(str1, str2) {
+//   const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+//   const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+//   // Write your code here
+//   let clearStr1 = str1.replace(/[0-9]/g, '')
+//   let clearStr2 = str2.replace(/[0-9]/g, '')
 
-}
-// Do not write anything outside function
+// }
+// // Do not write anything outside function
 
-console.log(stringWeaver('h2ello','w1orld'))
+// console.log(stringWeaver('h2ello','w1orld'))
