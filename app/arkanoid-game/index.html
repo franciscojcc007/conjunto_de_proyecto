@@ -233,7 +233,7 @@
 
   // a que velocidad de fps queremos que renderice nuestro juego
   const fps = 60
-  
+
   let msPrev = window.performance.now()
   let msFPSPrev = window.performance.now() + 1000;
   const msPerFrame = 1000 / fps
@@ -244,7 +244,7 @@
 
   function draw() {
     if (gameOver) return
-    
+
     window.requestAnimationFrame(draw)
 
     const msNow = window.performance.now()
@@ -257,8 +257,7 @@
 
     frames++
 
-    if (msFPSPrev < msNow)
-    {
+    if (msFPSPrev < msNow) {
       msFPSPrev = window.performance.now() + 1000
       framesPerSec = frames;
       frames = 0;
