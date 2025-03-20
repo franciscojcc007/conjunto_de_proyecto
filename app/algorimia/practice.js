@@ -1263,13 +1263,31 @@
 // Error
 // account.balance = -10
 
-
-
-
-
 function reverseVowels(str) {
-    // Write your code here
-
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+    let chars = str.split('');
+    let left = 0, right = chars.length - 1;
+    
+    while (left < right) {
+        if (!vowels.has(chars[left])) {
+            left++;
+            continue;
+        }
+        if (!vowels.has(chars[right])) {
+            right--;
+            continue;
+        }
+        
+        [chars[left], chars[right]] = [chars[right], chars[left]];
+        left++;
+        right--;
+    }
+    
+    return chars.join('');
 }
 
-// console.log(reverseVowels('hello'))
+// Ejemplos de uso
+console.log(reverseVowels("hello")); // "holle"
+console.log(reverseVowels("programación")); // "pregramacinó"
+
+
