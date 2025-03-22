@@ -1263,31 +1263,53 @@
 // Error
 // account.balance = -10
 
-function reverseVowels(str) {
-    const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
-    let chars = str.split('');
-    let left = 0, right = chars.length - 1;
+// function reverseVowels(str) {
+//     const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+//     let chars = str.split('');
+//     let left = 0, right = chars.length - 1;
     
-    while (left < right) {
-        if (!vowels.has(chars[left])) {
-            left++;
-            continue;
-        }
-        if (!vowels.has(chars[right])) {
-            right--;
-            continue;
-        }
+//     while (left < right) {
+//         if (!vowels.has(chars[left])) {
+//             left++;
+//             continue;
+//         }
+//         if (!vowels.has(chars[right])) {
+//             right--;
+//             continue;
+//         }
         
-        [chars[left], chars[right]] = [chars[right], chars[left]];
-        left++;
-        right--;
-    }
+//         [chars[left], chars[right]] = [chars[right], chars[left]];
+//         left++;
+//         right--;
+//     }
     
-    return chars.join('');
+//     return chars.join('');
+// }
+
+// // Ejemplos de uso
+// console.log(reverseVowels("hello")); // "holle"
+// console.log(reverseVowels("programación")); // "pregramacinó"
+
+
+function getPercentageRounds(percentage) {
+    const totalRounds = 10; // Número total de círculos
+    const filledRounds = Math.round(percentage * totalRounds);
+    
+    let result = "";
+
+    for (let i = 0; i < totalRounds; i++) {
+        if (i < filledRounds) {
+            result += "🔵";
+        } else {
+            result += "⚪";
+        }
+    }
+
+    return result;
 }
 
-// Ejemplos de uso
-console.log(reverseVowels("hello")); // "holle"
-console.log(reverseVowels("programación")); // "pregramacinó"
-
-
+// Ejemplos de uso:
+console.log(getPercentageRounds(0.1));      
+console.log(getPercentageRounds(0.2));   
+console.log(getPercentageRounds(0.7));   
+console.log(getPercentageRounds(1));      
