@@ -1,41 +1,43 @@
-/*
+/_
 Clase 3 - Objetos y Clases avanzadas (12/02/2025)
-*/
+_/
 
 // Clases avanzadas
 
 class Person {
-    constructor(name, age) {
-        this.name = name
-        this.age = age
-    }
+constructor(name, age) {
+this.name = name
+this.age = age
+}
 
     greet() {
         console.log(`Hola, soy ${this.name}`)
     }
+
 }
 
 const person = new Person("Brais", 37)
 person.greet()
 
 person.sayAge = function () {
-    console.log(`Tengo ${this.age} años`)
+console.log(`Tengo ${this.age} años`)
 }
 person.sayAge()
 
 // - Abstracción
 
 class Animal {
-    constructor(name) {
-        if (new.target === Animal) {
-            throw new Error("No se puede instanciar una clase abstracta")
-        }
-        this.name = name
-    }
+constructor(name) {
+if (new.target === Animal) {
+throw new Error("No se puede instanciar una clase abstracta")
+}
+this.name = name
+}
 
     makeSound() {
         throw new Error("Este método tiene que ser implementado por la subclase")
     }
+
 }
 
 // Error
@@ -49,6 +51,7 @@ class Cat extends Animal {
     makeSound() {
         console.log("Miau!")
     }
+
 }
 
 class Dog extends Animal {
@@ -56,6 +59,7 @@ class Dog extends Animal {
     makeSound() {
         console.log("Guau!")
     }
+
 }
 
 const cat = new Cat("MoureCat")
@@ -69,9 +73,9 @@ dog.makeSound()
 // - Mixins
 
 const FlyMixin = {
-    fly() {
-        console.log(`${this.name} está volando`)
-    }
+fly() {
+console.log(`${this.name} está volando`)
+}
 }
 
 class Bird extends Animal { }
@@ -102,6 +106,7 @@ class Session {
         this.name = name
         Session.instance = this
     }
+
 }
 
 const session1 = new Session("Brais Moure")
@@ -119,14 +124,15 @@ console.log(session2 === session3)
 const ID = Symbol("id")
 
 class User {
-    constructor(name) {
-        this.name = name
-        this[ID] = Math.random()
-    }
+constructor(name) {
+this.name = name
+this[ID] = Math.random()
+}
 
     getId() {
         return this[ID]
     }
+
 }
 
 const user = new User("Brais")
@@ -151,22 +157,22 @@ console.log(anotherCar instanceof Car)
 // - Proxy
 
 const proxy = {
-    get(target, property) {
-        console.log(`Se accede a la propiedad ${property}`)
-        return target[property]
-    },
-    set(target, property, value) {
-        if (property === "balance" && value < 0) {
-            throw new Error("El saldo no puede ser negativo")
-        }
-        target[property] = value
-    }
+get(target, property) {
+console.log(`Se accede a la propiedad ${property}`)
+return target[property]
+},
+set(target, property, value) {
+if (property === "balance" && value < 0) {
+throw new Error("El saldo no puede ser negativo")
+}
+target[property] = value
+}
 }
 
 class BankAccount {
-    constructor(balance) {
-        this.balance = balance
-    }
+constructor(balance) {
+this.balance = balance
+}
 }
 
 const account = new Proxy(new BankAccount(100), proxy)
@@ -178,9 +184,9 @@ console.log(account.balance)
 // Error
 // account.balance = -10
 
-/*
+/_
 Clase 3 - Objetos y Clases avanzadas (12/02/2025)
-*/
+_/
 
 // Objetos avanzados
 
@@ -189,18 +195,18 @@ Clase 3 - Objetos y Clases avanzadas (12/02/2025)
 // Prototipos
 
 let person = {
-    name: "Brais",
-    age: 37,
-    greet() {
-        console.log(`Hola, soy ${this.name}`)
-    }
+name: "Brais",
+age: 37,
+greet() {
+console.log(`Hola, soy ${this.name}`)
+}
 }
 
-console.log(person.__proto__)
+console.log(person.**proto**)
 console.log(Object.getPrototypeOf(person))
 
 person.sayAge = function () {
-    console.log(`Tengo ${this.age} años`)
+console.log(`Tengo ${this.age} años`)
 }
 
 console.log(person)
@@ -224,12 +230,12 @@ programmer.sayAge()
 // - Métodos estáticos y de instancia
 
 function Person(name, age) {
-    this.name = name
-    this.age = age
+this.name = name
+this.age = age
 }
 
 Person.prototype.greet = function () {
-    console.log(`Hola, soy ${this.name}`)
+console.log(`Hola, soy ${this.name}`)
 }
 
 let newPerson = new Person("Brais", 37)
