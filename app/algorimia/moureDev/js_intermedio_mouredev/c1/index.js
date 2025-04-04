@@ -23,6 +23,13 @@ function multiplicar(num1){
 console.log(multiplicar(2)(5)(6))
 
 // 3. Desarrolla una función recursiva que calcule la potencia de un número elevado a un exponente
+function recursiva(num, ex){
+  if(ex === 0)return 1;
+    return num * recursiva(num, ex -1)
+}
+
+console.log(recursiva(5, 4))
+
 
 
 // 4. Crea una función createCounter() que reciba un valor inicial y retorne un objeto con métodos para increment(), decrement() y getValue(), utilizando un closure para mantener el estado
