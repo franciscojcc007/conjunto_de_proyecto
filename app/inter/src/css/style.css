@@ -1,10 +1,65 @@
-div{
-  font-size:1.5em;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
-section img{
-  width:100%;
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
-section{
-  border:1px solid gray;
-  padding:20px;
+
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.product-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.product-box header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #004080;
+}
+
+.precio {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.detalles p {
+  margin: 0.5rem 0;
+}
+
+.detalles strong {
+  color: #004080;
+}
+
+figure {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+figure img {
+  max-width: 75%;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
