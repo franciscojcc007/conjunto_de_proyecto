@@ -25,10 +25,29 @@ cuentaRegresiva(100);
 *   sucesión de Fibonacci (la función recibe la posición).
 */
 
-const factorial = (num) => {
-  if (num === 0 || num === 1) return 1
-  return num * factorial(num - 1)
-}
+const factorial = (num, acc = 1) => {
+  if (typeof num !== 'number' || num < 0 || !Number.isInteger(num)) {
+    throw new Error('El parámetro debe ser un número entero no negativo.');
+  }
+  if (num <= 1) return acc;
+  return factorial(num - 1, num * acc);
+};
 
-let result = factorial(-5)
-console.log(result)
+
+
+let resultFactorial = factorial(5)
+console.log(resultFactorial)
+
+const fibonacci = (num, memo = {}) => {
+  if (typeof num !== 'number' || num < 0 || !Number.isInteger(num)) {
+    throw new Error('El parámetro debe ser un número entero no negativo.');
+  }
+  if (num <= 1) return num;
+  if (memo[num]) return memo[num];
+  memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+  return memo[num];
+};
+
+
+let resultFibonacci = fibonacci(3)
+console.log(resultFibonacci)
