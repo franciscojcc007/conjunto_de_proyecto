@@ -1,5 +1,6 @@
 // Valor a modificar
-let nota=10;
+let nota=8;
+const d = document;
 
 /*
 A mostrar en el <div class="resultado">
@@ -17,3 +18,22 @@ Menos de 0 o más de 10: "No te flipes"
 /* Usar sólo TERNARIOS
 (...) ? :
 */
+
+(nota < 0 || nota > 10)
+?dibujar('no te flipes')
+:(nota < 5)
+    ?dibujar('suspendido')
+    :(nota < 7)
+      ?dibujar('Aprobado')
+      :(nota < 9)
+        ?dibujar('Notable')
+        :dibujar('Excelente')
+
+function dibujar(valor){
+  
+  (nota >= 5 && nota <= 10)
+  ? d.querySelector('.resultado').innerHTML = `<div class="aprobado">¡¡Has APROBADO con ${nota}!!</div>`
+  : d.querySelector('.resultado').innerHTML = `<div class="suspendido">Has suspendido con ${nota}</div>`
+  
+  d.querySelector('.nota').innerHTML = valor;
+}
