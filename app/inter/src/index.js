@@ -1,7 +1,6 @@
 let user = "frank";
 let purchasedProduct = 1;
 const designatedDiscount = 0.1;
-let discountedPrice;
 const products = [
   {
     product: "Pantalón",
