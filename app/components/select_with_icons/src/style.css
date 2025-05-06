@@ -1,0 +1,52 @@
+@supports (appearance: base-select) {
+    .custom-select {
+      /* 
+        new customizable appearance assignment.
+        this changes what can go inside <select> and 
+        exposes parts you can target and style
+      */
+      &, &::picker(select) {
+        appearance: base-select;
+      }
+      
+      /* nice layout for the selected state */
+      selectedcontent {
+        display: flex;
+        align-items: center;
+        gap: .5ch;
+        
+        /* hide anything not an svg */
+        > :not(svg) {
+          display: none;
+        }
+      }
+      
+      /* icon at the end with grid */
+      option {
+        display: grid;
+        grid-template-columns: [icon] auto [content] 1fr [mark] auto;
+        
+        &::checkmark {
+          grid-area: 1 / mark;
+        }
+      }
+    }
+  }
+  
+  
+  @layer support {
+    html {
+      block-size: 100%;
+      color-scheme: dark light;
+    }
+  
+    body {
+      min-block-size: 100%;
+      font-family: system-ui, sans-serif;
+  
+      display: flex;
+      place-content: center;
+      place-items: center;
+      gap: 5vmin;
+    }
+  }
