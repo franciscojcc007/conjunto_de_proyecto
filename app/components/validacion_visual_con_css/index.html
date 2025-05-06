@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación Visual con CSS</title>
+
+  <style>
+    body{
+      background: #000;
+      color: #fff;
+    }
+
+    /* :has(:focus:invalid) → Cambia el color del texto del label a rojo (tomato) si el input tiene el foco y es inválido. */
+    label:has(:focus:invalid) {
+      color: tomato;
+    }
+
+    /* :has(:focus:valid) → Cambia el color del texto del label a verde si el input tiene el foco y es válido.  */
+    label:has(:focus:valid) {
+      color: green;
+    }
+
+    /* :has(:focus-visible:invalid) input → Cambia el outline del input a rosa (pink) si es visible, tiene el foco y es inválido. */
+    label:has(:focus-visible:invalid) input {
+      outline-color: rgb(244, 147, 163);
+    }
+
+    /* :has(:focus-visible:valid) input → Cambia el outline del input a verde si es visible, tiene el foco y es válido. */
+    label:has(:focus-visible:valid) input {
+      outline-color: green;
+    }
+
+    input {
+      padding: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label>
+      Tu email:
+      <input type="email" required>
+    </label>
+  </form>
+
+</body>
+
+</html>
