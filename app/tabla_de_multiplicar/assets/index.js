@@ -1,6 +1,7 @@
 const d = document
+d.querySelector(".btn_generate").addEventListener("click",generateTable)
 
-const generateTable = () => {
+function generateTable () {
   const value = parseInt(d.getElementById('value').value)
   const resultTable = d.getElementById('resultTable')
   resultTable.innerHTML = ''; 
