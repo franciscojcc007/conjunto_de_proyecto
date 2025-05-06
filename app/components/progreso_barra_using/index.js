@@ -1,5 +1,7 @@
 let intervalId;
 const d = document;
+d.querySelector(".btn-click").addEventListener("click",move);
+
 function move() {
     if (!intervalId) {
         const myBar = d.getElementById("myBar");
