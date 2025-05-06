@@ -81,7 +81,7 @@ function copiarAlPortapapeles(texto) {
   d.body.removeChild(inputTemp)
 }
 
-function mostrarOcultarDivs() {
+d.mostrarOcultarDivs=function () {
   setTimeout(() => {
     let texto = d.getElementById('textoOriginal').value
     let divPasivo = d.getElementById('pasivo')
