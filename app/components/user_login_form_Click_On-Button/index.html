@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -12,13 +12,12 @@
 <body>
   <h2 class="header">Formulario de inicio de sesión</h2>
   <div class="login-button-form">
-    <button onclick="document.getElementById('user-login').style.display = 'block' " id="login" type="submit"
-      class="login-button">Iniciar sesión</button>
+    <button type="submit" class="login-button login">Iniciar sesión</button>
   </div>
-  <div id="user-login" class="login-form">
+  <div id="user-login" class="login-form modal-open">
     <form action="" class="login-container">
       <div class="img-container">
-        <span class="close" onclick="document.getElementById('user-login').style.display = 'none' ">&times;</span>
+        <span class="close">&times;</span>
         <img src="./src/img/servicio-al-cliente.png" alt="">
       </div>
       <div class="container">
