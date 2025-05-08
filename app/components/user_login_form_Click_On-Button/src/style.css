@@ -7,7 +7,7 @@
 
 body{
     background: var(--background-color);
-    width: 100%;
+    width: 90%;
     min-height: 50%;
 }
 :root{
@@ -22,9 +22,9 @@ body{
 
 .header{
     text-align: center;
-    padding-top: 25px;
-    margin-top: 20px;
-    font-size: 36px;
+    padding-top: 20px;
+    margin-top: 15px;
+    font-size: 2rem;
     color: var(--primary-color);
 }
 
@@ -32,7 +32,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 70vh;
 }
 
 .login-button-form .login-button{
