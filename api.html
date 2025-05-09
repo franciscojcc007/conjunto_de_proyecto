@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API</title>
+</head>
+
+<body>
+  <main>
+    <img alt="imagen de gato">
+    <button type="button">otros</button>
+  </main>
+  <script>
+    const d = document
+    const urlApi = "https://api.thecatapi.com/v1/images/search?limit=3"
+    // fetch(urlApi)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     const img = d.querySelector('img')
+    //     img.src = data[0].url;
+    //   })
+
+    const img = document.querySelector('img')
+    img.src = "https://cdn2.thecatapi.com/images/250.jpg"
+    async function llamadaApi(){
+      try {
+        const res = await fetch(urlApi)
+        const data = await res.json()
+        const img = d.querySelector('img')
+        img.src = data[0].url;
+      } catch (error) {
+        console.log(error);
+      }
+      
+    }
+    const btn = d.querySelector('button')
+    btn.addEventListener('click', llamadaApi)
+  </script>
+</body>
+
+</html>
