@@ -1,6 +1,6 @@
 let page = 1
 const d = document
-
+import { API_KEY } from './config.js';
 const btnPrevious = d.getElementById('btnPrevious')
 const btnFollowing = d.getElementById('btnFollowing')
 
@@ -21,7 +21,7 @@ btnPrevious.addEventListener('click', () => {
 const LoadMovie = async () => {
   try {
     const answer = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=${page}`
+       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=es-MX&page=${page}`
     )
 
     // console.log(answer)
