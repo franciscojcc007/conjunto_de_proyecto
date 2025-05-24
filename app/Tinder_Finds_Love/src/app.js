@@ -40,7 +40,7 @@ function startDrag(e) {
     choiceEl.style.opacity = opacity
   }
 
-  function onEnd(e) {
+  function onEnd() {
 
     d.removeEventListener('mousemove', onMove)
     d.removeEventListener('mouseup', onEnd)
