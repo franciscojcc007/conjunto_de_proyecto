@@ -13,7 +13,7 @@ const colorAleatorio = ()=>{
     }
     return colorGuardado;
 }
-bnt.addEventListener('click',function (params) {
+bnt.addEventListener('click',function () {
   let colorString = colorAleatorio();
   // text.style.color = colorString;
   text.textContent = colorString;
