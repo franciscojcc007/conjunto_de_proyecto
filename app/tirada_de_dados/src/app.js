@@ -1,5 +1,5 @@
 const cube = document.getElementById('cube');
-const body = document.body; // Referencia al fondo de la página
+const body = document.body; 
 
 cube.addEventListener('click', () => {
   const randomFace = Math.floor(Math.random() * 6) + 1;
