@@ -127,7 +127,7 @@ function handleDragStart(event) {
     event.dataTransfer.setData('text/plain', draggedElement.src)
 }
 
-function handleDragEnd(event) {
+function handleDragEnd() {
     draggedElement = null
     sourceContainer = null
 }

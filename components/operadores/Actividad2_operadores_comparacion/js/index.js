@@ -7,7 +7,7 @@ const PASSWORD_CORRECTO = "1234";
 /* Estos son los datos del usuario
 (modifícalos para comprobar que todo funciona correctamente)*/
 
-const NOMBRE = "soy frank";
+const NOMBRE = "soy rank";
 const PIN = 1;
 const PASSWORD = "1234";
 

@@ -1291,25 +1291,48 @@
 // console.log(reverseVowels("programación")); // "pregramacinó"
 
 
-function getPercentageRounds(percentage) {
-    const totalRounds = 10; // Número total de círculos
-    const filledRounds = Math.round(percentage * totalRounds);
+// function getPercentageRounds(percentage) {
+//     const totalRounds = 10; // Número total de círculos
+//     const filledRounds = Math.round(percentage * totalRounds);
     
-    let result = "";
+//     let result = "";
 
-    for (let i = 0; i < totalRounds; i++) {
-        if (i < filledRounds) {
-            result += "🔵";
-        } else {
-            result += "⚪";
-        }
-    }
+//     for (let i = 0; i < totalRounds; i++) {
+//         if (i < filledRounds) {
+//             result += "🔵";
+//         } else {
+//             result += "⚪";
+//         }
+//     }
 
-    return result;
+//     return result;
+// }
+
+// // Ejemplos de uso:
+// console.log(getPercentageRounds(0.1));      
+// console.log(getPercentageRounds(0.2));   
+// console.log(getPercentageRounds(0.7));   
+// console.log(getPercentageRounds(1));      
+// const first = (callback) => {
+// setTimeout(() => {
+//   console.log('Primero')
+//   callback()
+// }, 1000)
+// }
+
+// const second = () => {
+// console.log('Segundo')
+// }
+
+
+function prometeMeAmistad() {
+return new Promise((resolve, reject) => {
+  if (Math.random() < 0.8) {
+    resolve("Soy tu amigo");
+  } else {
+    reject(new Error("No puedo ser tu amigo"));
+  }
+});
 }
 
-// Ejemplos de uso:
-console.log(getPercentageRounds(0.1));      
-console.log(getPercentageRounds(0.2));   
-console.log(getPercentageRounds(0.7));   
-console.log(getPercentageRounds(1));      
+prometeMeAmistad()
