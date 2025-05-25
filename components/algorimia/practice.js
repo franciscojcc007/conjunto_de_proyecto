@@ -1335,4 +1335,19 @@ return new Promise((resolve, reject) => {
 });
 }
 
+function agregarEmojis(mensaje) {
+return new Promise((resolve) => {
+  resolve(`${mensaje} 😊`);
+});
+}
+
 prometeMeAmistad()
+
+.then(respuesta => agregarEmojis(respuesta))
+.then(mensaje => {
+  console.log(mensaje);
+  return Promise.resolve(true);
+})
+.then(ok => console.log("¿Se completó todo correctamente?", ok))
+.catch(error => console.error("Error en alguna de las promesas:", error))
+.finally(() => console.log("Fin de la promesa"));
