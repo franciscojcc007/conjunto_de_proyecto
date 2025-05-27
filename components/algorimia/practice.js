@@ -1325,29 +1325,42 @@
 // }
 
 
-function prometeMeAmistad() {
-return new Promise((resolve, reject) => {
-  if (Math.random() < 0.8) {
-    resolve("Soy tu amigo");
-  } else {
-    reject(new Error("No puedo ser tu amigo"));
-  }
-});
+// function prometeMeAmistad() {
+// return new Promise((resolve, reject) => {
+//   if (Math.random() < 0.8) {
+//     resolve("Soy tu amigo");
+//   } else {
+//     reject(new Error("No puedo ser tu amigo"));
+//   }
+// });
+// }
+
+// function agregarEmojis(mensaje) {
+// return new Promise((resolve) => {
+//   resolve(`${mensaje} 😊`);
+// });
+// }
+
+// prometeMeAmistad()
+
+// .then(respuesta => agregarEmojis(respuesta))
+// .then(mensaje => {
+//   console.log(mensaje);
+//   return Promise.resolve(true);
+// })
+// .then(ok => console.log("¿Se completó todo correctamente?", ok))
+// .catch(error => console.error("Error en alguna de las promesas:", error))
+// .finally(() => console.log("Fin de la promesa"));
+let precio = 100
+
+const calcularImpuesto  =  async (precio)=>{
+  return precio * 0.10
 }
 
-function agregarEmojis(mensaje) {
-return new Promise((resolve) => {
-  resolve(`${mensaje} 😊`);
-});
+const calculoFinal = async(precio)=>{
+  const impuesto = await calcularImpuesto(precio)
+  const total = precio + impuesto
+  console.log(`el precio es ${precio} mas el impuesto es ${total}`)
 }
 
-prometeMeAmistad()
-
-.then(respuesta => agregarEmojis(respuesta))
-.then(mensaje => {
-  console.log(mensaje);
-  return Promise.resolve(true);
-})
-.then(ok => console.log("¿Se completó todo correctamente?", ok))
-.catch(error => console.error("Error en alguna de las promesas:", error))
-.finally(() => console.log("Fin de la promesa"));
+calculoFinal(precio)
