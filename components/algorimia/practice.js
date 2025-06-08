@@ -1351,16 +1351,35 @@
 // .then(ok => console.log("¿Se completó todo correctamente?", ok))
 // .catch(error => console.error("Error en alguna de las promesas:", error))
 // .finally(() => console.log("Fin de la promesa"));
-let precio = 100
+// let precio = 100
 
-const calcularImpuesto  =  async (precio)=>{
-  return precio * 0.10
+// const calcularImpuesto  =  async (precio)=>{
+//   return precio * 0.10
+// }
+
+// const calculoFinal = async(precio)=>{
+//   const impuesto = await calcularImpuesto(precio)
+//   const total = precio + impuesto
+//   console.log(`el precio es ${precio} mas el impuesto es ${total}`)
+// }
+
+// calculoFinal(precio)
+
+// console.log("Inicio");
+
+// setTimeout(() => {
+// console.log("Timeout");
+// }, 0);
+
+// Promise.resolve().then(() => console.log("Promesa"));
+
+const car ={
+    modelo: 'Bmw',
+    color: 'blue',
+    year: 2025,
+    onCar:function (){
+        console.log(`el ${this.modelo} esta encendido`)
+    }
 }
 
-const calculoFinal = async(precio)=>{
-  const impuesto = await calcularImpuesto(precio)
-  const total = precio + impuesto
-  console.log(`el precio es ${precio} mas el impuesto es ${total}`)
-}
-
-calculoFinal(precio)
+car.onCar()
