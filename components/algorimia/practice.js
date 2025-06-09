@@ -1,3 +1,40 @@
+function calcularAlturaTriángulos (ladoEquivalente, base){
+    if(ladoEquivalente == base){
+        console.warn(`Este no es un triangulo isosceles`)
+    }else{
+        let altura2 = Math.sqrt((ladoEquivalente ** 2) - ((base ** 2) / 4))
+        let result = altura2.toFixed(3)
+        console.log(`calcular altura triángulos ${result}`)
+    }
+}
+
+calcularAlturaTriángulos(10, 8)
+
+function calcularAlturaTrianguloEscaleno(lado1, lado2, lado3) {
+  if (
+    lado1 + lado2 <= lado3 ||
+    lado1 + lado3 <= lado2 ||
+    lado2 + lado3 <= lado1
+  ) {
+    return false
+  }
+  
+  if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+    return false
+  }
+
+  const s = (lado1 + lado2 + lado3) / 2
+  const area = Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3))
+  const altura = (2 * area) / lado1
+
+  return Math.floor(altura); 
+  }
+
+console.log(calcularAlturaTrianguloEscaleno(12,8,6))
+console.log(calcularAlturaTrianguloEscaleno(6,6,6))
+
+
+
 // // Type your code below
 
 // let a = 9
