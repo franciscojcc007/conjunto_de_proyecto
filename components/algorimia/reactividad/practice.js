@@ -1,37 +1,37 @@
-function calcularAlturaTriángulos (ladoEquivalente, base){
-    if(ladoEquivalente == base){
-        console.warn(`Este no es un triangulo isosceles`)
-    }else{
-        let altura2 = Math.sqrt((ladoEquivalente ** 2) - ((base ** 2) / 4))
-        let result = altura2.toFixed(3)
-        console.log(`calcular altura triángulos ${result}`)
-    }
-}
+// function calcularAlturaTriángulos (ladoEquivalente, base){
+//     if(ladoEquivalente == base){
+//         console.warn(`Este no es un triangulo isosceles`)
+//     }else{
+//         let altura2 = Math.sqrt((ladoEquivalente ** 2) - ((base ** 2) / 4))
+//         let result = altura2.toFixed(3)
+//         console.log(`calcular altura triángulos ${result}`)
+//     }
+// }
 
-calcularAlturaTriángulos(10, 8)
+// calcularAlturaTriángulos(10, 8)
 
-function calcularAlturaTrianguloEscaleno(lado1, lado2, lado3) {
-  if (
-    lado1 + lado2 <= lado3 ||
-    lado1 + lado3 <= lado2 ||
-    lado2 + lado3 <= lado1
-  ) {
-    return false
-  }
+// function calcularAlturaTrianguloEscaleno(lado1, lado2, lado3) {
+//   if (
+//     lado1 + lado2 <= lado3 ||
+//     lado1 + lado3 <= lado2 ||
+//     lado2 + lado3 <= lado1
+//   ) {
+//     return false
+//   }
   
-  if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-    return false
-  }
+//   if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+//     return false
+//   }
 
-  const s = (lado1 + lado2 + lado3) / 2
-  const area = Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3))
-  const altura = (2 * area) / lado1
+//   const s = (lado1 + lado2 + lado3) / 2
+//   const area = Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3))
+//   const altura = (2 * area) / lado1
 
-  return Math.floor(altura); 
-  }
+//   return Math.floor(altura); 
+//   }
 
-console.log(calcularAlturaTrianguloEscaleno(12,8,6))
-console.log(calcularAlturaTrianguloEscaleno(6,6,6))
+// console.log(calcularAlturaTrianguloEscaleno(12,8,6))
+// console.log(calcularAlturaTrianguloEscaleno(6,6,6))
 
 
 // function suma() {
@@ -861,13 +861,30 @@ console.log(calcularAlturaTrianguloEscaleno(6,6,6))
 
 // Promise.resolve().then(() => console.log("Promesa"));
 
-const car ={
-    modelo: 'Bmw',
-    color: 'blue',
-    year: 2025,
-    onCar:function (){
-        console.log(`el ${this.modelo} esta encendido`)
-    }
-}
+// const car ={
+//     modelo: 'Bmw',
+//     color: 'blue',
+//     year: 2025,
+//     onCar:function (){
+//         console.log(`el ${this.modelo} esta encendido`)
+//     }
+// }
 
-car.onCar()
+// car.onCar()
+// Por favor, rellene los espacios en blanco para mostrar los minutos actuales.
+
+// var date = new Date();
+// console.log(date.getMinutes())
+
+function main() {
+    var increase = 10;
+    var prices = [98.99, 15.2, 20, 1026];
+
+    //your code goes here
+    let acc = [];
+    for(let i = 0; i < prices.length; i++){
+        acc.push(prices[i] + increase);
+    }
+    console.log(acc);
+}
+main()
