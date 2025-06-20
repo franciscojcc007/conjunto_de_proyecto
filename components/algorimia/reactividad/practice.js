@@ -876,15 +876,35 @@
 // var date = new Date();
 // console.log(date.getMinutes())
 
-function main() {
-    var increase = 10;
-    var prices = [98.99, 15.2, 20, 1026];
+// function main() {
+//     var increase = 10;
+//     var prices = [98.99, 15.2, 20, 1026];
 
-    //your code goes here
-    let acc = [];
-    for(let i = 0; i < prices.length; i++){
-        acc.push(prices[i] + increase);
-    }
-    console.log(acc);
-}
-main()
+//     //your code goes here
+//     let acc = [];
+//     for(let i = 0; i < prices.length; i++){
+//         acc.push(prices[i] + increase);
+//     }
+//     console.log(acc);
+// }
+// main()
+// let list = ["x", "y", "z"];
+// for (let val of list) {
+//     console.log(val);
+// }
+
+// let obj = {a: 1, b: 2, c: 3};
+// for (let v in obj) {
+//     console.log(v);
+// }
+
+
+// let names = ['John', 'Fred', 'Ann'];
+// let [Ann, Fred, John] = names;
+// console.log(John);
+
+// const obj = {one: 1, two: 2};
+// let {one:first, two:second} = obj;
+// console.log(one);
+
+
