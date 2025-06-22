@@ -1,11 +1,23 @@
-const palindromo = (palabra="")=>{
-    if(!palabra) return console.warn("No ingresaste una palabra");
-    palabra = palabra.toLowerCase();
-    let alReves = palabra.split("").reverse().join("");
-    return (palabra === alReves)
-        ? console.info(`Si es Palindromo, Palabra original ${palabra}, Palabra alreves ${alReves}`)
-        : console.info(`No es Palindromo, Palabra original ${palabra}, Palabra alreves ${alReves}`);
 
+
+
+// Por ejemplo, para las palabras "hello", "how", "are", "you", la salida debería ser "$hello$how$are$you$".
+class Add {
+  constructor(...words) {
+      this.words = words;
+  }
+  //your code goes here
+  print(){
+   const output = this.words.length > 0
+      ? `$${this.words.join('$')}$`
+      : '$';
+    console.log(output);
+  }
 }
 
-palindromo("ana");
+var x = new Add("hehe", "hoho", "haha", "hihi", "huhu");
+var y = new Add("this", "is", "awesome");
+var z = new Add("lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit");
+x.print();
+y.print();
+z.print();
