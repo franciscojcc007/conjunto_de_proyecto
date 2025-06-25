@@ -5,14 +5,11 @@ const factorial =(numero = undefined) =>{
   if(numero === 0) return console.error('El numero no puede ser "0"');
   if(Math.sign(numero) === -1) return console.error("El numero no puede ser negativo");
 
-  let fatorial = 1;
-
-
+  let factorialNum = 1;
   for (let i = numero; i > 1; i--) {
-    fatorial *= i;
-    
+    factorialNum *= i;
   }
-  return console.info(`El factorial de ${numero} es ${fatorial}`);
+  return console.info(`El factorial de ${numero} es ${factorialNum}`);
 }
-factorial(4);
+factorial(5);
 
