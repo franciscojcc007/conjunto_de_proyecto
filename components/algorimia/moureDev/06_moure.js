@@ -33,8 +33,6 @@ const factorial = (num, acc = 1) => {
   return factorial(num - 1, num * acc);
 };
 
-
-
 let resultFactorial = factorial(5)
 console.log(resultFactorial)
 
