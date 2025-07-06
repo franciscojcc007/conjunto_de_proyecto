@@ -1,21 +1,18 @@
 function canConstruct(ransomNote, magazine) {
-  // Crear un mapa para contar las letras en magazine
   const letterCount = {};
 
-  // Contar cada letra en magazine
   for (let char of magazine) {
     letterCount[char] = (letterCount[char] || 0) + 1;
   }
 
-  // Revisar cada letra en ransomNote
   for (let char of ransomNote) {
     if (!letterCount[char]) {
-      return false; // No hay suficiente letra o no existe en magazine
+      return false; 
     }
-    letterCount[char]--; // Usar una letra
+    letterCount[char]--; 
   }
 
-  return true; // Se puede construir la nota de rescate
+  return true;
 }
 
-console.log(canConstruct("abc", "abdef"));
+console.log(canConstruct("abc", "abc"));
