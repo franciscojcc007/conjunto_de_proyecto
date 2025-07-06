@@ -7,6 +7,8 @@ function manufacture(gifts, materials) {
 const gifts = ['tren', 'oso', 'pelota'];
 const materials = 'tronesa';
 
+
+
 manufacture(gifts, materials) // ["tren", "oso"]
 // 'tren' SÍ porque sus letras están en 'tronesa'
 // 'oso' SÍ porque sus letras están en 'tronesa'
