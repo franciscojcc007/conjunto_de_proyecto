@@ -50,14 +50,15 @@
  * 5 También se debe proponer una operación de finalización del programa.
  */
 
-// require("colors");
+
+import readline from 'node:readline';
+import { stdin as input, stdout as output } from 'node:process';
 
 const agenda = () => {
   const dict = {}
-  const readline = require('readline')
   const rl = readline.createInterface({
-    input: process.stdin,
-    output: pro1cess.stdout
+    input,
+    output
   });
 
   const menu = () => {
@@ -145,7 +146,7 @@ const agenda = () => {
           menu()
       }
     }
-  )
+    )
   }
 
   menu()
