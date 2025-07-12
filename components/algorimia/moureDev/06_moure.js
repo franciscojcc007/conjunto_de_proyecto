@@ -5,15 +5,15 @@
  *
  */
 
-function cuentaRegresiva(num) {
-    if (num < 0) {
-        return;
-    }
-    console.log(num);
-    cuentaRegresiva(num - 1);   
-}
+// function cuentaRegresiva(num) {
+//     if (num < 0) {
+//         return;
+//     }
+//     console.log(num);
+//     cuentaRegresiva(num - 1);   
+// }
 
-cuentaRegresiva(100);
+// cuentaRegresiva(100);
 
 
 /* 
@@ -47,5 +47,5 @@ const fibonacci = (num, memo = {}) => {
 };
 
 
-let resultFibonacci = fibonacci(3)
+let resultFibonacci = fibonacci(5)
 console.log(resultFibonacci)
