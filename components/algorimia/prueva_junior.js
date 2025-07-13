@@ -134,25 +134,59 @@
 // Cuáles son tus conclusiones con respectos la inversión de la empresa?
 // Anexe los procedimientos empleados para resolver cada respuesta dentro de un archivo de Excel.
 
-const inversion= (c,r,f,t)=>{
-    const beneficioNeto= c * r -(c - f) * t
-    const gananciaInversion = c * r
-    const costeDeuda = (c - f) * t
-    const rentabilidadFinanciera = (gananciaInversion - costeDeuda) / f
-    console.log(`Beneficio Neto: ${beneficioNeto.toFixed(2)}$`)
-    console.log(`ganancia de la inversión: ${gananciaInversion.toFixed(2)}$`)
-    console.log(`coste de la deuda: ${costeDeuda.toFixed(2)}$`)
-    console.log(`rentabilidad financiera de la empresa con esta inversión: ${rentabilidadFinanciera.toFixed(2)}$`)
+// const inversion= (c,r,f,t)=>{
+//     const beneficioNeto= c * r -(c - f) * t
+//     const gananciaInversion = c * r
+//     const costeDeuda = (c - f) * t
+//     const rentabilidadFinanciera = (gananciaInversion - costeDeuda) / f
+//     console.log(`Beneficio Neto: ${beneficioNeto.toFixed(2)}$`)
+//     console.log(`ganancia de la inversión: ${gananciaInversion.toFixed(2)}$`)
+//     console.log(`coste de la deuda: ${costeDeuda.toFixed(2)}$`)
+//     console.log(`rentabilidad financiera de la empresa con esta inversión: ${rentabilidadFinanciera.toFixed(2)}$`)
 
-}
+// }
 
-let capitalInversion= 30000
-let rentabilidadAnual = 0.15
-let fondosPropios = 10000
-let tiposInteres = 0.09
+// let capitalInversion= 30000
+// let rentabilidadAnual = 0.15
+// let fondosPropios = 10000
+// let tiposInteres = 0.09
 
 
-inversion(capitalInversion,rentabilidadAnual,fondosPropios,tiposInteres)
+// inversion(capitalInversion,rentabilidadAnual,fondosPropios,tiposInteres)
+
+const razon = (cantidadChicos, cantidadChicas, totalEstudiantes) => {
+  const sumaBase = cantidadChicos + cantidadChicas;
+
+  if (sumaBase === 0) {
+    console.log("La razón no puede calcularse porque la suma de chicos y chicas es cero.");
+    return;
+  }
+
+  const contante = totalEstudiantes / sumaBase;
+  const chicosReales = cantidadChicos * contante;
+  const chicasReales = cantidadChicas * contante;
+
+  const sumaTotal = chicosReales + chicasReales;
+
+  if (Math.round(sumaTotal) === totalEstudiantes) {
+    console.log(`Hay ${chicosReales} chicos y ${chicasReales} chicas en la clase.`);
+  } else {
+    console.log("La proporción no coincide exactamente con el total de estudiantes.");
+  }
+};
+
+let chicos = 5;
+let chicas = 8;
+let total = 65;
+
+razon(chicos, chicas, total);
+
+chicos = 3;
+chicas = 2;
+total = 80;
+
+razon(chicos, chicas, total);
+
 
 // let tamanoTela = 40
 // let trozosCorte= 1
@@ -160,6 +194,6 @@ inversion(capitalInversion,rentabilidadAnual,fondosPropios,tiposInteres)
 
 // const calcularTiempoTrabajo =()=>{
 
-// }
+// }  
 
 // calcularTiempoTrabajo(tamanoTela, trozosCorte, tiempoCorte)
