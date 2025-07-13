@@ -134,6 +134,25 @@
 // Cuáles son tus conclusiones con respectos la inversión de la empresa?
 // Anexe los procedimientos empleados para resolver cada respuesta dentro de un archivo de Excel.
 
+const inversion= (c,r,f,t)=>{
+    const beneficioNeto= c * r -(c - f) * t
+    const gananciaInversion = c * r
+    const costeDeuda = (c - f) * t
+    const rentabilidadFinanciera = (gananciaInversion - costeDeuda) / f
+    console.log(`Beneficio Neto: ${beneficioNeto.toFixed(2)}$`)
+    console.log(`ganancia de la inversión: ${gananciaInversion.toFixed(2)}$`)
+    console.log(`coste de la deuda: ${costeDeuda.toFixed(2)}$`)
+    console.log(`rentabilidad financiera de la empresa con esta inversión: ${rentabilidadFinanciera.toFixed(2)}$`)
+
+}
+
+let capitalInversion= 30000
+let rentabilidadAnual = 0.15
+let fondosPropios = 10000
+let tiposInteres = 0.09
+
+
+inversion(capitalInversion,rentabilidadAnual,fondosPropios,tiposInteres)
 
 // let tamanoTela = 40
 // let trozosCorte= 1
