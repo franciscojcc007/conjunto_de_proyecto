@@ -154,46 +154,49 @@
 
 // inversion(capitalInversion,rentabilidadAnual,fondosPropios,tiposInteres)
 
-const razon = (cantidadChicos, cantidadChicas, totalEstudiantes) => {
-  const sumaBase = cantidadChicos + cantidadChicas;
+// const razon = (cantidadChicos, cantidadChicas, totalEstudiantes) => {
+//   const sumaBase = cantidadChicos + cantidadChicas;
 
-  if (sumaBase === 0) {
-    console.log("La razón no puede calcularse porque la suma de chicos y chicas es cero.");
-    return;
-  }
+//   if (sumaBase === 0) {
+//     console.log("La razón no puede calcularse porque la suma de chicos y chicas es cero.");
+//     return;
+//   }
 
-  const contante = totalEstudiantes / sumaBase;
-  const chicosReales = cantidadChicos * contante;
-  const chicasReales = cantidadChicas * contante;
+//   const contante = totalEstudiantes / sumaBase;
+//   const chicosReales = cantidadChicos * contante;
+//   const chicasReales = cantidadChicas * contante;
 
-  const sumaTotal = chicosReales + chicasReales;
+//   const sumaTotal = chicosReales + chicasReales;
 
-  if (Math.round(sumaTotal) === totalEstudiantes) {
-    console.log(`Hay ${chicosReales} chicos y ${chicasReales} chicas en la clase.`);
-  } else {
-    console.log("La proporción no coincide exactamente con el total de estudiantes.");
-  }
-};
+//   if (Math.round(sumaTotal) === totalEstudiantes) {
+//     console.log(`Hay ${chicosReales} chicos y ${chicasReales} chicas en la clase.`);
+//   } else {
+//     console.log("La proporción no coincide exactamente con el total de estudiantes.");
+//   }
+// };
 
-let chicos = 5;
-let chicas = 8;
-let total = 65;
+// let chicos = 5;
+// let chicas = 8;
+// let total = 65;
 
-razon(chicos, chicas, total);
+// razon(chicos, chicas, total);
 
-chicos = 3;
-chicas = 2;
-total = 80;
+// chicos = 3;
+// chicas = 2;
+// total = 80;
 
-razon(chicos, chicas, total);
+// razon(chicos, chicas, total);
 
 
-// let tamanoTela = 40
-// let trozosCorte= 1
-// let tiempoCorte = 6
+let tamanoTela = 80
+let trozosCorte= 1
+let tiempoCorte = 6
 
-// const calcularTiempoTrabajo =()=>{
+const calcularTiempoTrabajo = (tamanoTela, trozosCorte, tiempoCorte)=>{
 
-// }  
+    const totalTiempo = tamanoTela / trozosCorte * tiempoCorte
+    console.log(`El tiempo total de trabajo es: ${totalTiempo} minutos`);
+}  
 
-// calcularTiempoTrabajo(tamanoTela, trozosCorte, tiempoCorte)
+calcularTiempoTrabajo(tamanoTela, trozosCorte, tiempoCorte)
+
