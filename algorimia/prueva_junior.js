@@ -217,14 +217,43 @@
 // "Cómo aprender JavaScript para principiantes"
 
 
-function formatBlogTitle(title) {
-  return title
-    .trim()
-    .split(' ') 
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-    .replace('Javascript','JavasCript')
+// function formatBlogTitle(title) {
+//   return title
+//     .trim()
+//     .split(' ') 
+//     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join(' ')
+//     .replace('Javascript','JavasCript')
+// }
+
+
+// console.log(formatBlogTitle( '  mastering javascript tricks   '))
+
+function stringWeaver(str1, str2) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  // Write your code here
+  const removeNumbers = str => str.split('').filter(char => !numbers.includes(char));
+  const toUpperCaseVowels = str => str.map(char => vowels.includes(char) ? char.toUpperCase() : char);
+  let result = ''
+  let isNum1 = removeNumbers(str1)
+  let isNum2 = removeNumbers(str2);
+  let isVowel1 = toUpperCaseVowels(isNum1)
+  let isVowel2 = toUpperCaseVowels(isNum2);
+  let maxLength = Math.max(isVowel1.length, isVowel2.length);
+  for (let i = 0; i < maxLength; i++) {
+    if (i < isVowel1.length) {
+      let char1 = isVowel1[i];
+      result += char1;
+      
+    }
+    if (i < isVowel2.length) {
+      let char2 = isVowel2[i];
+      result += char2
+    }
+  }
+
+  return result
 }
 
-
-console.log(formatBlogTitle( '  mastering javascript tricks   '))
+console.log(stringWeaver("h2ello", "w1orld"))
