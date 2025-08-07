@@ -257,24 +257,48 @@
 // }
 
 // console.log(stringWeaver("h2ello", "w1orld"))
-function getColumn(max, numberOfRows, colIndex) {
-  const result = [];
-  for (let i = 0; i < numberOfRows; i++) {
-    if(colIndex < i){
-      result.push(max[i][colIndex]);
-    }
+// function getColumn(max, numberOfRows, colIndex) {
+//   const result = [];
+//   for (let i = 0; i < numberOfRows; i++) {
+//     if(colIndex < i){
+//       result.push(max[i][colIndex]);
+//     }
+//   }
+//   return result;
+// }
+
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ]
+// let nun1= 3
+// let nun2= 1
+
+// console.log(getColumn(matrix,nun1,nun2))//[ 2, 5, 8 ]
+
+function getElementsInRow(grid, rowIndex) {
+  // TODO: Return an array with all elements in the specified row
+  // If rowIndex is out of bounds, return an empty array
+   if (rowIndex < 0 || rowIndex >= grid.length) {
+    return [];
   }
-  return result;
+
+  return grid[rowIndex];
 }
+// Do not write anything outside the function
+// const grid = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+const rowIndex = 2;
 
-let matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+const grid = [
+  [10,11,12,13],
+  [14,15,16,17],
+  [18,19,20,21]
 ]
-let nun1= 3
-let nun2= 1
-
-console.log(getColumn(matrix,nun1,nun2))//[ 2, 5, 8 ]
 
 
+console.log(getElementsInRow(grid, rowIndex))//[4, 5, 6]
