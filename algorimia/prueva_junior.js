@@ -245,7 +245,7 @@
 //     if (i < isVowel1.length) {
 //       let char1 = isVowel1[i];
 //       result += char1;
-      
+
 //     }
 //     if (i < isVowel2.length) {
 //       let char2 = isVowel2[i];
@@ -277,28 +277,52 @@
 
 // console.log(getColumn(matrix,nun1,nun2))//[ 2, 5, 8 ]
 
-function getElementsInRow(grid, rowIndex) {
-  // TODO: Return an array with all elements in the specified row
-  // If rowIndex is out of bounds, return an empty array
-   if (rowIndex < 0 || rowIndex >= grid.length) {
-    return [];
-  }
+// function getElementsInRow(grid, rowIndex) {
+//   // TODO: Return an array with all elements in the specified row
+//   // If rowIndex is out of bounds, return an empty array
+//    if (rowIndex < 0 || rowIndex >= grid.length) {
+//     return [];
+//   }
 
-  return grid[rowIndex];
-}
-// Do not write anything outside the function
+//   return grid[rowIndex];
+// }
+// // Do not write anything outside the function
+// // const grid = [
+// //   [1, 2, 3],
+// //   [4, 5, 6],
+// //   [7, 8, 9]
+// // ];
+// const rowIndex = 2;
+
 // const grid = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9]
-// ];
-const rowIndex = 2;
+//   [10,11,12,13],
+//   [14,15,16,17],
+//   [18,19,20,21]
+// ]
 
-const grid = [
-  [10,11,12,13],
-  [14,15,16,17],
-  [18,19,20,21]
+
+// console.log(getElementsInRow(grid, rowIndex))//[4, 5, 6]
+
+
+// const comprobacionesDiccionario = (a, b)=>{
+
+//   const selection = a < b ? a : b
+//   return selection
+// }
+// console.log(comprobacionesDiccionario("amor", "fmistad"))
+
+function mirrorRows(matrix) {
+  let reversedMatrix = [];
+  for (let i = 0; i < matrix.length; i++) {
+    let reversedRow = matrix[i].slice().reverse();
+    reversedMatrix.push(reversedRow)
+  }
+  return reversedMatrix;
+}
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ]
 
-
-console.log(getElementsInRow(grid, rowIndex))//[4, 5, 6]
+console.log(mirrorRows(matrix))
