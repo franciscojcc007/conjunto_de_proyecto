@@ -311,18 +311,46 @@
 // }
 // console.log(comprobacionesDiccionario("amor", "fmistad"))
 
-function mirrorRows(matrix) {
-  let reversedMatrix = [];
-  for (let i = 0; i < matrix.length; i++) {
-    let reversedRow = matrix[i].slice().reverse();
-    reversedMatrix.push(reversedRow)
+// function mirrorRows(matrix) {
+//   let reversedMatrix = [];
+//   for (let i = 0; i < matrix.length; i++) {
+//     let reversedRow = matrix[i].slice().reverse();
+//     reversedMatrix.push(reversedRow)
+//   }
+//   return reversedMatrix;
+// }
+// const matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ]
+
+// console.log(mirrorRows(matrix))
+
+function combineMatrices(matrixA, matrixB, op) {
+  let c = [];
+  for (let i = 0; i < matrixA.length; i++) {
+    c[i] = []; 
+    for (let j = 0; j < matrixA[0].length; j++) {
+      if (op === '+') {
+        c[i][j] = matrixA[i][j] + matrixB[i][j];
+      } else {
+        c[i][j] = matrixA[i][j] - matrixB[i][j];
+      }
+    }
   }
-  return reversedMatrix;
+  return c;
 }
-const matrix = [
+
+const matrixA = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
-]
+];
+const matrixB = [
+  [9, 8, 7],
+  [6, 5, 4],
+  [3, 2, 1]
+];
 
-console.log(mirrorRows(matrix))
+console.log(combineMatrices(matrixA, matrixB, '+'));
