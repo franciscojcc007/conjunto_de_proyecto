@@ -327,30 +327,61 @@
 
 // console.log(mirrorRows(matrix))
 
-function combineMatrices(matrixA, matrixB, op) {
-  let c = [];
-  for (let i = 0; i < matrixA.length; i++) {
-    c[i] = []; 
-    for (let j = 0; j < matrixA[0].length; j++) {
-      if (op === '+') {
-        c[i][j] = matrixA[i][j] + matrixB[i][j];
-      } else {
-        c[i][j] = matrixA[i][j] - matrixB[i][j];
+// function combineMatrices(matrixA, matrixB, op) {
+//   let c = [];
+//   for (let i = 0; i < matrixA.length; i++) {
+//     c[i] = []; 
+//     for (let j = 0; j < matrixA[0].length; j++) {
+//       if (op === '+') {
+//         c[i][j] = matrixA[i][j] + matrixB[i][j];
+//       } else {
+//         c[i][j] = matrixA[i][j] - matrixB[i][j];
+//       }
+//     }
+//   }
+//   return c;
+// }
+
+// const matrixA = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+// const matrixB = [
+//   [9, 8, 7],
+//   [6, 5, 4],
+//   [3, 2, 1]
+// ];
+
+// console.log(combineMatrices(matrixA, matrixB, '+'));
+
+const matrixA = [
+  [1, 2],
+  [3, 4]
+]
+const matrixB = [
+  [5, 6],
+  [7, 8]
+]
+
+
+function multiplyMatrices(n, m) {
+  // Write your code here
+  // Check if matrices can be multiplied
+  // Create the result matrix with appropriate dimensions
+  // Calculate each element in the result matrix
+  let result = []
+  for (let i = 0; i < n.length; i++) {
+    result[i] = []
+    for (let j = 0; j < m[0].length; j++) {
+      result[i][j] = 0
+      for (let k = 0; k < m.length; k++) {
+        result[i][j] += n[i][k] * m[k][j]
       }
     }
   }
-  return c;
+  return result
 }
+// Do not write anything outside function
 
-const matrixA = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-];
-const matrixB = [
-  [9, 8, 7],
-  [6, 5, 4],
-  [3, 2, 1]
-];
-
-console.log(combineMatrices(matrixA, matrixB, '+'));
+console.log(multiplyMatrices(matrixA, matrixB))//[[19, 22], [43, 50]]
