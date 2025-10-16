@@ -22,12 +22,13 @@ html {
 }
 
 body {
-    align-items: center;
     background: linear-gradient(320deg, #3b1464, #070795, #09634f);
-    display: flex;
     font-family: 'Dosis', 'sans-serif';
     height: inherit;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    /* place-items: center; */
 }
 
 .wrapper {
