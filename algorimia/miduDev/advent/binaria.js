@@ -29,4 +29,4 @@ function binarySearch(arr, l, r, x) {
 
 const arr = [1,2,3,4,5,7,8,9];
 console.log(quickSort(arr));
-console.log(binarySearch(arr, 0, arr.length - 1, 2));
+console.log(binarySearch(arr, 0, arr.at(-1) , 2));
