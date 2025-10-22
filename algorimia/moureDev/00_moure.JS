@@ -14,7 +14,7 @@ https://developer.mozilla.org/es/docs/Web/JavaScript
 
 /*
 ccc
-CONMENTARIO
+COMENTARIO
 ccc
 */
 let a;
