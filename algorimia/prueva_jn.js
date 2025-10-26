@@ -44,27 +44,32 @@
 // }
 // console.log(limesToCut(25, ['small', 'large', 'large', 'medium', 'small'])) // 4
 
-//Además de reservar el tiempo, también debes asegurarte de tener suficiente salsa y fideos para
-//  cocinar la lasaña de tu Sueños. Por cada capa de fideos en su lasaña, necesitará 50 gramos de 
-// fideos. Por cada capa de salsa en su lasaña, Necesitarás 0,2 litros de salsa.
+// Las cantidades enumeradas en su libro de cocina solo producen suficiente lasaña para dos porciones. Ya que quieres cocinar para más personas La próxima vez, desea calcular las cantidades para diferentes números de porciones.
 
-//Defina la función que toma una matriz de capas como parámetro. La función determinará entonces el
-//  cantidad de fideos y salsa necesarios para preparar su comida. El resultado debe devolverse como 
-// un objeto con claves y .quantitiesnoodlessauce
+// Implemente una función que tome dos parámetros.scaleRecipe
+
+// Objeto de receta que contiene las cantidades necesarias para 2 porciones. El formato del objeto se puede ver en el ejemplo abajo.
+// El número de porciones que desea cocinar.
+// La función debe devolver un objeto de receta con las cantidades necesarias para el número deseado de porciones. Quieres mantener Sin embargo, la receta original. Esto significa que, en esta tarea, el argumento de la receta no debe modificarse.
 
 
-// function quantities(capas){
-//     let noodles = 0
-//     let sauce = 0
-//     for (let i = 0; i < capas.length; i++) {
-//         if(capas[i]=== 'noodles') noodles += 50
-//         if(capas[i]=== 'sauce') sauce += 0.2
+// function scaleRecipe(recipe, num){
+//     console.log(recipe);
+//     const scaledRecipe = {};
+
+//     for (const ingredient in recipe) {
+//         console.log(recipe[ingredient]);
+//         scaledRecipe[ingredient] = recipe[ingredient] *  (num / 2)
 //     }
-//     return {
-//         noodles,
-//         sauce
-//     }
+//     return scaledRecipe;
+    
 // }
 
-// console.log(quantities(['sauce', 'noodles', 'sauce', 'meat', 'mozzarella', 'noodles']));
-// // => { noodles: 100, sauce: 0.4 }
+// const recipe = {
+//   noodles: 200,
+//   sauce: 0.5,
+//   mozzarella: 1,
+//   meat: 100,
+// };
+
+// console.log(scaleRecipe(recipe, 5))
