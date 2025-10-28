@@ -73,3 +73,32 @@
 // };
 
 // console.log(scaleRecipe(recipe, 5))
+
+function translate2d(dx, dy) {
+  return function (x , y){  
+    return [x + dx, y + dy]
+  }
+}
+
+
+function scale2d(sx, sy) {
+   return function (x , y){  
+    return [x * sx, y * sy]
+  }
+}
+
+
+function composeTransform(f, g) {
+   return function (x, y) {
+    const [x1, y1] = f(x, y);  
+    return g(x1, y1);          
+  };
+}
+
+const moveCoordinatesRight2Px = translate2d(2, 0);
+const doubleCoordinates = scale2d(2, 2);
+const composedTransformations = composeTransform(
+  moveCoordinatesRight2Px,
+  doubleCoordinates);
+const result = composedTransformations(0, 1);
+console.log(result)
