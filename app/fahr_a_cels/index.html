@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conversor Fahrenheit a Celsius</title>
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-    <script type="module" src="./app.js"></script>
+    <main class="card">
+        <h1>Conversor térmico</h1>
+        <p class="description">
+            Ingresa cualquier valor en Fahrenheit y obtén la conversión inmediata
+            a grados Celsius.
+        </p>
+        <form id="converter-form">
+            <label for="fahrenheit-input">Grados Fahrenheit</label>
+            <div class="input-group">
+                <input
+                    id="fahrenheit-input"
+                    type="number"
+                    placeholder="Ej. 68"
+                    step="any"
+                    required
+                />
+                <button type="submit">Convertir</button>
+            </div>
+        </form>
+        <p class="result" id="result-output">
+            —
+            <span>Introduce un valor para comenzar</span>
+        </p>
+    </main>
+    <script type="module" src="./src/app.js"></script>
 </body>
 </html>
