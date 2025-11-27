@@ -74,8 +74,8 @@ d.addEventListener("submit", async (e) => {
           res = await fetch(
             "http://localhost:3000/fisiculturista_open",
             options
-          ),
-          json = await res.json();
+          );
+         
 
         if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
@@ -108,8 +108,8 @@ d.addEventListener("submit", async (e) => {
           res = await fetch(
             `http://localhost:3000/fisiculturista_open/${e.target.id.value}`,
             options
-          ),
-          json = await res.json();
+          );
+        
 
         if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
@@ -155,8 +155,7 @@ d.addEventListener("click", async (e) => {
           res = await fetch(
             `http://localhost:3000/fisiculturista_open/${e.target.dataset.id}`,
             options
-          ),
-          json = await res.json();
+          );
 
         if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
