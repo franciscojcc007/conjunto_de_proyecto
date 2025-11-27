@@ -1,9 +1,9 @@
 let runningTotal = 0
 let buffer = '0'
-let previosOperator
+let previousOperator = null
 const d = document
 
-const $screen = d.querySelector('.screen')
+const screenElement = d.querySelector('.screen')
 
 function buttonClick(value) {
   if (isNaN(value)) {
@@ -11,7 +11,7 @@ function buttonClick(value) {
   } else {
     handleNumber(value)
   }
-  $screen.innerText = buffer
+  screenElement.innerText = buffer
 }
 function handleSymbol(symbol) {
   switch (symbol) {
@@ -20,11 +20,11 @@ function handleSymbol(symbol) {
       runningTotal = 0
       break
     case '=':
-      if (previosOperator === null) {
+      if (previousOperator === null) {
         return
       }
       flushOperation(parseInt(buffer));
-      previosOperator = null
+      previousOperator = null
       buffer = runningTotal
       runningTotal = 0
       break
@@ -56,26 +56,26 @@ function handleMath(symbol) {
   if (buffer === '0') {
     return
   }
-  const intbuffer = parseInt(buffer);
+  const parsedBuffer = parseInt(buffer);
 
   if (runningTotal === 0) {
-    runningTotal = intbuffer
+    runningTotal = parsedBuffer
   } else {
-    flushOperation(intbuffer)
+    flushOperation(parsedBuffer)
   }
-  previosOperator = symbol
+  previousOperator = symbol
   buffer = '0'
 }
 
-function flushOperation(intbuffer) {
-  if (previosOperator === '+') {
-    runningTotal += intbuffer
-  } else if (previosOperator === '−') {
-    runningTotal -= intbuffer
-  } else if (previosOperator === '×') {
-    runningTotal *= intbuffer
-  } else if (previosOperator === '÷') {
-    runningTotal /= intbuffer
+function flushOperation(parsedBuffer) {
+  if (previousOperator === '+') {
+    runningTotal += parsedBuffer
+  } else if (previousOperator === '−') {
+    runningTotal -= parsedBuffer
+  } else if (previousOperator === '×') {
+    runningTotal *= parsedBuffer
+  } else if (previousOperator === '÷') {
+    runningTotal /= parsedBuffer
   }
 }
 
