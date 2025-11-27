@@ -9,7 +9,7 @@ const ajax = (options) => {
   let { url, method, success, error, data } = options;
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener("readystatechange", (e) => {
+  xhr.addEventListener("readystatechange", () => {
     if (xhr.readyState !== 4) return;
 
     if (xhr.status >= 200 && xhr.status < 300) {
@@ -28,7 +28,7 @@ const ajax = (options) => {
 
 const getAll = () => {
   ajax({
-    url: "http://localhost:3000/fisiculturista_open",
+    url: "http://localhost:3000/fisiculturista_clasico",
     success: (res) => {
       console.log(res);
 
@@ -74,9 +74,9 @@ d.addEventListener("submit", (e) => {
     if (!e.target.id.value) {
       //Create - POST
       ajax({
-        url: "http://localhost:3000/fisiculturista_open",
+        url: "http://localhost:3000/fisiculturista_clasico",
         method: "POST",
-        success: (res) => location.reload(),
+        success: () => location.reload(),
         error: (err) =>
           $form.insertAdjacentHTML("afterend", `<p><b>${err}</b></p>`),
         data: {
@@ -92,9 +92,9 @@ d.addEventListener("submit", (e) => {
     } else {
       //Update - PUT
       ajax({
-        url: `http://localhost:3000/fisiculturista_open/${e.target.id.value}`,
+        url: `http://localhost:3000/fisiculturista_clasico/${e.target.id.value}`,
         method: "PUT",
-        success: (res) => location.reload(),
+        success: () => location.reload(),
         error: (err) =>
           $form.insertAdjacentHTML("afterend", `<p><b>${err}</b></p>`),
         data: {
@@ -132,9 +132,9 @@ d.addEventListener("click", (e) => {
     if (isDelete) {
       //Delete - DELETE
       ajax({
-        url: `http://localhost:3000/fisiculturista_open/${e.target.dataset.id}`,
+        url: `http://localhost:3000/fisiculturista_clasico/${e.target.dataset.id}`,
         method: "DELETE",
-        success: (res) => location.reload(),
+        success: () => location.reload(),
         error: (err) => alert(err),
       });
     }
