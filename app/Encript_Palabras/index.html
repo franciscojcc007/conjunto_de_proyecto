@@ -17,38 +17,42 @@
 
 <body>
   <script type="module" src="./assets/app.js"></script>
-  <div class="conteiner">
+  <div class="container">
     <header class="header">
-      <div class="header_pr">
+      <div class="header-main">
         <img src="./assets/img/Logo.png" class="alura" alt="logo de alura">
         <h1>Encriptado de Palabras</h1>
       </div>
-      <article id="contadorPalabras" class="text2">
+      <article id="wordCounter" class="counter-panel">
         <p>Cuantas palabras tienes</p>
       </article>
     </header>
     <main>
-      <section class="principal">
-        <article class="article-uno">
-          <form onreset="mostrarOcultarDivs()">
-            <textarea class="textarea-original" placeholder="Ingrese el texto que deseas encriptar aquí" name="texto"
-              minlength="1" autofocus id="textoOriginal" oninput="mostrarOcultarDivs()"></textarea>
-            <label class="label" for="encriptar">Solo se puede encriptar letras minúsculas y sin acento👌</label>
-            <input class="boton" type="button" value="Encriptar" id="encriptar" name="encriptar">
-            <input class="boton" type="button" value="Desencriptar" id="desencriptar" name="Desencriptar">
+      <section class="main-section">
+        <article class="input-panel">
+          <form onreset="togglePanelsVisibility()">
+            <textarea class="input-textarea" placeholder="Ingrese el texto que deseas encriptar aquí" name="texto"
+              minlength="1" autofocus id="originalText" oninput="togglePanelsVisibility()"></textarea>
+            <label class="label" for="encryptButton">Solo se puede encriptar letras minúsculas y sin acento👌</label>
+            <div class="button-group">
+              <input class="action-button" type="button" value="Encriptar" id="encryptButton" name="encriptar">
+              <input class="action-button" type="button" value="Desencriptar" id="decryptButton" name="Desencriptar">
+            </div>
           </form>
         </article>
-        <article class="article-dos" id="pasivo">
-          <img src="./assets/img/conejo_con_lupa.png" class="imagen-b" alt="conejo vestido de investigador con una lupa">
-          <p class="mensaje-info">Sin mensaje aún</p>
-          <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+        <article class="empty-panel" id="inactive-panel">
+          <img src="./assets/img/conejo_con_lupa.png" class="hero-illustration" alt="conejo vestido de investigador con una lupa">
+          <p class="info-message">Sin mensaje aún</p>
+          <p class="info-paragraph">Ingresa el texto que desees encriptar o desencriptar</p>
         </article>
-        <article class="article-tres" id="activo">
+        <article class="result-panel" id="active-panel">
           <form>
-            <textarea class="textarea-modificada" disabled id="textoEncriptado"></textarea>
-            <label class="label" for="copiar">puedes copiar el texto y limpiar lo realizado</label>
-            <input class="boton copiar" type="button" name="copiar" value="copiar" id="copiar">
-            <input class="boton limpiar" type="button" name="limpiar" value="limpiar" id="limpiar">
+            <textarea class="output-textarea" disabled id="encryptedText"></textarea>
+            <label class="label" for="copyButton">puedes copiar el texto y limpiar lo realizado</label>
+            <div class="button-group">
+              <input class="action-button copy-button" type="button" name="copiar" value="copiar" id="copyButton">
+              <input class="action-button clear-button" type="button" name="limpiar" value="limpiar" id="clearButton">
+            </div>
           </form>
         </article>
       </section>
