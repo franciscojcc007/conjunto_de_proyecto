@@ -1,22 +1,22 @@
 const d = document;
 
-const bnt = d.getElementById('btn')
-const text = d.getElementById('color')
+const generateButton = d.getElementById('btn')
+const colorText = d.getElementById('color')
 
-const colorAleatorio = ()=>{
-    let dígitos = '01235456789ABCDEF';
-    let colorGuardado = '#';
+const generateRandomColor = ()=>{
+    let hexDigits = '01235456789ABCDEF';
+    let generatedColor = '#';
     for (let i = 0; i < 6; i++) {
-      colorGuardado += dígitos[Math.floor(Math.random() * 16)];
+      generatedColor += hexDigits[Math.floor(Math.random() * 16)];
       // let indice =  Math.floor(Math.random()*16)
       // colorGuardado += dígitos[indice];
     }
-    return colorGuardado;
+    return generatedColor;
 }
-bnt.addEventListener('click',function () {
-  let colorString = colorAleatorio();
+generateButton.addEventListener('click',function () {
+  let colorString = generateRandomColor();
   // text.style.color = colorString;
-  text.textContent = colorString;
+  colorText.textContent = colorString;
   d.body.style.backgroundColor = colorString;
   
 });

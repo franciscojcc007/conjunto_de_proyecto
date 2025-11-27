@@ -1,5 +1,5 @@
 const d = document
-const llaves = {
+const cipherKeys = {
   "e": 'enter',
   "i": 'imes',
   "a": 'ali',
@@ -7,98 +7,100 @@ const llaves = {
   "u": 'ufate'
 };
 
-let contadorPalabras = 0
+let encryptedWordCount = 0
 
-function encriptar(texto) {
-  return texto.replace(/[aeiou]/g, function (match) {
-    return llaves[match]
+function encryptText(text) {
+  return text.replace(/[aeiou]/g, function (match) {
+    return cipherKeys[match]
   })
 }
 
-function desencriptar(texto) {
-  return texto.replace(/enter|imes|ali|ober|ufate/g, function (match) {
-    return Object.keys(llaves).find(key => llaves[key] === match)
+function decryptText(text) {
+  return text.replace(/enter|imes|ali|ober|ufate/g, function (match) {
+    return Object.keys(cipherKeys).find(key => cipherKeys[key] === match)
   })
 }
 
-function contarPalabras(texto) {
-  return texto.trim().split(/\s+/).filter(contieneLetraEnLlaves).length
+function countWords(text) {
+  return text.trim().split(/\s+/).filter(containsCipherLetter).length
 }
 
-function contieneLetraEnLlaves(palabra) {
-  for (let letra in llaves) {
-    if (palabra.includes(letra)) {
+function containsCipherLetter(word) {
+  for (let letter in cipherKeys) {
+    if (word.includes(letter)) {
       return true
     }
   }
   return false
 }
 
-function obtenerTextoEntrada() {
-  return d.getElementById('textoOriginal').value.trim()
+function getInputText() {
+  return d.getElementById('originalText').value.trim()
 }
 
-function actualizarSalida(texto) {
-  d.getElementById('textoEncriptado').value = texto
+function updateOutput(text) {
+  d.getElementById('encryptedText').value = text
 }
 
-function procesar() {
-  const texto = obtenerTextoEntrada()
-  const resultado = encriptar(texto)
-  contadorPalabras += contarPalabras(texto)
-  d.getElementById('contadorPalabras').innerText = `Palabras Encriptadas: ${contadorPalabras}`
-  actualizarSalida(resultado)
+function handleEncrypt() {
+  const inputText = getInputText()
+  const result = encryptText(inputText)
+  encryptedWordCount += countWords(inputText)
+  d.getElementById('wordCounter').innerText = `Palabras Encriptadas: ${encryptedWordCount}`
+  updateOutput(result)
 }
 
-function procesarDesencriptar() {
-  const texto = obtenerTextoEntrada()
-  const resultado = desencriptar(texto)
-  actualizarSalida(resultado)
+function handleDecrypt() {
+  const inputText = getInputText()
+  const result = decryptText(inputText)
+  updateOutput(result)
 }
 
-function btnCopiar() {
-  let texto = d.getElementById('textoEncriptado').value.trim()
-  copiarAlPortapapeles(texto)
+function handleCopy() {
+  let text = d.getElementById('encryptedText').value.trim()
+  copyToClipboard(text)
 }
 
-function btnLimpiar() {
-  d.getElementById('textoEncriptado').value = ''
-  d.getElementById('textoOriginal').value = ''
-  d.getElementById('contadorPalabras').innerText = 'Palabras Encriptadas'
-  contadorPalabras = 0
+function handleClear() {
+  d.getElementById('encryptedText').value = ''
+  d.getElementById('originalText').value = ''
+  d.getElementById('wordCounter').innerText = 'Palabras Encriptadas'
+  encryptedWordCount = 0
 }
 
-function copiarAlPortapapeles(texto) {
-  if (texto.trim() === '') {
+function copyToClipboard(text) {
+  if (text.trim() === '') {
     return
   }
-  const inputTemp = d.createElement('input')
-  inputTemp.value = texto
-  d.body.appendChild(inputTemp)
-  inputTemp.select()
-  inputTemp.setSelectionRange(0, 99999)
+  const tempInput = d.createElement('input')
+  tempInput.value = text
+  d.body.appendChild(tempInput)
+  tempInput.select()
+  tempInput.setSelectionRange(0, 99999)
   d.execCommand('copy')
-  d.body.removeChild(inputTemp)
+  d.body.removeChild(tempInput)
 }
 
-d.mostrarOcultarDivs=function () {
+const togglePanelsVisibility = function () {
   setTimeout(() => {
-    let texto = d.getElementById('textoOriginal').value
-    let divPasivo = d.getElementById('pasivo')
-    let divActivo = d.getElementById('activo')
-    let textoEncriptado = d.getElementById('textoEncriptado')
-    if (texto == '') {
-      divPasivo.style.display = 'block'
-      divActivo.style.display = 'none'
+    let text = d.getElementById('originalText').value
+    let inactivePanel = d.getElementById('inactive-panel')
+    let activePanel = d.getElementById('active-panel')
+    let encryptedTextField = d.getElementById('encryptedText')
+    if (text == '') {
+      inactivePanel.style.display = 'block'
+      activePanel.style.display = 'none'
     } else {
-      divPasivo.style.display = 'none'
-      divActivo.style.display = 'block'
-      textoEncriptado.value = texto
+      inactivePanel.style.display = 'none'
+      activePanel.style.display = 'block'
+      encryptedTextField.value = text
     }
   }, 0)
 }
 
-d.getElementById('encriptar').addEventListener('click', procesar)
-d.getElementById('desencriptar').addEventListener('click', procesarDesencriptar)
-d.getElementById('copiar').addEventListener('click', btnCopiar)
-d.getElementById('limpiar').addEventListener('click', btnLimpiar)
+d.getElementById('encryptButton').addEventListener('click', handleEncrypt)
+d.getElementById('decryptButton').addEventListener('click', handleDecrypt)
+d.getElementById('copyButton').addEventListener('click', handleCopy)
+d.getElementById('clearButton').addEventListener('click', handleClear)
+
+window.togglePanelsVisibility = togglePanelsVisibility
